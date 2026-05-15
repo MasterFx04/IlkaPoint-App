@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|c:\\users\\jradr\\onedrive\\escritorio\\utp - adrian campos\\ii a\u00F1o\\i semestre\\lenguaje de programacion i\\proyectos\\ilkapoint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:25:04.174Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
