@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace IlkaPoint.Clases
 {
-    internal class InventarioDB
+    public class Inventario
     {
+        public int Id { get; set; }
     }
 }
