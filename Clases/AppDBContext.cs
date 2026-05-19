@@ -21,6 +21,7 @@ namespace IlkaPoint.Clases
 
         //ACA TODO LO QUE SEA ALMACENAR LA INFORMACION DE LAS TRANSACCIONES
         public DbSet<Transaccion> Transacciones { get; set; }
+        public DbSet<DetallesTransaccion> DetallesTransaccion { get; set; }
        
     }
 }

@@ -71,6 +71,8 @@ namespace IlkaPoint.Clases
             }
         }
 
+        public List<DetallesTransaccion> Detalles {  get; set; }
+
         //Constructor
         public Transaccion(string metodoPago, bool esJubilado) //registrarTransaccion()
         {
@@ -86,16 +88,26 @@ namespace IlkaPoint.Clases
         private decimal CalcularDescuento() //Funcion privada por que se llama solo en la clase, un forms no llamara a la funcion
         {
             decimal descuento = Convert.ToDecimal(Convert.ToDouble(total) * 0.15);
-            decimal resultado;
+            decimal subResultado;
+            decimal itbms = Convert.ToDecimal(Convert.ToDouble(total) * 0.07); ;
+            decimal resultadoFinal;
             if (esJubilado)
             {
-                resultado = total - descuento;
+                subResultado = total - descuento;
             }
             else
             {
-                resultado = total;
+                subResultado = total;
             }
-            return resultado;
+            resultadoFinal = subResultado + itbms;
+            return resultadoFinal;
         }
+
+        /* NO LE VEO NECESIDAD A ESTA FUNCION
+        public void ActualizarCantidad(decimal cantidadNueva)
+        {
+            //NECESITO LA DB DE PRODUCTOS PARA INICIAR
+        }
+        */
     }
 }
