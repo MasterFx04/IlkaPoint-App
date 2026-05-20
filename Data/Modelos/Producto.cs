@@ -14,12 +14,8 @@ namespace IlkaPoint.Data.Modelos
         public string nombre { get; set; }
         public string categoria { get; set; }
         public string proveedor { get; set; }
-        public bool precio { get; set; }
-        public int cantidad { get; set; }
-        public virtual decimal calcularPrecio() 
-        {
-            return precio * cantidad; 
-        }
+        public decimal precio { get; set; }
+
     }
    
 } 

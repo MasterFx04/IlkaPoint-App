@@ -1,4 +1,5 @@
 ﻿using IlkaPoint.Data.Modelos;
+using IlkaPoint.Servicios;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -16,8 +17,8 @@ namespace IlkaPoint.Clases
         }
 
         //AQUI VA PRODUCTO E INVENTARIO
-        public DbSet<Inventario> Movimientos { get; set; }
-        //public DbSet<Producto> Productos { get; set; }
+        public DbSet<ServicioInventario> Movimientos { get; set; }
+        public DbSet<Producto> Productos { get; set; }
 
         //ACA TODO LO QUE SEA ALMACENAR LA INFORMACION DE LAS TRANSACCIONES
         public DbSet<Transaccion> Transacciones { get; set; }
