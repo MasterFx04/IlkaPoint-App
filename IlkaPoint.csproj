@@ -57,11 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\AppDBContext.cs" />
+    <Compile Include="Clases\DetallesTransaccion.cs" />
     <Compile Include="Clases\Inventario.cs" />
+<<<<<<< HEAD
+    <Compile Include="Clases\Transaccion.cs" />
+    <Compile Include="Data\Modelos\Producto.cs" />
+=======
     <Compile Include="Data\AppDbContexto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
+>>>>>>> 11f65357cd580258310b38ad892aca7d9147da7f
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,14 @@
     <Compile Include="Migrations\202605152356197_InitialCreate.Designer.cs">
       <DependentUpon>202605152356197_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202605190339057_AgregarTransaccion.cs" />
+    <Compile Include="Migrations\202605190339057_AgregarTransaccion.Designer.cs">
+      <DependentUpon>202605190339057_AgregarTransaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202605191958191_AgregarDetallesTransaccion.cs" />
+    <Compile Include="Migrations\202605191958191_AgregarDetallesTransaccion.Designer.cs">
+      <DependentUpon>202605191958191_AgregarDetallesTransaccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605152356197_InitialCreate.resx">
       <DependentUpon>202605152356197_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605190339057_AgregarTransaccion.resx">
+      <DependentUpon>202605190339057_AgregarTransaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605191958191_AgregarDetallesTransaccion.resx">
+      <DependentUpon>202605191958191_AgregarDetallesTransaccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
