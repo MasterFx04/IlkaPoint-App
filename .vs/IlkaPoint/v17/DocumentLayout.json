@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\clases\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:clases\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|c:\\users\\jradr\\onedrive\\escritorio\\utp - adrian campos\\ii a\u00F1o\\i semestre\\lenguaje de programacion i\\proyectos\\ilkapoint\\clases\\transaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:clases\\transaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\clases\\detallestransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:clases\\detallestransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\clases\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:clases\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|c:\\users\\jradr\\onedrive\\escritorio\\utp - adrian campos\\ii a\u00F1o\\i semestre\\lenguaje de programacion i\\proyectos\\ilkapoint\\migrations\\202605191958191_agregardetallestransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:migrations\\202605191958191_agregardetallestransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\migrations\\202605190339057_agregartransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:migrations\\202605190339057_agregartransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|c:\\users\\jradr\\onedrive\\escritorio\\utp - adrian campos\\ii a\u00F1o\\i semestre\\lenguaje de programacion i\\proyectos\\ilkapoint\\clases\\detallestransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:clases\\detallestransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2811A72-F660-4115-A0B3-0188ECBDF531}|IlkaPoint.csproj|C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\clases\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,50 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "202605191958191_AgregarDetallesTransaccion.cs",
-              "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Migrations\\202605191958191_AgregarDetallesTransaccion.cs",
-              "RelativeDocumentMoniker": "Migrations\\202605191958191_AgregarDetallesTransaccion.cs",
-              "ToolTip": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Migrations\\202605191958191_AgregarDetallesTransaccion.cs",
-              "RelativeToolTip": "Migrations\\202605191958191_AgregarDetallesTransaccion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T19:58:23.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "202605190339057_AgregarTransaccion.cs",
-              "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Migrations\\202605190339057_AgregarTransaccion.cs",
-              "RelativeDocumentMoniker": "Migrations\\202605190339057_AgregarTransaccion.cs",
-              "ToolTip": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Migrations\\202605190339057_AgregarTransaccion.cs",
-              "RelativeToolTip": "Migrations\\202605190339057_AgregarTransaccion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T03:39:10.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Transaccion.cs",
               "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\Transaccion.cs",
               "RelativeDocumentMoniker": "Clases\\Transaccion.cs",
               "ToolTip": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\Transaccion.cs",
               "RelativeToolTip": "Clases\\Transaccion.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAwwEkAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowFMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-19T01:54:12.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Configuration.cs",
               "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Migrations\\Configuration.cs",
               "RelativeDocumentMoniker": "Migrations\\Configuration.cs",
@@ -111,33 +77,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AppDBContext.cs",
               "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\AppDBContext.cs",
               "RelativeDocumentMoniker": "Clases\\AppDBContext.cs",
               "ToolTip": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\AppDBContext.cs",
               "RelativeToolTip": "Clases\\AppDBContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAywBcAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBcAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-15T23:39:57.456Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DetallesTransaccion.cs",
-              "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\DetallesTransaccion.cs",
-              "RelativeDocumentMoniker": "Clases\\DetallesTransaccion.cs",
-              "ToolTip": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\DetallesTransaccion.cs",
-              "RelativeToolTip": "Clases\\DetallesTransaccion.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwDoAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T17:56:53.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Inventario.cs",
               "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\Inventario.cs",
               "RelativeDocumentMoniker": "Clases\\Inventario.cs",
@@ -146,6 +99,19 @@
               "ViewState": "AgIAAAEAAAAAAAAAAAAiwAoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-15T23:36:42.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DetallesTransaccion.cs",
+              "DocumentMoniker": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\DetallesTransaccion.cs",
+              "RelativeDocumentMoniker": "Clases\\DetallesTransaccion.cs",
+              "ToolTip": "C:\\Users\\jradr\\OneDrive\\Escritorio\\UTP - ADRIAN CAMPOS\\II a\u00F1o\\I Semestre\\LENGUAJE DE PROGRAMACION I\\proyectos\\IlkaPoint\\Clases\\DetallesTransaccion.cs",
+              "RelativeToolTip": "Clases\\DetallesTransaccion.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T17:56:53.989Z",
               "EditorCaption": ""
             }
           ]

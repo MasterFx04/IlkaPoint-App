@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace IlkaPoint.Data.Modelos
 {
-    internal class Producto
+    //La clase padre va ser producto y dentro de esta se van a establecercomo las diferentes caracteristicas o parametros
+    //en las que se segmentara el inventario dentro de la base de datos y la creación de los metodos.
+    public class Producto
     {
+        public int id { get; set; }
+        public string nombre { get; set; }
+        public string categoria { get; set; }
+        public string proveedor { get; set; }
+        public bool precio { get; set; }
+        public int cantidad { get; set; }
+        public virtual decimal calcularPrecio() 
+        {
+            return precio * cantidad; 
+        }
     }
-}
+   
+} 
+
+

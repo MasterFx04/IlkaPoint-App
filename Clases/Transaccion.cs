@@ -81,7 +81,7 @@ namespace IlkaPoint.Clases
 
             fecha = DateTime.Now; //Cada vez que alguien haga una transaccion, la fecha va a ser hoy.
 
-
+            
             total = CalcularDescuento();
         }
 
