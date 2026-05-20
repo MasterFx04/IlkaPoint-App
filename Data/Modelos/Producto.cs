@@ -16,6 +16,11 @@ namespace IlkaPoint.Data.Modelos
         public string proveedor { get; set; }
         public decimal precio { get; set; }
 
+        public virtual decimal CalcularPrecio()
+        {
+            //Aca para polimorfismo
+            return precio;
+        }
     }
    
 } 

@@ -58,9 +58,7 @@
   <ItemGroup>
     <Compile Include="Clases\AppDBContext.cs" />
     <Compile Include="Clases\DetallesTransaccion.cs" />
-    <Compile Include="Clases\Inventario.cs" />
     <Compile Include="Clases\Transaccion.cs" />
-    <Compile Include="Data\AppDbContexto.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
@@ -82,6 +80,10 @@
     <Compile Include="Migrations\202605191958191_AgregarDetallesTransaccion.Designer.cs">
       <DependentUpon>202605191958191_AgregarDetallesTransaccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202605201445438_AgregarProducto.cs" />
+    <Compile Include="Migrations\202605201445438_AgregarProducto.Designer.cs">
+      <DependentUpon>202605201445438_AgregarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605191958191_AgregarDetallesTransaccion.resx">
       <DependentUpon>202605191958191_AgregarDetallesTransaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605201445438_AgregarProducto.resx">
+      <DependentUpon>202605201445438_AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

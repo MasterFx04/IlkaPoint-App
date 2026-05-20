@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace IlkaPoint.Data.Modelos
 {
-    internal class ProductoPorUnidad : Producto
+    public class ProductoPorUnidad : Producto
     {
-        public override decimal calcularPrecio()
+        public override decimal CalcularPrecio()
         {
-            return calcularPrecio * cantidad;
+            //ARREGLAR
+            return 0;
         }
     }
 }

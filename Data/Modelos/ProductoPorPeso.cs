@@ -10,7 +10,7 @@ namespace IlkaPoint.Data.Modelos
     public class ProductoPorPeso : Producto
         {
             public float peso { get; set; }
-            public override decimal calcularPrecio()
+            public override decimal CalcularPrecio()
             {
             return precio * (decimal)peso;
             }
