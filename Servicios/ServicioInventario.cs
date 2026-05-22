@@ -13,6 +13,8 @@ namespace IlkaPoint.Servicios
 {
     public class ServicioInventario
     {
+        public int Id { get; set; }
+
         //este es el primer nivel de validación
         public bool AgregarProducto(Producto nuevoProducto)
         {

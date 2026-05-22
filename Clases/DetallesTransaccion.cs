@@ -70,12 +70,12 @@ namespace IlkaPoint.Clases
             get;
             set;
         }
-        /*
+        
         public Producto Producto
         {
             get;
             set;
         }
-        */
+        
     }
 }

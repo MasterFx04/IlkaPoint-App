@@ -18,9 +18,17 @@ namespace IlkaPoint.Data.Modelos
         
         public string rutaImagenPng { get; set; }
 
+<<<<<<< HEAD
         //le permitira a las clases hijas aplicar un polimorfismo
         public virtual decimal calcularPrecio()
         { return precio; }
+=======
+        public virtual decimal CalcularPrecio()
+        {
+            //Aca para polimorfismo
+            return precio;
+        }
+>>>>>>> c0f397cb5dcca31adba192f7e36aa458bce2f444
     }
    
 } 
