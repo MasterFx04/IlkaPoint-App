@@ -16,8 +16,8 @@ namespace IlkaPoint.Clases
 
         }
 
-        //AQUI VA PRODUCTO E INVENTARIO
-        public DbSet<ServicioInventario> Movimientos { get; set; }
+        //AQUI VA PRODUCTO 
+      
         public DbSet<Producto> Productos { get; set; }
 
         //ACA TODO LO QUE SEA ALMACENAR LA INFORMACION DE LAS TRANSACCIONES

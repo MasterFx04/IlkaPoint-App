@@ -14,7 +14,7 @@ namespace IlkaPoint.Servicios
     public class ServicioInventario
     {
         //este es el primer nivel de validación
-        public bool AgregarProducto(Producto nuevoProducto) 
+        public bool AgregarProducto(Producto nuevoProducto)
         {
             if (string.IsNullOrEmpty(nuevoProducto.nombre))
                 throw new Exception("El nombre del producto es obligatorio para continuar.");
@@ -22,7 +22,7 @@ namespace IlkaPoint.Servicios
             if (nuevoProducto.precio <= 0)
                 throw new Exception("Elprecio debe ser un valor mayor a 0.");
 
-                    using (var db = new AppDBContext())
+            using (var db = new AppDBContext())
             {
                 try
                 {
@@ -33,9 +33,9 @@ namespace IlkaPoint.Servicios
                 }
 
                 catch (Exception)
-                { 
-                     return false;
-                
+                {
+                    return false;
+
                 }
             }
         }
@@ -58,6 +58,87 @@ namespace IlkaPoint.Servicios
                         .ToList();
             }
         }
-    }
+
+        //trabajar en la logica para cuando se agrega la cantidad de los productos 
+
+        public bool AgregarCantidadStock(int productoId, decimal cantidadAgregar)
+        {
+            if (cantidadAgregar <= 0)
+                throw new Exception("La cantidad agregar debe ser mayor a 0");
+
+            using (var db = new AppDBContext()) 
+            {
+
+                try
+                {
+                    Stock registrarStock = db.Stocks.FirstOrDefault(s => s.ProductoId == productoId);
+                    if (registrarStock == null)
+                    {
+                        //por si no existe un registro previo de stock del objeto prodcuto (ejemplo manzana) lo creamos
+                        Stock nuevoStock = new Stock()
+                        {
+                            ProductoId = productoId,
+                            Cantidad = cantidadAgregar,
+                        };
+
+                        db.Stocks.Add(nuevoStock);
+                    }
+
+                    else
+                    {
+                        //si ya existe (cuando se hace la funcion AgregarCantidad += CantidadProducto )
+                        registrarStock.Cantidad += cantidadAgregar;
+                    }
+                    //guardar los cambios en la base de datos 
+                    db.SaveChanges();
+                    return true;
+                }
+
+                catch (Exception)
+                {
+                    return false;
+                }
+
+
+
+
+
+
+
+            }
+        }
+    }   
+
+
+        //servicio inventario para que se comunique con la base de datos 
+        //public bool RegistrarStock(int productoId, decimal cantidadAgregar)
+        // Validación 
+        /* if (cantidadAgregar <= 0)
+        throw new Exception ("La cantidad a agregar debe ser mayor a 0");
+         using (var db = new AppDBContext())
+        {
+        try
+        {
+        //para que el usuario busque el producto en la base de datos segun el Id
+        var producto = db.Producto.Find(productoId);
+
+        //Agregar o sumar la nueva cantidad al stock siendo el caso de que tenia una cantidad previamente 
+        producto.cantidadStock += cantidadAgregar;
+
+        //guardar los cambios en la base de datos 
+        db.SaveChanges();
+        return true; 
+        }
+        catch (Exception)
+        {
+        retun false
+        }
+        }
+        }
+        */
+
+       
+
+    
 }
 

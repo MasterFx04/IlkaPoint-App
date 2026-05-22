@@ -58,9 +58,8 @@
   <ItemGroup>
     <Compile Include="Clases\AppDBContext.cs" />
     <Compile Include="Clases\DetallesTransaccion.cs" />
-    <Compile Include="Clases\Inventario.cs" />
+    <Compile Include="Clases\Stock.cs" />
     <Compile Include="Clases\Transaccion.cs" />
-    <Compile Include="Data\AppDbContexto.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
