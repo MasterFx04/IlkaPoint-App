@@ -49,19 +49,20 @@ namespace IlkaPoint.Clases
             set { precioUnitario = value; }
         }
 
-        public DetallesTransaccion(int productoId, int cantidad, decimal precioUnitario)
+        public DetallesTransaccion(Producto producto, int cantidad)
         {
-            _productoId = productoId;
+            _productoId = producto.id;
             this.cantidad = cantidad;
-            this.precioUnitario = precioUnitario;
+            precioUnitario = producto.precio;
 
-            //ESTA FUNCION VOID CALCULA EL SUBTOTAL DEPENDIENDO DEL PRECIO Y CANTIDAD DEL PRODUCTO
-            CalcularSubtotal();
+
+            //ESTA FUNCION DECIMAL CALCULA EL SUBTOTAL DEPENDIENDO DEL PRECIO Y CANTIDAD DEL PRODUCTO
+            subTotal = CalcularSubtotal();
         }
 
-        private void CalcularSubtotal()
+        private decimal CalcularSubtotal()
         {
-            subTotal = cantidad * precioUnitario;
+            return cantidad * precioUnitario;
         }
 
         //NAVEGACION ENTRE CLASES, ESTO PERMITE QUE UN OBJETO ALMACENE VARIOS OBJETOS Y PODER HACER CONSULTAS

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IlkaPoint.Data.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -58,7 +59,7 @@ namespace IlkaPoint.Clases
             }
         }
         
-        private decimal Total
+        public decimal Total
         {
             get
             {
@@ -71,7 +72,11 @@ namespace IlkaPoint.Clases
             }
         }
 
+
+
         public List<DetallesTransaccion> Detalles {  get; set; }
+
+
 
         //Constructor
         public Transaccion(string metodoPago, bool esJubilado) //registrarTransaccion()
@@ -81,15 +86,17 @@ namespace IlkaPoint.Clases
 
             fecha = DateTime.Now; //Cada vez que alguien haga una transaccion, la fecha va a ser hoy.
 
-            
-            total = CalcularDescuento();
+            Detalles = new List<DetallesTransaccion>();
+
+            total = 0;
         }
 
+        /*
         private decimal CalcularDescuento() //Funcion privada por que se llama solo en la clase, un forms no llamara a la funcion
         {
             decimal descuento = Convert.ToDecimal(Convert.ToDouble(total) * 0.15);
             decimal subResultado;
-            decimal itbms = Convert.ToDecimal(Convert.ToDouble(total) * 0.07); ;
+            decimal itbms = Convert.ToDecimal(Convert.ToDouble(total) * 0.07);
             decimal resultadoFinal;
             if (esJubilado)
             {
@@ -102,12 +109,27 @@ namespace IlkaPoint.Clases
             resultadoFinal = subResultado + itbms;
             return resultadoFinal;
         }
+        */
 
-        /* NO LE VEO NECESIDAD A ESTA FUNCION
+        public decimal CalcularTotal()
+        {
+            if (Detalles == null || Detalles.Count == 0)
+            {
+                return 0;
+            }
+            decimal total = 0;
+            foreach(DetallesTransaccion detalle in Detalles)
+            {
+                total += detalle.SubTotal;
+            }
+            return total;
+
+        }
+        
         public void ActualizarCantidad(decimal cantidadNueva)
         {
-            //NECESITO LA DB DE PRODUCTOS PARA INICIAR
+            //NECESITO LA DB DE Inventario PARA INICIAR
         }
-        */
+        
     }
 }
