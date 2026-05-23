@@ -15,7 +15,8 @@ namespace IlkaPoint.Clases
         [ForeignKey("ProductoId")]
         public Producto Producto { get; set; }
 
-        public decimal Cantidad { get; set; }
+        //public decimal Cantidad { get; set; } La cantidad no es un decimal
+        public int Cantidad { get; set; }
 
         /* Stocks (Existencias): Aquí es donde aplicamos tu nuevo plan. No queremos repetir el nombre ni el precio del producto; solo queremos saber cuántas latas hay en el estante.
 

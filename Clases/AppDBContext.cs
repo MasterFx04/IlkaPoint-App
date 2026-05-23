@@ -19,6 +19,7 @@ namespace IlkaPoint.Clases
         //AQUI VA PRODUCTO 
       
         public DbSet<Producto> Productos { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
 
         //ACA TODO LO QUE SEA ALMACENAR LA INFORMACION DE LAS TRANSACCIONES
         public DbSet<Transaccion> Transacciones { get; set; }

@@ -22,9 +22,9 @@ namespace IlkaPoint.Servicios
                 throw new Exception("El nombre del producto es obligatorio para continuar.");
 
             if (nuevoProducto.precio <= 0)
-                throw new Exception("Elprecio debe ser un valor mayor a 0.");
+                throw new Exception("El precio debe ser un valor mayor a 0");
 
-            using (var db = new AppDBContext())
+            using (AppDBContext db = new AppDBContext())
             {
                 try
                 {
@@ -41,7 +41,7 @@ namespace IlkaPoint.Servicios
                 }
             }
         }
-        //llamado para ver el listado completo del inventario 
+        //llamado para ver el listado completo del inventario
         public List<Producto> ObtenerTodoElInventario()
         {
             using (var db = new AppDBContext())
@@ -53,7 +53,7 @@ namespace IlkaPoint.Servicios
         //Filtro para buscar en el inventario los producto por nombre 
         public List<Producto> BuscarProductoPorNombre(string nombreBusqueda)
         {
-            using (var db = new AppDBContext())
+            using (AppDBContext db = new AppDBContext())
             {
                 return db.Productos
                         .Where(p => p.nombre.Contains(nombreBusqueda))
@@ -63,12 +63,12 @@ namespace IlkaPoint.Servicios
 
         //trabajar en la logica para cuando se agrega la cantidad de los productos 
 
-        public bool AgregarCantidadStock(int productoId, decimal cantidadAgregar)
+        public bool AgregarCantidadStock(int productoId, int cantidadAgregar)
         {
             if (cantidadAgregar <= 0)
                 throw new Exception("La cantidad agregar debe ser mayor a 0");
 
-            using (var db = new AppDBContext()) 
+            using (AppDBContext db = new AppDBContext()) 
             {
 
                 try
