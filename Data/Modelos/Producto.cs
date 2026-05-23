@@ -15,12 +15,20 @@ namespace IlkaPoint.Data.Modelos
         public string categoria { get; set; }
         public string proveedor { get; set; }
         public decimal precio { get; set; }
+        
+        public string rutaImagenPng { get; set; }
 
+<<<<<<< HEAD
+        //le permitira a las clases hijas aplicar un polimorfismo
+        public virtual decimal calcularPrecio()
+        { return precio; }
+=======
         public virtual decimal CalcularPrecio()
         {
             //Aca para polimorfismo
             return precio;
         }
+>>>>>>> c0f397cb5dcca31adba192f7e36aa458bce2f444
     }
    
 } 
