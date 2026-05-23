@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202605201445438_AgregarProducto.Designer.cs">
       <DependentUpon>202605201445438_AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202605232000256_AgregarStock.cs" />
+    <Compile Include="Migrations\202605232000256_AgregarStock.Designer.cs">
+      <DependentUpon>202605232000256_AgregarStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605201445438_AgregarProducto.resx">
       <DependentUpon>202605201445438_AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605232000256_AgregarStock.resx">
+      <DependentUpon>202605232000256_AgregarStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
