@@ -69,6 +69,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSimulaciónInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimulaciónInventario.Designer.cs">
+      <DependentUpon>FormSimulaciónInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202605152356197_InitialCreate.cs" />
     <Compile Include="Migrations\202605152356197_InitialCreate.Designer.cs">
       <DependentUpon>202605152356197_InitialCreate.cs</DependentUpon>
@@ -92,9 +98,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\NuevoProducto.cs" />
     <Compile Include="Servicios\ServicioInventario.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSimulaciónInventario.resx">
+      <DependentUpon>FormSimulaciónInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605152356197_InitialCreate.resx">
       <DependentUpon>202605152356197_InitialCreate.cs</DependentUpon>
