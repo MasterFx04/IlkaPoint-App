@@ -61,6 +61,15 @@ namespace IlkaPoint.Servicios
             }
         }
 
+        public Producto BuscarProductoPorId(int idProducto)
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Productos
+                        .Where(p => p.id.ToString() == idProducto.ToString())
+            }
+        }
+
         //trabajar en la logica para cuando se agrega la cantidad de los productos 
 
         public bool AgregarCantidadStock(int productoId, int cantidadAgregar)
@@ -77,11 +86,7 @@ namespace IlkaPoint.Servicios
                     if (registrarStock == null)
                     {
                         //por si no existe un registro previo de stock del objeto prodcuto (ejemplo manzana) lo creamos
-                        Stock nuevoStock = new Stock()
-                        {
-                            ProductoId = productoId,
-                            Cantidad = cantidadAgregar,
-                        };
+                        Stock nuevoStock = new Stock(productoId, cantidadAgregar, db.Productos.Find(productoId).nombre);
 
                         db.Stocks.Add(nuevoStock);
                     }
@@ -109,6 +114,16 @@ namespace IlkaPoint.Servicios
 
             }
         }
+
+        public List<Stock> ObtenerElStockActual()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks.ToList();
+            }
+        }
+
+
     }   
 
 
@@ -138,6 +153,8 @@ namespace IlkaPoint.Servicios
         }
         }
         */
+
+
 
        
 

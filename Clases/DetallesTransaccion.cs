@@ -49,6 +49,7 @@ namespace IlkaPoint.Clases
             set { precioUnitario = value; }
         }
 
+        //Constructor
         public DetallesTransaccion(Producto producto, int cantidad)
         {
             _productoId = producto.id;

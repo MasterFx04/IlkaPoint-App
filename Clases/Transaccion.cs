@@ -79,9 +79,9 @@ namespace IlkaPoint.Clases
 
 
         //Constructor
-        public Transaccion(string metodoPago, bool esJubilado) //registrarTransaccion()
+        public Transaccion(bool esJubilado) //registrarTransaccion()
         {
-            this.metodoPago = metodoPago;
+            //this.metodoPago = metodoPago;
             this.esJubilado = esJubilado;
 
             fecha = DateTime.Now; //Cada vez que alguien haga una transaccion, la fecha va a ser hoy.
