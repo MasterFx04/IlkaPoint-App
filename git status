@@ -1,0 +1,40 @@
+[33ma753cf6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: checkout: moving from feature-InventarioDB to main
+[33m7deeaec[m[33m ([m[1;32mfeature-InventarioDB[m[33m)[m HEAD@{1}: commit: form de simulación con interfaz y validaciones
+[33mc93bbfc[m HEAD@{2}: commit (merge): Fix de .csproj
+[33m642ed1c[m HEAD@{3}: commit: Fix del archivo .csproj
+[33m34a13b7[m HEAD@{4}: reset: moving to HEAD
+[33m34a13b7[m HEAD@{5}: checkout: moving from main to feature-InventarioDB
+[33ma753cf6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{6}: commit: Guardando los cambios para cambiar de rama
+[33md04752f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{7}: pull origin main: Fast-forward
+[33mc0f397c[m HEAD@{8}: reset: moving to origin/main
+[33m8e3c421[m HEAD@{9}: checkout: moving from servicio-inventario to main
+[33m5a6986c[m[33m ([m[1;31morigin/servicio-inventario[m[33m, [m[1;32mservicio-inventario[m[33m, [m[1;32mlogica-productos[m[33m)[m HEAD@{10}: checkout: moving from logica-productos to servicio-inventario
+[33m5a6986c[m[33m ([m[1;31morigin/servicio-inventario[m[33m, [m[1;32mservicio-inventario[m[33m, [m[1;32mlogica-productos[m[33m)[m HEAD@{11}: rebase (abort): returning to refs/heads/logica-productos
+[33mc0f397c[m HEAD@{12}: pull origin main --rebase (start): checkout c0f397cb5dcca31adba192f7e36aa458bce2f444
+[33m5a6986c[m[33m ([m[1;31morigin/servicio-inventario[m[33m, [m[1;32mservicio-inventario[m[33m, [m[1;32mlogica-productos[m[33m)[m HEAD@{13}: commit (merge): Reestructuración de la lógica de Inventario e Independización de la nueva clase Stock
+[33me3367a7[m HEAD@{14}: reset: moving to HEAD
+[33me3367a7[m HEAD@{15}: commit: Reestructuración del modulo inventario e Independizació de la nueva clase Stock
+[33m8e3c421[m HEAD@{16}: merge main: Fast-forward
+[33m6710783[m[33m ([m[1;31morigin/logica-productos[m[33m)[m HEAD@{17}: checkout: moving from main to logica-productos
+[33m8e3c421[m HEAD@{18}: pull: Fast-forward
+[33m07f76af[m HEAD@{19}: pull: Fast-forward
+[33m62c2d48[m HEAD@{20}: pull: Merge made by the 'ort' strategy.
+[33m1b7cda5[m HEAD@{21}: commit: remover .vs del repositorio
+[33m897ee09[m HEAD@{22}: pull origin main: Fast-forward
+[33mc8c289a[m HEAD@{23}: reset: moving to HEAD
+[33mc8c289a[m HEAD@{24}: checkout: moving from logica-productos to main
+[33m6710783[m[33m ([m[1;31morigin/logica-productos[m[33m)[m HEAD@{25}: commit: Estructura actualizada de ServicioInventario
+[33me0ce0df[m HEAD@{26}: commit (amend): Estructura inicial de carpetas y modelos de la clase Productos
+[33m1bd3049[m HEAD@{27}: commit: Estructura inicial de carpetas y modelos de la clase Productos
+[33mc8c289a[m HEAD@{28}: checkout: moving from logica-productos to logica-productos
+[33mc8c289a[m HEAD@{29}: merge main: Fast-forward
+[33md2ec0ec[m HEAD@{30}: checkout: moving from main to logica-productos
+[33mc8c289a[m HEAD@{31}: pull origin main: Fast-forward
+[33md2ec0ec[m HEAD@{32}: reset: moving to HEAD
+[33md2ec0ec[m HEAD@{33}: checkout: moving from logica-productos to main
+[33md2ec0ec[m HEAD@{34}: checkout: moving from main to logica-productos
+[33md2ec0ec[m HEAD@{35}: checkout: moving from logica-productos to main
+[33md2ec0ec[m HEAD@{36}: checkout: moving from main to logica-productos
+[33md2ec0ec[m HEAD@{37}: checkout: moving from main to main
+[33md2ec0ec[m HEAD@{38}: pull: Fast-forward
+[33m84838c1[m HEAD@{39}: clone: from https://github.com/MasterFx04/IlkaPoint-App

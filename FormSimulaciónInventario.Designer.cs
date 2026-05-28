@@ -115,7 +115,7 @@
             this.lblImagen.Size = new System.Drawing.Size(63, 20);
             this.lblImagen.TabIndex = 8;
             this.lblImagen.Text = "Imagen";
-            this.lblImagen.Click += new System.EventHandler(this.label3_Click);
+ 
             // 
             // lblProveedor
             // 
