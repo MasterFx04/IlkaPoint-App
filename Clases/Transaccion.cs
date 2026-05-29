@@ -20,7 +20,7 @@ namespace IlkaPoint.Clases
         private decimal total;
 
         //Todos los atributos necesitan get y set en su encapsulamiento
-        private DateTime Fecha
+        public DateTime Fecha
         {
             get
             {
@@ -33,7 +33,7 @@ namespace IlkaPoint.Clases
             }
         }
 
-        private string MetodoPago
+        public string MetodoPago
         {
             get
             {

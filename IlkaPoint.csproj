@@ -88,6 +88,12 @@
     <Compile Include="FormsPrueba\RegistroVentasForm.Designer.cs">
       <DependentUpon>RegistroVentasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsPrueba\UserControlPrueba.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormsPrueba\UserControlPrueba.Designer.cs">
+      <DependentUpon>UserControlPrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202605152356197_InitialCreate.cs" />
     <Compile Include="Migrations\202605152356197_InitialCreate.Designer.cs">
       <DependentUpon>202605152356197_InitialCreate.cs</DependentUpon>
@@ -112,6 +118,14 @@
     <Compile Include="Migrations\202605242139003_ChangesOnStock.Designer.cs">
       <DependentUpon>202605242139003_ChangesOnStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202605291644513_IDK.cs" />
+    <Compile Include="Migrations\202605291644513_IDK.Designer.cs">
+      <DependentUpon>202605291644513_IDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202605292202565_Fix1.cs" />
+    <Compile Include="Migrations\202605292202565_Fix1.Designer.cs">
+      <DependentUpon>202605292202565_Fix1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsPrueba\RegistroVentasForm.resx">
       <DependentUpon>RegistroVentasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsPrueba\UserControlPrueba.resx">
+      <DependentUpon>UserControlPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605152356197_InitialCreate.resx">
       <DependentUpon>202605152356197_InitialCreate.cs</DependentUpon>
@@ -145,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605242139003_ChangesOnStock.resx">
       <DependentUpon>202605242139003_ChangesOnStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605291644513_IDK.resx">
+      <DependentUpon>202605291644513_IDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605292202565_Fix1.resx">
+      <DependentUpon>202605292202565_Fix1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

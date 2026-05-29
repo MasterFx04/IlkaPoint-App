@@ -28,9 +28,26 @@ namespace IlkaPoint
             string nombre = textBox1.Text;
             string categoria = textBox2.Text;
             string proovedor = textBox3.Text;
-            decimal precio = decimal.Parse(textBox4.Text); ;
-            //Prueba agregar Nuevo Producto
+            decimal precio = decimal.Parse(textBox4.Text);
+
             Producto productoPrueba = new ProductoPorUnidad(nombre, categoria, proovedor, precio, "skibidi");
+
+            /*
+            if (comboBox1.SelectedItem.ToString() == "Unitario")
+            {
+                productoPrueba = new ProductoPorUnidad(nombre, categoria, proovedor, precio, "skibidi");
+
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Por Precio")
+            {
+                productoPrueba = new ProductoPorPeso(nombre, categoria, proovedor, precio, "skibidi", 0);
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un Tipo de Producto");
+                return;
+            }
+            */
 
             inventario.AgregarProducto(productoPrueba);
 
@@ -41,6 +58,10 @@ namespace IlkaPoint
         {
             ServicioInventario inventario = new ServicioInventario();
             dataGridView1.DataSource = inventario.ObtenerTodoElInventario();
+
+            dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.Columns["rutaImagenPng"].Visible = false;
+
 
         }
 
@@ -74,6 +95,13 @@ namespace IlkaPoint
 
             Producto producto = (Producto)dataGridView1.Rows[e.RowIndex].DataBoundItem;
             //MessageBox.Show(producto.nombre); si funciona
+
+            if (producto is ProductoPorPeso)
+            {
+                MessageBox.Show("No se ingresan cantidades de este producto ya que es un producto por peso");
+                return;
+            }
+
             FormAgregarStock formStock = new FormAgregarStock(producto);
             formStock.Show();
         }
@@ -83,6 +111,12 @@ namespace IlkaPoint
             RegistroVentasForm form = new RegistroVentasForm();
             form.Show();
             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            label5.Text = "Precio " + comboBox1.SelectedItem.ToString();
         }
     }
 }

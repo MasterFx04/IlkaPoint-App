@@ -51,9 +51,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(368, 319);
+            this.dataGridView1.Size = new System.Drawing.Size(368, 274);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // button1
             // 
@@ -82,15 +82,14 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(293, 319);
             this.dataGridView2.TabIndex = 3;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(862, 377);
+            this.button2.Location = new System.Drawing.Point(886, 377);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 46);
             this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
+            this.button2.Text = "Comprar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -140,7 +139,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(872, 136);
+            this.button4.Location = new System.Drawing.Point(917, 136);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 37);
             this.button4.TabIndex = 11;
@@ -150,18 +149,19 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(872, 204);
+            this.button5.Location = new System.Drawing.Point(917, 204);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 34);
             this.button5.TabIndex = 12;
             this.button5.Text = "Efectivo";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // RegistroVentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1021, 450);
+            this.ClientSize = new System.Drawing.Size(1021, 449);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);

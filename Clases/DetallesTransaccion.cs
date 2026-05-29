@@ -12,6 +12,7 @@ namespace IlkaPoint.Clases
         private int _id;
         private int _transaccionId;
         private int _productoId;
+        private string _produtoNombre;
 
         private int cantidad;
         private decimal precioUnitario;
@@ -33,6 +34,12 @@ namespace IlkaPoint.Clases
             get { return _productoId; }
             set { _productoId = value; }
         }
+
+        public string ProductoNombre
+        {
+            get { return _produtoNombre;  }
+            set { _produtoNombre = value;  }
+        }
         public int Cantidad
         {
             get { return cantidad; }
@@ -52,6 +59,8 @@ namespace IlkaPoint.Clases
         //Constructor
         public DetallesTransaccion(Producto producto, int cantidad)
         {
+            //this.Producto = producto;
+            _produtoNombre = producto.nombre;
             _productoId = producto.id;
             this.cantidad = cantidad;
             precioUnitario = producto.precio;

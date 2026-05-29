@@ -28,6 +28,24 @@ namespace IlkaPoint.Clases
         {
             using (AppDBContext db = new AppDBContext())
             {
+                foreach (DetallesTransaccion detalle in transaccion.Detalles)
+                {
+                    detalle.Producto = null;
+                    detalle.Transaccion = null;
+
+                    // busca el stock del producto
+                    Stock stock = db.Stocks.FirstOrDefault(s => s.ProductoId == detalle.ProductoId);
+
+                    if (stock == null)
+                        throw new Exception($"No existe stock registrado para el producto {detalle.Producto.nombre}");
+
+                    if (stock.Cantidad < detalle.Cantidad)
+                        throw new Exception($"Stock insuficiente para {detalle.Producto.nombre}. Disponible: {stock.Cantidad}");
+
+                    // reduce la cantidad
+                    stock.Cantidad -= detalle.Cantidad;
+                }
+
                 transaccion.Total = transaccion.CalcularTotal();
                 db.Transacciones.Add(transaccion);
                 db.SaveChanges();

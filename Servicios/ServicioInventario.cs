@@ -61,17 +61,39 @@ namespace IlkaPoint.Servicios
             }
         }
 
+        public List<Stock> BuscarStockPorNombre(string nombreDeBusqueda)
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks
+                        .Where(s => s.productoNombre.Contains(nombreDeBusqueda))
+                        .ToList();
+            }
+        }
+
+        
         public Producto BuscarProductoPorId(int idProducto)
         {
             using (AppDBContext db = new AppDBContext())
             {
-                return db.Productos
-                        .Where(p => p.id.ToString() == idProducto.ToString())
+                return db.Productos.Find(idProducto);
             }
         }
 
-        //trabajar en la logica para cuando se agrega la cantidad de los productos 
+        /*
+        public List<ProductoPorPeso> BuscarProductosTipoPeso()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Productos
+                        .OfType<ProductoPorPeso>()
+                        .ToList();
+            }
+        }
+        */
+        
 
+        //trabajar en la logica para cuando se agrega la cantidad de los productos 
         public bool AgregarCantidadStock(int productoId, int cantidadAgregar)
         {
             if (cantidadAgregar <= 0)
