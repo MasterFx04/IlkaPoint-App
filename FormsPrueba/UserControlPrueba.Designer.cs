@@ -66,7 +66,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(21, 274);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 182);
+            this.panel1.Size = new System.Drawing.Size(465, 182);
             this.panel1.TabIndex = 3;
             // 
             // label3
@@ -88,7 +88,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "UserControlPrueba";
-            this.Size = new System.Drawing.Size(357, 517);
+            this.Size = new System.Drawing.Size(526, 517);
             this.Load += new System.EventHandler(this.UserControlPrueba_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

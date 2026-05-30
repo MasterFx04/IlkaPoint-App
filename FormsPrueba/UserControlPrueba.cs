@@ -30,7 +30,7 @@ namespace IlkaPoint.FormsPrueba
             {
                 //SE CREARA UN LABEL POR CADA DETALLE
                 Label lblDetalle = new Label();
-                lblDetalle.Text = $"{detalle.Cantidad}x {detalle.ProductoNombre} - ${detalle.PrecioUnitario} = ${detalle.SubTotal}";
+                lblDetalle.Text = $"{detalle.Cantidad}x {detalle.ProductoNombre} - ${detalle.PrecioUnitario} = ${detalle.SubTotal} - ${transaccion.MetodoPago}";
                 lblDetalle.Location = new Point(10, posicionY);
                 lblDetalle.AutoSize = true;
 

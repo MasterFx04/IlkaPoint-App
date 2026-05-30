@@ -91,6 +91,64 @@ namespace IlkaPoint.Servicios
             }
         }
         */
+
+        public void EditarProducto(Producto productoEditado, Stock stockEditado)
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                
+                Producto producto = db.Productos.Find(productoEditado.id);
+
+                if (producto == null)
+                {
+                    throw new Exception("Producto no Encontrado");
+                }
+
+                producto.nombre = productoEditado.nombre;
+                producto.precio = productoEditado.precio;
+                producto.categoria = productoEditado.categoria;
+
+                db.SaveChanges();
+
+            }
+            using (AppDBContext db = new AppDBContext())
+            {
+
+
+                Stock stock = db.Stocks.Find(stockEditado.Id);
+                if (stock == null)
+                {
+                    throw new Exception("Producto no Encontrado");
+
+                }
+
+                stock.Cantidad = stockEditado.Cantidad;
+
+                db.SaveChanges();
+            }
+        }
+
+        public void EliminarProducto(int idProducto)
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                //ELIMINAMOS EL STOCK
+                Stock stock = db.Stocks.FirstOrDefault(s => s.ProductoId == idProducto);
+                if (stock != null)
+                {
+                    db.Stocks.Remove(stock);
+                }
+
+                //LUEGO ELIMINAMOS EL PRODUCTO
+                Producto producto = db.Productos.Find(idProducto);
+                if (producto != null)
+                {
+                    db.Productos.Remove(producto);
+                }
+
+                db.SaveChanges();
+            }
+        }
         
 
         //trabajar en la logica para cuando se agrega la cantidad de los productos 
