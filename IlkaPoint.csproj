@@ -93,15 +93,17 @@
     <Compile Include="FormsPrueba\EditProduct.Designer.cs">
       <DependentUpon>EditProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsPrueba\Form1.cs">
+    <Compile Include="FormsPrueba\Form1Backup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsPrueba\Form1.Designer.cs">
-    <Compile Include="Forms Oficiales\Form1.cs">
+    <Compile Include="FormsPrueba\Form1Backup.Designer.cs">
+      <DependentUpon>Form1Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Oficiales\Form1v2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Oficiales\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms Oficiales\Form1v2.Designer.cs">
+      <DependentUpon>Form1v2.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsPrueba\FormAgregarStock.cs">
       <SubType>Form</SubType>
@@ -174,9 +176,11 @@
     <EmbeddedResource Include="FormsPrueba\EditProduct.resx">
       <DependentUpon>EditProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsPrueba\Form1.resx">
-    <EmbeddedResource Include="Forms Oficiales\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormsPrueba\Form1Backup.resx">
+      <DependentUpon>Form1Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Oficiales\Form1v2.resx">
+      <DependentUpon>Form1v2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsPrueba\FormAgregarStock.resx">
       <DependentUpon>FormAgregarStock.cs</DependentUpon>

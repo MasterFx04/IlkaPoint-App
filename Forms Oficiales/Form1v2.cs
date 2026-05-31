@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace IlkaPoint
 {
-    public partial class Form1 : Form
+    public partial class Form1Backup : Form
     {
         // Paleta de Colores Estética
         public static readonly Color AzulFondo = ColorTranslator.FromHtml("#1A3560");         // Fondo de la pantalla principal
@@ -21,7 +21,7 @@ namespace IlkaPoint
         public static readonly Color BlancoTexto = ColorTranslator.FromHtml("#FFFFFF");       // Textos legibles
         public static readonly Color AzulMenu = ColorTranslator.FromHtml("#08243B");          // Menú lateral izquierdo
 
-        public Form1()
+        public Form1Backup()
         {
             InitializeComponent();
             ApplyTheme();

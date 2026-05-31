@@ -1,6 +1,6 @@
-﻿namespace IlkaPoint
+﻿namespace IlkaPoint.FormsPrueba
 {
-    partial class Form1
+    partial class Form1Backup
     {
         /// <summary>
         /// Required designer variable.

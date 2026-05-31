@@ -1,6 +1,6 @@
 ﻿namespace IlkaPoint
 {
-    partial class Form1
+    partial class Form1Backup
     {
         /// <summary>
         /// Required designer variable.
