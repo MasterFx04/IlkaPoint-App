@@ -20,14 +20,14 @@ namespace IlkaPoint.Clases
 
         private void ConfigurarEstiloEstetico()
         {
-            this.BackColor = Form1Backup.AzulMenu;
+            this.BackColor = Form1v2.AzulMenu;
 
        
-            btnVerFactura.BackColor = Form1Backup.AzulClaroTarjetas;
+            btnVerFactura.BackColor = Form1v2.AzulClaroTarjetas;
             btnVerFactura.ForeColor = Color.White;      // Texto en blanco
             //btnVerFactura.Type = AntdUI.TTypeStandard.Primary;
-            lblNumVenta1.ForeColor = Form1Backup.AzulClaroTarjetas;
-            lblVenta1.ForeColor = Form1Backup.AzulClaroTarjetas;
+            lblNumVenta1.ForeColor = Form1v2.AzulClaroTarjetas;
+            lblVenta1.ForeColor = Form1v2.AzulClaroTarjetas;
         }
         public void CargarDatos(string numVenta, string fecha, string cliente, double total)
         {
