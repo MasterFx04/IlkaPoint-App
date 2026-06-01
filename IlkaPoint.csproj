@@ -36,8 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AntdUI, Version=2.3.14.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
-      <HintPath>packages\AntdUI.2.3.14\lib\net46\AntdUI.dll</HintPath>
     <Reference Include="AntdUI, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
       <HintPath>packages\AntdUI.2.4.0\lib\net46\AntdUI.dll</HintPath>
     </Reference>
