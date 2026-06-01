@@ -36,6 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AntdUI, Version=2.3.14.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
+      <HintPath>packages\AntdUI.2.3.14\lib\net46\AntdUI.dll</HintPath>
     <Reference Include="AntdUI, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
       <HintPath>packages\AntdUI.2.4.0\lib\net46\AntdUI.dll</HintPath>
     </Reference>
@@ -45,10 +47,16 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,19 +67,26 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\AppDBContext.cs" />
     <Compile Include="Clases\DetallesTransaccion.cs" />
     <Compile Include="Clases\Stock.cs" />
+    <Compile Include="Forms Oficiales\Tarjeta de Ventas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms Oficiales\Tarjeta de Ventas.Designer.cs">
+      <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Transaccion.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms Oficiales\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms Oficiales\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDashboardPrincipal.cs">
@@ -115,8 +130,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Servicios\ServicioInventario.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms Oficiales\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboardPrincipal.resx">
@@ -145,8 +165,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Oficiales\Tarjeta de Ventas.resx">
+      <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,6 +191,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\image-Photoroom %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2810%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
     <None Include="Resources\search-engine-optimization.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
