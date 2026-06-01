@@ -196,6 +196,9 @@ namespace IlkaPoint.Properties {
         internal static System.Drawing.Bitmap salesimg {
             get {
                 object obj = ResourceManager.GetObject("salesimg", resourceCulture);
+        internal static System.Drawing.Bitmap search_engine_optimization {
+            get {
+                object obj = ResourceManager.GetObject("search-engine-optimization", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
