@@ -36,13 +36,13 @@
             this.txtBuscar = new AntdUI.Input();
             this.label2 = new System.Windows.Forms.Label();
             this.panelContenido = new AntdUI.In.FlowLayoutPanel();
+            this.btnNuevaVenta = new FontAwesome.Sharp.IconButton();
             this.avatarLogo = new AntdUI.Avatar();
             this.btnCerrarsesion = new FontAwesome.Sharp.IconButton();
             this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.btnVentas = new FontAwesome.Sharp.IconButton();
             this.btnInventario = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new FontAwesome.Sharp.IconButton();
-            this.btnNuevaVenta = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelEncabezado.SuspendLayout();
             this.SuspendLayout();
@@ -159,6 +159,26 @@
             this.panelContenido.Size = new System.Drawing.Size(903, 622);
             this.panelContenido.TabIndex = 3;
             this.panelContenido.Text = "flowLayoutPanel1";
+            // 
+            // btnNuevaVenta
+            // 
+            this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevaVenta.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaVenta.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnNuevaVenta.IconColor = System.Drawing.Color.White;
+            this.btnNuevaVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevaVenta.IconSize = 45;
+            this.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaVenta.Location = new System.Drawing.Point(611, 67);
+            this.btnNuevaVenta.Name = "btnNuevaVenta";
+            this.btnNuevaVenta.Size = new System.Drawing.Size(266, 55);
+            this.btnNuevaVenta.TabIndex = 3;
+            this.btnNuevaVenta.Text = "Nueva Venta";
+            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // avatarLogo
             // 
@@ -291,25 +311,6 @@
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // btnNuevaVenta
-            // 
-            this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevaVenta.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevaVenta.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnNuevaVenta.IconColor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevaVenta.IconSize = 45;
-            this.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(611, 67);
-            this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(266, 55);
-            this.btnNuevaVenta.TabIndex = 3;
-            this.btnNuevaVenta.Text = "Nueva Venta";
-            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevaVenta.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 

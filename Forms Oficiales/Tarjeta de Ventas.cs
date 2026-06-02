@@ -22,18 +22,22 @@ namespace IlkaPoint.Clases
         {
             this.BackColor = Form1.AzulMenu;
 
-       
+
             btnVerFactura.BackColor = Form1.AzulClaroTarjetas;
-            btnVerFactura.ForeColor = Color.White;      // Texto en blanco
-            //btnVerFactura.Type = AntdUI.TTypeStandard.Primary;
+            btnVerFactura.ForeColor = Color.White;  
             lblNumVenta1.ForeColor = Form1.AzulClaroTarjetas;
             lblVenta1.ForeColor = Form1.AzulClaroTarjetas;
         }
-        public void CargarDatos(string numVenta, string fecha, string cliente, double total)
+
+        /// <summary>
+        /// Carga los datos de la venta en la tarjeta estética del historial.
+        /// </summary>
+        /// <param name="metodoPago"> 
+        public void CargarDatos(string numVenta, string fecha, string metodoPago, double total)
         {
             lblNumVenta1.Text = numVenta;
             lblDayVenta.Text = fecha;
-            lblUserName.Text = cliente;
+            lblPaidMet.Text = metodoPago;
             lblTotalVenta.Text = $"$ {total:N2}";
         }
 
@@ -54,7 +58,7 @@ namespace IlkaPoint.Clases
 
         private void lblNumVenta1_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
 }
