@@ -193,12 +193,42 @@ namespace IlkaPoint.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lupaimg {
+            get {
+                object obj = ResourceManager.GetObject("lupaimg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap salesimg {
             get {
                 object obj = ResourceManager.GetObject("salesimg", resourceCulture);
         internal static System.Drawing.Bitmap search_engine_optimization {
             get {
                 object obj = ResourceManager.GetObject("search-engine-optimization", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xmark {
+            get {
+                object obj = ResourceManager.GetObject("xmark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xredmarkimg {
+            get {
+                object obj = ResourceManager.GetObject("xredmarkimg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
