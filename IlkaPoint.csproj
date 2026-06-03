@@ -36,8 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AntdUI, Version=2.3.14.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
-      <HintPath>packages\AntdUI.2.3.14\lib\net46\AntdUI.dll</HintPath>
     <Reference Include="AntdUI, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
       <HintPath>packages\AntdUI.2.4.0\lib\net46\AntdUI.dll</HintPath>
     </Reference>
@@ -73,6 +71,10 @@
     <Compile Include="Clases\AppDBContext.cs" />
     <Compile Include="Clases\DetallesTransaccion.cs" />
     <Compile Include="Clases\Stock.cs" />
+    <Compile Include="Clases\Transaccion.cs" />
+    <Compile Include="Data\Modelos\Producto.cs" />
+    <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
+    <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
     <Compile Include="Forms Oficiales\AgregarVenta.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +86,12 @@
     </Compile>
     <Compile Include="Forms Oficiales\Form_FondoOscuro.Designer.cs">
       <DependentUpon>Form_FondoOscuro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Oficiales\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Oficiales\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms Oficiales\InfoProducto.cs">
       <SubType>UserControl</SubType>
@@ -103,21 +111,12 @@
     <Compile Include="Forms Oficiales\Tarjeta de Ventas.Designer.cs">
       <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Transaccion.cs" />
-    <Compile Include="Data\Modelos\Producto.cs" />
-    <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
-    <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
-    <Compile Include="Forms Oficiales\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Oficiales\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms Oficiales\VerFactura.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms Oficiales\VerFactura.Designer.cs">
       <DependentUpon>VerFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDashboardPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,7 +163,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
     <Compile Include="Servicios\ServicioInventario.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Forms Oficiales\AgregarVenta.resx">
       <DependentUpon>AgregarVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,8 +186,12 @@
     <EmbeddedResource Include="Forms Oficiales\ItemProducto.resx">
       <DependentUpon>ItemProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Oficiales\Tarjeta de Ventas.resx">
+      <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Oficiales\VerFactura.resx">
       <DependentUpon>VerFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboardPrincipal.resx">
       <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,53 +221,22 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Oficiales\Tarjeta de Ventas.resx">
-      <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image-Photoroom %2810%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image-Photoroom %2817%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image-Photoroom %2815%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image-Photoroom %2812%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image-Photoroom %287%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image-Photoroom %2810%291.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image-Photoroom %2818%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2.png" />
     <None Include="Resources\search-engine-optimization.png" />
   </ItemGroup>
