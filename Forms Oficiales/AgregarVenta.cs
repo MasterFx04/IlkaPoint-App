@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -135,7 +135,6 @@ namespace IlkaPoint.Forms_Oficiales
 
             nuevaFila.CargarDatos(prod.Id, prod.Nombre, prod.Precio, prod.Foto);
 
-            // xxxxxxxx
             flpListaProductos.Controls.Add(nuevaFila);
 
             nuevaFila.BringToFront();
