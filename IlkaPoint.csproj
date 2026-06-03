@@ -38,6 +38,8 @@
   <ItemGroup>
     <Reference Include="AntdUI, Version=2.3.14.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
       <HintPath>packages\AntdUI.2.3.14\lib\net46\AntdUI.dll</HintPath>
+    <Reference Include="AntdUI, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
+      <HintPath>packages\AntdUI.2.4.0\lib\net46\AntdUI.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.2\lib\net45\EntityFramework.dll</HintPath>
@@ -55,6 +57,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -115,6 +118,23 @@
     </Compile>
     <Compile Include="Forms Oficiales\VerFactura.Designer.cs">
       <DependentUpon>VerFactura.cs</DependentUpon>
+    <Compile Include="FrmDashboardPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDashboardPrincipal.Designer.cs">
+      <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventario.Designer.cs">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202605152356197_InitialCreate.cs" />
     <Compile Include="Migrations\202605152356197_InitialCreate.Designer.cs">
@@ -162,6 +182,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Oficiales\VerFactura.resx">
       <DependentUpon>VerFactura.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDashboardPrincipal.resx">
+      <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventario.resx">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605152356197_InitialCreate.resx">
       <DependentUpon>202605152356197_InitialCreate.cs</DependentUpon>
@@ -186,6 +214,11 @@
     <EmbeddedResource Include="Forms Oficiales\Tarjeta de Ventas.resx">
       <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -226,6 +259,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2.png" />
+    <None Include="Resources\search-engine-optimization.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
