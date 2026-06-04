@@ -38,11 +38,12 @@
             this.lblNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblNombreProducto.AutoEllipsis = true;
-            this.lblNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreProducto.AutoSize = true;
+            this.lblNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreProducto.ForeColor = System.Drawing.Color.White;
-            this.lblNombreProducto.Location = new System.Drawing.Point(15, 7);
+            this.lblNombreProducto.Location = new System.Drawing.Point(15, 3);
             this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(258, 23);
+            this.lblNombreProducto.Size = new System.Drawing.Size(195, 25);
             this.lblNombreProducto.TabIndex = 0;
             this.lblNombreProducto.Text = "Nombre del Producto";
             this.lblNombreProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -51,11 +52,12 @@
             // 
             this.lblOperacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblOperacion.AutoEllipsis = true;
-            this.lblOperacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperacion.AutoSize = true;
+            this.lblOperacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperacion.ForeColor = System.Drawing.Color.Silver;
-            this.lblOperacion.Location = new System.Drawing.Point(15, 30);
+            this.lblOperacion.Location = new System.Drawing.Point(15, 33);
             this.lblOperacion.Name = "lblOperacion";
-            this.lblOperacion.Size = new System.Drawing.Size(166, 23);
+            this.lblOperacion.Size = new System.Drawing.Size(81, 25);
             this.lblOperacion.TabIndex = 1;
             this.lblOperacion.Text = "0 x 0.00";
             this.lblOperacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -64,7 +66,7 @@
             // 
             this.lblSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSubtotal.AutoEllipsis = true;
-            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtotal.ForeColor = System.Drawing.Color.White;
             this.lblSubtotal.Location = new System.Drawing.Point(301, 7);
             this.lblSubtotal.Name = "lblSubtotal";
@@ -78,15 +80,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lblNombreProducto);
             this.Controls.Add(this.lblSubtotal);
             this.Controls.Add(this.lblOperacion);
-            this.Controls.Add(this.lblNombreProducto);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(405, 55);
             this.Name = "ItemProducto";
             this.Size = new System.Drawing.Size(405, 55);
             this.Load += new System.EventHandler(this.ItemProducto_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

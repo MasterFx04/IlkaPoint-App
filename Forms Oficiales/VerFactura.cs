@@ -102,7 +102,7 @@ namespace IlkaPoint.Forms_Oficiales
                 lblNumVenta.Left = centroPanel - (lblNumVenta.Width / 2);
             }
 
-            if (lblFecha != null) lblFecha.Left = 20;
+            if (lblFecha != null) lblFecha.Left = 18;
 
             if (lblFechaFactura != null)
             {
@@ -141,6 +141,11 @@ namespace IlkaPoint.Forms_Oficiales
 
         private void lblNumVenta_Click(object sender, EventArgs e)
         {
+        }
+
+        private void panelArriba_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

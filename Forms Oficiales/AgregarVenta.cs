@@ -109,7 +109,7 @@ namespace IlkaPoint.Forms_Oficiales
                     }
                     else
                     {
-                        MessageBox.Show("No se encontraron productos que coincidan con la búsqueda.", "Ilka Point", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("No se encontraron productos que coincidan con la búsqueda.", "Ilca Point", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtBuscarProducto.Clear();
                         txtBuscarProducto.Focus();
                     }
@@ -228,9 +228,9 @@ namespace IlkaPoint.Forms_Oficiales
             // Para recalcular totales (total de productos) antes de guardar
             ActualizarTotales();
 
-            var nuevaVenta = new Form1.RegistroVenta()
+            var nuevaVenta = new Form1v2.RegistroVenta()
             {
-                IdVenta = "00" + (Form1.BaseDatosVentas.Count + 1), 
+                IdVenta = "00" + (Form1v2.BaseDatosVentas.Count + 1), 
                 MetodoPago = metodoPagoSeleccionado, 
                 Fecha = DateTime.Now.ToString("dd-MM-yyyy"),
                 TotalArticulos = int.Parse(lblTotalProductos.Text),
@@ -244,7 +244,7 @@ namespace IlkaPoint.Forms_Oficiales
                 {
                     if (int.TryParse(item.txtCantidad.Text, out int cant) && cant > 0)
                     {
-                        nuevaVenta.Productos.Add(new Form1.ItemVendido
+                        nuevaVenta.Productos.Add(new Form1v2.ItemVendido
                         {
                             Nombre = item.lblNombre.Text,
                             Cantidad = cant,
@@ -255,7 +255,7 @@ namespace IlkaPoint.Forms_Oficiales
             }
 
             // Guardamos venta
-            Form1.BaseDatosVentas.Add(nuevaVenta);
+            Form1v2.BaseDatosVentas.Add(nuevaVenta);
 
             MessageBox.Show($"¡Venta registrada con éxito (ID: {nuevaVenta.IdVenta})!", "Ilka Point", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -51,13 +51,13 @@
             this.panelCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCompra.BackColor = System.Drawing.Color.Transparent;
+            this.panelCompra.Controls.Add(this.cmbMetodoPago);
             this.panelCompra.Controls.Add(this.lblNumVenta);
             this.panelCompra.Controls.Add(this.lblTotalProductos);
             this.panelCompra.Controls.Add(this.lblTotalPrecio);
             this.panelCompra.Controls.Add(this.lblMetPago);
             this.panelCompra.Controls.Add(this.txtTotal);
             this.panelCompra.Controls.Add(this.lblTextoCantidad);
-            this.panelCompra.Controls.Add(this.cmbMetodoPago);
             this.panelCompra.Location = new System.Drawing.Point(37, 688);
             this.panelCompra.Name = "panelCompra";
             this.panelCompra.Size = new System.Drawing.Size(410, 218);
@@ -81,7 +81,7 @@
             // 
             this.lblTotalProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotalProductos.AutoSize = true;
-            this.lblTotalProductos.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProductos.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalProductos.ForeColor = System.Drawing.Color.White;
             this.lblTotalProductos.Location = new System.Drawing.Point(349, 55);
             this.lblTotalProductos.Name = "lblTotalProductos";
@@ -93,7 +93,7 @@
             // lblTotalPrecio
             // 
             this.lblTotalPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrecio.ForeColor = System.Drawing.Color.White;
             this.lblTotalPrecio.Location = new System.Drawing.Point(200, 159);
             this.lblTotalPrecio.Name = "lblTotalPrecio";
@@ -106,9 +106,9 @@
             // 
             this.lblMetPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMetPago.AutoSize = true;
-            this.lblMetPago.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMetPago.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMetPago.ForeColor = System.Drawing.Color.White;
-            this.lblMetPago.Location = new System.Drawing.Point(26, 107);
+            this.lblMetPago.Location = new System.Drawing.Point(26, 105);
             this.lblMetPago.Name = "lblMetPago";
             this.lblMetPago.Size = new System.Drawing.Size(189, 30);
             this.lblMetPago.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtTotal.AutoSize = true;
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.ForeColor = System.Drawing.Color.White;
             this.txtTotal.Location = new System.Drawing.Point(24, 159);
             this.txtTotal.Name = "txtTotal";
@@ -132,7 +132,7 @@
             // 
             this.lblTextoCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTextoCantidad.AutoSize = true;
-            this.lblTextoCantidad.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextoCantidad.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextoCantidad.ForeColor = System.Drawing.Color.White;
             this.lblTextoCantidad.Location = new System.Drawing.Point(26, 55);
             this.lblTextoCantidad.Name = "lblTextoCantidad";
@@ -144,13 +144,13 @@
             // cmbMetodoPago
             // 
             this.cmbMetodoPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbMetodoPago.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMetodoPago.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMetodoPago.FormattingEnabled = true;
             this.cmbMetodoPago.Items.AddRange(new object[] {
             "Efectivo",
             "Yappy",
             "Tarjeta"});
-            this.cmbMetodoPago.Location = new System.Drawing.Point(200, 103);
+            this.cmbMetodoPago.Location = new System.Drawing.Point(200, 105);
             this.cmbMetodoPago.Name = "cmbMetodoPago";
             this.cmbMetodoPago.Size = new System.Drawing.Size(181, 38);
             this.cmbMetodoPago.TabIndex = 0;

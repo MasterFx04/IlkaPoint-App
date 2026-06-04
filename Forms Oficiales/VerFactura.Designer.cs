@@ -94,6 +94,7 @@
             this.panelArriba.Name = "panelArriba";
             this.panelArriba.Size = new System.Drawing.Size(410, 299);
             this.panelArriba.TabIndex = 7;
+            this.panelArriba.Paint += new System.Windows.Forms.PaintEventHandler(this.panelArriba_Paint);
             // 
             // lblFechaFactura
             // 
@@ -114,7 +115,7 @@
             this.lblFecha.ForeColor = System.Drawing.Color.White;
             this.lblFecha.Location = new System.Drawing.Point(14, 206);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(83, 30);
+            this.lblFecha.Size = new System.Drawing.Size(79, 30);
             this.lblFecha.TabIndex = 14;
             this.lblFecha.Text = "Fecha:";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,7 +197,7 @@
             this.lblMetPago.ForeColor = System.Drawing.Color.White;
             this.lblMetPago.Location = new System.Drawing.Point(49, 849);
             this.lblMetPago.Name = "lblMetPago";
-            this.lblMetPago.Size = new System.Drawing.Size(189, 30);
+            this.lblMetPago.Size = new System.Drawing.Size(178, 30);
             this.lblMetPago.TabIndex = 12;
             this.lblMetPago.Text = "Forma de Pago:";
             this.lblMetPago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +223,7 @@
             this.lblTextoCantidad.ForeColor = System.Drawing.Color.White;
             this.lblTextoCantidad.Location = new System.Drawing.Point(49, 800);
             this.lblTextoCantidad.Name = "lblTextoCantidad";
-            this.lblTextoCantidad.Size = new System.Drawing.Size(275, 30);
+            this.lblTextoCantidad.Size = new System.Drawing.Size(259, 30);
             this.lblTextoCantidad.TabIndex = 10;
             this.lblTextoCantidad.Text = "Cantidad de Productos:";
             this.lblTextoCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -20,13 +20,13 @@ namespace IlkaPoint.Clases
 
         private void ConfigurarEstiloEstetico()
         {
-            this.BackColor = Form1.AzulMenu;
+            this.BackColor = Form1v2.AzulMenu;
 
 
-            btnVerFactura.BackColor = Form1.AzulClaroTarjetas;
+            btnVerFactura.BackColor = Form1v2.AzulClaroTarjetas;
             btnVerFactura.ForeColor = Color.White;  
-            lblNumVenta1.ForeColor = Form1.AzulClaroTarjetas;
-            lblVenta1.ForeColor = Form1.AzulClaroTarjetas;
+            lblNumVenta1.ForeColor = Form1v2.AzulClaroTarjetas;
+            lblVenta1.ForeColor = Form1v2.AzulClaroTarjetas;
         }
 
         /// <summary>

@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace IlkaPoint
 {
-    public partial class Form1 : Form
+    public partial class Form1v2 : Form
     {
         // Paleta de Colores Estética
         public static readonly Color AzulFondo = ColorTranslator.FromHtml("#1A3560");         // Fondo de la pantalla principal
@@ -108,7 +108,7 @@ namespace IlkaPoint
             }
         }
 
-        public Form1()
+        public Form1v2()
         {
             InitializeComponent();
             ApplyTheme();

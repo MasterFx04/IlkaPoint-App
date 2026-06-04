@@ -49,12 +49,12 @@
             this.lblNumVenta1.AutoSize = true;
             this.lblNumVenta1.BackColor = System.Drawing.Color.Transparent;
             this.lblNumVenta1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumVenta1.Location = new System.Drawing.Point(141, 11);
+            this.lblNumVenta1.Location = new System.Drawing.Point(145, 11);
             this.lblNumVenta1.Name = "lblNumVenta1";
             this.lblNumVenta1.Size = new System.Drawing.Size(56, 25);
             this.lblNumVenta1.TabIndex = 0;
             this.lblNumVenta1.Text = "0222";
-            this.lblNumVenta1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNumVenta1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblNumVenta1.Click += new System.EventHandler(this.lblNumVenta1_Click);
             // 
             // lblVenta1
@@ -62,12 +62,12 @@
             this.lblVenta1.AutoSize = true;
             this.lblVenta1.BackColor = System.Drawing.Color.Transparent;
             this.lblVenta1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVenta1.Location = new System.Drawing.Point(63, 11);
+            this.lblVenta1.Location = new System.Drawing.Point(60, 11);
             this.lblVenta1.Name = "lblVenta1";
             this.lblVenta1.Size = new System.Drawing.Size(81, 25);
             this.lblVenta1.TabIndex = 1;
             this.lblVenta1.Text = "Venta #";
-            this.lblVenta1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVenta1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnVerFactura
             // 
