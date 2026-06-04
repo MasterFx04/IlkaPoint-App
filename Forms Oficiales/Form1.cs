@@ -220,5 +220,10 @@ namespace IlkaPoint
         private void txtBuscar_TextChanged(object sender, EventArgs e) { }
         private void button1_Click(object sender, EventArgs e) { }
         private void datePicker1_ValueChanged(object sender, AntdUI.DateTimeNEventArgs e) { }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

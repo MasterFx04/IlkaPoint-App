@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.lblNombreApp = new AntdUI.Label();
-            this.panelEncabezado = new System.Windows.Forms.Panel();
-            this.btnBuscar = new AntdUI.Button();
-            this.txtBuscar = new AntdUI.Input();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelContenido = new AntdUI.In.FlowLayoutPanel();
             this.avatarLogo = new AntdUI.Avatar();
             this.btnCerrarsesion = new FontAwesome.Sharp.IconButton();
             this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.btnVentas = new FontAwesome.Sharp.IconButton();
             this.btnInventario = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new FontAwesome.Sharp.IconButton();
+            this.lblNombreApp = new AntdUI.Label();
+            this.panelEncabezado = new System.Windows.Forms.Panel();
             this.btnNuevaVenta = new FontAwesome.Sharp.IconButton();
+            this.btnBuscar = new AntdUI.Button();
+            this.txtBuscar = new AntdUI.Input();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelContenido = new AntdUI.In.FlowLayoutPanel();
             this.panelMenu.SuspendLayout();
             this.panelEncabezado.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.label1.Location = new System.Drawing.Point(352, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 24);
+            this.label1.Size = new System.Drawing.Size(0, 30);
             this.label1.TabIndex = 0;
             // 
             // panelMenu
@@ -67,98 +67,12 @@
             this.panelMenu.Controls.Add(this.btnInventario);
             this.panelMenu.Controls.Add(this.btnInicio);
             this.panelMenu.Controls.Add(this.lblNombreApp);
-            this.panelMenu.Location = new System.Drawing.Point(48, 43);
+            this.panelMenu.Location = new System.Drawing.Point(48, 38);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(376, 892);
             this.panelMenu.TabIndex = 1;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
-            // 
-            // lblNombreApp
-            // 
-            this.lblNombreApp.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblNombreApp.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblNombreApp.Location = new System.Drawing.Point(70, 31);
-            this.lblNombreApp.Margin = new System.Windows.Forms.Padding(4);
-            this.lblNombreApp.Name = "lblNombreApp";
-            this.lblNombreApp.Size = new System.Drawing.Size(239, 75);
-            this.lblNombreApp.TabIndex = 2;
-            this.lblNombreApp.Text = "Ilca Point";
-            this.lblNombreApp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelEncabezado
-            // 
-            this.panelEncabezado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelEncabezado.BackColor = System.Drawing.Color.Transparent;
-            this.panelEncabezado.Controls.Add(this.btnNuevaVenta);
-            this.panelEncabezado.Controls.Add(this.btnBuscar);
-            this.panelEncabezado.Controls.Add(this.txtBuscar);
-            this.panelEncabezado.Controls.Add(this.label2);
-            this.panelEncabezado.ForeColor = System.Drawing.Color.White;
-            this.panelEncabezado.Location = new System.Drawing.Point(470, 54);
-            this.panelEncabezado.Margin = new System.Windows.Forms.Padding(4);
-            this.panelEncabezado.Name = "panelEncabezado";
-            this.panelEncabezado.Size = new System.Drawing.Size(894, 230);
-            this.panelEncabezado.TabIndex = 2;
-            this.panelEncabezado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEncabezado_Paint);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.IconSvg = "SearchOutlined";
-            this.btnBuscar.Location = new System.Drawing.Point(815, 137);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Radius = 0;
-            this.btnBuscar.Size = new System.Drawing.Size(71, 71);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Type = AntdUI.TTypeMini.Primary;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.Location = new System.Drawing.Point(423, 138);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PlaceholderText = "Buscar ID o nombre del cliente...";
-            this.txtBuscar.PrefixFore = System.Drawing.Color.Black;
-            this.txtBuscar.PrefixFormat = AntdUI.FormatFlags.Left;
-            this.txtBuscar.PrefixSvg = "";
-            this.txtBuscar.Radius = 0;
-            this.txtBuscar.Size = new System.Drawing.Size(394, 70);
-            this.txtBuscar.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.txtBuscar.SuffixFormat = AntdUI.FormatFlags.Left;
-            this.txtBuscar.SuffixSvg = "";
-            this.txtBuscar.SuffixWidth = 0;
-            this.txtBuscar.TabIndex = 1;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(-8, 151);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(350, 46);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Registro de Ventas";
-            // 
-            // panelContenido
-            // 
-            this.panelContenido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContenido.AutoScroll = true;
-            this.panelContenido.BackColor = System.Drawing.Color.Transparent;
-            this.panelContenido.Location = new System.Drawing.Point(470, 308);
-            this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(903, 622);
-            this.panelContenido.TabIndex = 3;
-            this.panelContenido.Text = "flowLayoutPanel1";
             // 
             // avatarLogo
             // 
@@ -292,6 +206,36 @@
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
+            // lblNombreApp
+            // 
+            this.lblNombreApp.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNombreApp.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblNombreApp.Location = new System.Drawing.Point(70, 31);
+            this.lblNombreApp.Margin = new System.Windows.Forms.Padding(4);
+            this.lblNombreApp.Name = "lblNombreApp";
+            this.lblNombreApp.Size = new System.Drawing.Size(239, 75);
+            this.lblNombreApp.TabIndex = 2;
+            this.lblNombreApp.Text = "Ilca Point";
+            this.lblNombreApp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelEncabezado
+            // 
+            this.panelEncabezado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelEncabezado.BackColor = System.Drawing.Color.Transparent;
+            this.panelEncabezado.Controls.Add(this.btnNuevaVenta);
+            this.panelEncabezado.Controls.Add(this.btnBuscar);
+            this.panelEncabezado.Controls.Add(this.txtBuscar);
+            this.panelEncabezado.Controls.Add(this.label2);
+            this.panelEncabezado.ForeColor = System.Drawing.Color.White;
+            this.panelEncabezado.Location = new System.Drawing.Point(470, 54);
+            this.panelEncabezado.Margin = new System.Windows.Forms.Padding(4);
+            this.panelEncabezado.Name = "panelEncabezado";
+            this.panelEncabezado.Size = new System.Drawing.Size(894, 230);
+            this.panelEncabezado.TabIndex = 2;
+            this.panelEncabezado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEncabezado_Paint);
+            // 
             // btnNuevaVenta
             // 
             this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -303,17 +247,74 @@
             this.btnNuevaVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevaVenta.IconSize = 45;
             this.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(611, 67);
+            this.btnNuevaVenta.Location = new System.Drawing.Point(508, 67);
             this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(266, 55);
+            this.btnNuevaVenta.Size = new System.Drawing.Size(369, 55);
             this.btnNuevaVenta.TabIndex = 3;
             this.btnNuevaVenta.Text = "Nueva Venta";
             this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.IconSvg = "SearchOutlined";
+            this.btnBuscar.Location = new System.Drawing.Point(815, 137);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Radius = 0;
+            this.btnBuscar.Size = new System.Drawing.Size(71, 71);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Type = AntdUI.TTypeMini.Primary;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.Location = new System.Drawing.Point(472, 138);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PlaceholderText = "Buscar ID o nombre del cliente...";
+            this.txtBuscar.PrefixFore = System.Drawing.Color.Black;
+            this.txtBuscar.PrefixFormat = AntdUI.FormatFlags.Left;
+            this.txtBuscar.PrefixSvg = "";
+            this.txtBuscar.Radius = 0;
+            this.txtBuscar.Size = new System.Drawing.Size(345, 70);
+            this.txtBuscar.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.txtBuscar.SuffixFormat = AntdUI.FormatFlags.Left;
+            this.txtBuscar.SuffixSvg = "";
+            this.txtBuscar.SuffixWidth = 0;
+            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(42, 152);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(422, 56);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Registro de Ventas";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // panelContenido
+            // 
+            this.panelContenido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContenido.AutoScroll = true;
+            this.panelContenido.BackColor = System.Drawing.Color.Transparent;
+            this.panelContenido.Location = new System.Drawing.Point(470, 308);
+            this.panelContenido.Name = "panelContenido";
+            this.panelContenido.Size = new System.Drawing.Size(903, 622);
+            this.panelContenido.TabIndex = 3;
+            this.panelContenido.Text = "flowLayoutPanel1";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1422, 977);
