@@ -20,7 +20,7 @@ namespace IlkaPoint.Clases
         private decimal total;
 
         //Todos los atributos necesitan get y set en su encapsulamiento
-        private DateTime Fecha
+        public DateTime Fecha
         {
             get
             {
@@ -33,7 +33,7 @@ namespace IlkaPoint.Clases
             }
         }
 
-        private string MetodoPago
+        public string MetodoPago
         {
             get
             {
@@ -79,9 +79,9 @@ namespace IlkaPoint.Clases
 
 
         //Constructor
-        public Transaccion(string metodoPago, bool esJubilado) //registrarTransaccion()
+        public Transaccion(bool esJubilado) //registrarTransaccion()
         {
-            this.metodoPago = metodoPago;
+            //this.metodoPago = metodoPago;
             this.esJubilado = esJubilado;
 
             fecha = DateTime.Now; //Cada vez que alguien haga una transaccion, la fecha va a ser hoy.

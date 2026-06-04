@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace IlkaPoint.Data.Modelos
     //en las que se segmentara el inventario dentro de la base de datos y la creación de los metodos.
     public class Producto
     {
+        [Key]
         public int id { get; set; }
         public string nombre { get; set; }
         public string categoria { get; set; }
@@ -25,6 +27,16 @@ namespace IlkaPoint.Data.Modelos
         public virtual decimal calcularPrecio()
         { return precio; }
         */
+
+        public Producto() { }
+        public Producto (string nombre, string categoria, string proveedor, decimal precio, string rutaImagenPng)
+        {
+            this.nombre = nombre;
+            this.categoria = categoria;
+            this.proveedor = proveedor;
+            this.precio = precio;
+            this.rutaImagenPng = rutaImagenPng;
+        }
 
         public virtual decimal CalcularPrecio()
         {
