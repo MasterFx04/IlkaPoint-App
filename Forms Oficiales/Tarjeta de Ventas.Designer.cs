@@ -32,7 +32,7 @@
             this.lblVenta1 = new System.Windows.Forms.Label();
             this.btnVerFactura = new AntdUI.Button();
             this.lblDayVenta = new System.Windows.Forms.Label();
-            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblPaidMet = new System.Windows.Forms.Label();
             this.lblTotalVenta = new System.Windows.Forms.Label();
             this.icnMoney = new System.Windows.Forms.PictureBox();
             this.icnUser = new System.Windows.Forms.PictureBox();
@@ -49,12 +49,12 @@
             this.lblNumVenta1.AutoSize = true;
             this.lblNumVenta1.BackColor = System.Drawing.Color.Transparent;
             this.lblNumVenta1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumVenta1.Location = new System.Drawing.Point(141, 11);
+            this.lblNumVenta1.Location = new System.Drawing.Point(145, 11);
             this.lblNumVenta1.Name = "lblNumVenta1";
             this.lblNumVenta1.Size = new System.Drawing.Size(56, 25);
             this.lblNumVenta1.TabIndex = 0;
             this.lblNumVenta1.Text = "0222";
-            this.lblNumVenta1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNumVenta1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblNumVenta1.Click += new System.EventHandler(this.lblNumVenta1_Click);
             // 
             // lblVenta1
@@ -62,12 +62,12 @@
             this.lblVenta1.AutoSize = true;
             this.lblVenta1.BackColor = System.Drawing.Color.Transparent;
             this.lblVenta1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVenta1.Location = new System.Drawing.Point(63, 11);
+            this.lblVenta1.Location = new System.Drawing.Point(60, 11);
             this.lblVenta1.Name = "lblVenta1";
             this.lblVenta1.Size = new System.Drawing.Size(81, 25);
             this.lblVenta1.TabIndex = 1;
             this.lblVenta1.Text = "Venta #";
-            this.lblVenta1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVenta1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnVerFactura
             // 
@@ -95,17 +95,17 @@
             this.lblDayVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblDayVenta.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblUserName
+            // lblPaidMet
             // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(64, 65);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(18, 24);
-            this.lblUserName.TabIndex = 8;
-            this.lblUserName.Text = "-";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPaidMet.AutoSize = true;
+            this.lblPaidMet.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaidMet.ForeColor = System.Drawing.Color.White;
+            this.lblPaidMet.Location = new System.Drawing.Point(64, 65);
+            this.lblPaidMet.Name = "lblPaidMet";
+            this.lblPaidMet.Size = new System.Drawing.Size(18, 24);
+            this.lblPaidMet.TabIndex = 8;
+            this.lblPaidMet.Text = "-";
+            this.lblPaidMet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTotalVenta
             // 
@@ -165,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblTotalVenta);
-            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.lblPaidMet);
             this.Controls.Add(this.lblDayVenta);
             this.Controls.Add(this.btnVerFactura);
             this.Controls.Add(this.icnMoney);
@@ -195,9 +195,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox icnUser;
         private System.Windows.Forms.PictureBox icnMoney;
-        private AntdUI.Button btnVerFactura;
         private System.Windows.Forms.Label lblDayVenta;
-        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblPaidMet;
         private System.Windows.Forms.Label lblTotalVenta;
+        public AntdUI.Button btnVerFactura;
     }
 }
