@@ -36,15 +36,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AntdUI, Version=2.3.14.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
+      <HintPath>packages\AntdUI.2.3.14\lib\net46\AntdUI.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.2\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,20 +64,70 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\AppDBContext.cs" />
     <Compile Include="Clases\DetallesTransaccion.cs" />
     <Compile Include="Clases\Stock.cs" />
+    <Compile Include="Forms Oficiales\Tarjeta de Ventas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms Oficiales\Tarjeta de Ventas.Designer.cs">
+      <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Transaccion.cs" />
+    <Compile Include="Clases\TransaccionService.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormsPrueba\AgregarProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormsPrueba\AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsPrueba\EditProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormsPrueba\EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsPrueba\Form1Backup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormsPrueba\Form1Backup.Designer.cs">
+      <DependentUpon>Form1Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Oficiales\Form1v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Oficiales\Form1v2.Designer.cs">
+      <DependentUpon>Form1v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsPrueba\FormAgregarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsPrueba\FormAgregarStock.Designer.cs">
+      <DependentUpon>FormAgregarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsPrueba\FormDePrueba2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsPrueba\FormDePrueba2.Designer.cs">
+      <DependentUpon>FormDePrueba2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsPrueba\RegistroVentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsPrueba\RegistroVentasForm.Designer.cs">
+      <DependentUpon>RegistroVentasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsPrueba\UserControlPrueba.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormsPrueba\UserControlPrueba.Designer.cs">
+      <DependentUpon>UserControlPrueba.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSimulaciónInventario.cs">
       <SubType>Form</SubType>
@@ -95,12 +155,50 @@
     <Compile Include="Migrations\202605232000256_AgregarStock.Designer.cs">
       <DependentUpon>202605232000256_AgregarStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202605242139003_ChangesOnStock.cs" />
+    <Compile Include="Migrations\202605242139003_ChangesOnStock.Designer.cs">
+      <DependentUpon>202605242139003_ChangesOnStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202605291644513_IDK.cs" />
+    <Compile Include="Migrations\202605291644513_IDK.Designer.cs">
+      <DependentUpon>202605291644513_IDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202605292202565_Fix1.cs" />
+    <Compile Include="Migrations\202605292202565_Fix1.Designer.cs">
+      <DependentUpon>202605292202565_Fix1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Servicios\ServicioInventario.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormsPrueba\AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsPrueba\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsPrueba\Form1Backup.resx">
+      <DependentUpon>Form1Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Oficiales\Form1v2.resx">
+      <DependentUpon>Form1v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsPrueba\FormAgregarStock.resx">
+      <DependentUpon>FormAgregarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsPrueba\FormDePrueba2.resx">
+      <DependentUpon>FormDePrueba2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsPrueba\RegistroVentasForm.resx">
+      <DependentUpon>RegistroVentasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsPrueba\UserControlPrueba.resx">
+      <DependentUpon>UserControlPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSimulaciónInventario.resx">
       <DependentUpon>FormSimulaciónInventario.cs</DependentUpon>
@@ -120,15 +218,23 @@
     <EmbeddedResource Include="Migrations\202605232000256_AgregarStock.resx">
       <DependentUpon>202605232000256_AgregarStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605242139003_ChangesOnStock.resx">
+      <DependentUpon>202605242139003_ChangesOnStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605291644513_IDK.resx">
+      <DependentUpon>202605291644513_IDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605292202565_Fix1.resx">
+      <DependentUpon>202605292202565_Fix1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Forms Oficiales\Tarjeta de Ventas.resx">
+      <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,11 +249,37 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2810%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\EntityFramework.6.5.2\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.2\build\EntityFramework.props'))" />
     <Error Condition="!Exists('packages\EntityFramework.6.5.2\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.2\build\EntityFramework.targets'))" />

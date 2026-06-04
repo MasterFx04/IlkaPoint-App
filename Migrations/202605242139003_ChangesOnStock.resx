@@ -117,47 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="image-Photoroom (18)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
   </data>
-  <data name="image-Photoroom (10)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (10)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (17)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (17).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homeimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8--home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoutimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic--sharp-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="salesimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carbon--sales-ops.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inventoryimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic--sharp-inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="helpimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols--help-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>
