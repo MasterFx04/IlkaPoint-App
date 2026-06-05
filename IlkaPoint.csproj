@@ -68,11 +68,29 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Administrador.cs" />
     <Compile Include="Clases\AppDBContext.cs" />
+    <Compile Include="Clases\CifradoXOR.cs" />
     <Compile Include="Clases\DetallesTransaccion.cs" />
     <Compile Include="Clases\Stock.cs" />
     <Compile Include="Clases\Transaccion.cs" />
-    <Compile Include="Clases\TransaccionService.cs" />
+    <Compile Include="Migrations\202606052239137_AgregarAdmin.cs" />
+    <Compile Include="Migrations\202606052239137_AgregarAdmin.Designer.cs">
+      <DependentUpon>202606052239137_AgregarAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606052304490_FixAdmin.cs" />
+    <Compile Include="Migrations\202606052304490_FixAdmin.Designer.cs">
+      <DependentUpon>202606052304490_FixAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606052308406_FixAdmin2.cs" />
+    <Compile Include="Migrations\202606052308406_FixAdmin2.Designer.cs">
+      <DependentUpon>202606052308406_FixAdmin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606052311118_FixAdmin3.cs" />
+    <Compile Include="Migrations\202606052311118_FixAdmin3.Designer.cs">
+      <DependentUpon>202606052311118_FixAdmin3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios\TransaccionService.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
@@ -312,6 +330,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605292202565_Fix1.resx">
       <DependentUpon>202605292202565_Fix1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606052239137_AgregarAdmin.resx">
+      <DependentUpon>202606052239137_AgregarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606052304490_FixAdmin.resx">
+      <DependentUpon>202606052304490_FixAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606052308406_FixAdmin2.resx">
+      <DependentUpon>202606052308406_FixAdmin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606052311118_FixAdmin3.resx">
+      <DependentUpon>202606052311118_FixAdmin3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
