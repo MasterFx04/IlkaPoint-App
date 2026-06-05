@@ -223,6 +223,9 @@ namespace IlkaPoint.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap subir_imagen {
+            get {
+                object obj = ResourceManager.GetObject("subir imagen", resourceCulture);
         internal static System.Drawing.Bitmap xmark {
             get {
                 object obj = ResourceManager.GetObject("xmark", resourceCulture);
