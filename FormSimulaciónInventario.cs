@@ -82,7 +82,7 @@ namespace IlkaPoint
                 {
                     DialogResult dialogResult = MessageBox.Show($"¡Simulación Completa Exitosamente!\n\n" +
                                     $" Producto: {nombre} (ID asignado: {nuevoId})\n" +
-                                    $" Stock Inicial Inyectado: {cantidadAAgregar} unidades.\n\n,"
+                                    $" Stock Inicial Inyectado: {cantidadAAgregar} unidades.\n\n"
                                     "Éxito de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
