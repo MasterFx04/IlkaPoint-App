@@ -56,5 +56,10 @@ namespace IlkaPoint
                     Image.FromFile(rutaImagen);
             }
         }
+
+        private void btnCerrarPanel_Click(object sender, EventArgs e)
+        {
+            this.FindForm()?.Close();
+        }
     }
 }

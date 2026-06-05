@@ -43,6 +43,7 @@
             this.lblCategoríaDeProducto = new AntdUI.Label();
             this.lblIndicaciones = new AntdUI.Label();
             this.lblAgregarProducto = new AntdUI.Label();
+            this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
             this.panelFondoUC.SuspendLayout();
             this.panelContenidoUC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
@@ -61,6 +62,7 @@
             // 
             // panelContenidoUC
             // 
+            this.panelContenidoUC.Controls.Add(this.btnCerrarPanel);
             this.panelContenidoUC.Controls.Add(this.btnNuevaVenta);
             this.panelContenidoUC.Controls.Add(this.pbProducto);
             this.panelContenidoUC.Controls.Add(this.label3);
@@ -266,6 +268,25 @@
             this.lblAgregarProducto.Text = "Agregar Producto";
             this.lblAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnCerrarPanel
+            // 
+            this.btnCerrarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarPanel.BackgroundImage = global::IlkaPoint.Properties.Resources.xmark;
+            this.btnCerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarPanel.FlatAppearance.BorderSize = 0;
+            this.btnCerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarPanel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCerrarPanel.IconColor = System.Drawing.Color.Black;
+            this.btnCerrarPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarPanel.Location = new System.Drawing.Point(397, 20);
+            this.btnCerrarPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrarPanel.Name = "btnCerrarPanel";
+            this.btnCerrarPanel.Size = new System.Drawing.Size(58, 65);
+            this.btnCerrarPanel.TabIndex = 15;
+            this.btnCerrarPanel.UseVisualStyleBackColor = false;
+            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
+            // 
             // ucAgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -297,5 +318,6 @@
         private AntdUI.Input input1;
         private System.Windows.Forms.PictureBox pbProducto;
         private FontAwesome.Sharp.IconButton btnNuevaVenta;
+        private FontAwesome.Sharp.IconButton btnCerrarPanel;
     }
 }

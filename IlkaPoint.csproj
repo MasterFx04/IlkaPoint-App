@@ -160,22 +160,22 @@
     <Compile Include="FormsPrueba\UserControlPrueba.Designer.cs">
       <DependentUpon>UserControlPrueba.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDashboardPrincipal.cs">
+    <Compile Include="Forms Oficiales\FrmDashboardPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDashboardPrincipal.Designer.cs">
+    <Compile Include="Forms Oficiales\FrmDashboardPrincipal.Designer.cs">
       <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInventario2.cs">
+    <Compile Include="Forms Oficiales\FrmInventario2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInventario2.Designer.cs">
+    <Compile Include="Forms Oficiales\FrmInventario2.Designer.cs">
       <DependentUpon>FrmInventario2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="Forms Oficiales\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
+    <Compile Include="Forms Oficiales\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202605152356197_InitialCreate.cs" />
@@ -280,13 +280,13 @@
     <EmbeddedResource Include="FormsPrueba\UserControlPrueba.resx">
       <DependentUpon>UserControlPrueba.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDashboardPrincipal.resx">
+    <EmbeddedResource Include="Forms Oficiales\FrmDashboardPrincipal.resx">
       <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInventario2.resx">
+    <EmbeddedResource Include="Forms Oficiales\FrmInventario2.resx">
       <DependentUpon>FrmInventario2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="Forms Oficiales\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605152356197_InitialCreate.resx">

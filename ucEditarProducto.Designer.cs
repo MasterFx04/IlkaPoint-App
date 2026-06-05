@@ -30,6 +30,8 @@
         {
             this.panelFondoUC = new AntdUI.In.Panel();
             this.panelContenidoUC = new AntdUI.In.Panel();
+            this.btnNuevaVenta = new FontAwesome.Sharp.IconButton();
+            this.pbProducto = new System.Windows.Forms.PictureBox();
             this.label3 = new AntdUI.Label();
             this.input1 = new AntdUI.Input();
             this.label2 = new AntdUI.Label();
@@ -41,8 +43,7 @@
             this.lblCategoríaDeProducto = new AntdUI.Label();
             this.lblIndicaciones = new AntdUI.Label();
             this.lblAgregarProducto = new AntdUI.Label();
-            this.btnNuevaVenta = new FontAwesome.Sharp.IconButton();
-            this.pbProducto = new System.Windows.Forms.PictureBox();
+            this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
             this.panelFondoUC.SuspendLayout();
             this.panelContenidoUC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
@@ -61,6 +62,7 @@
             // 
             // panelContenidoUC
             // 
+            this.panelContenidoUC.Controls.Add(this.btnCerrarPanel);
             this.panelContenidoUC.Controls.Add(this.btnNuevaVenta);
             this.panelContenidoUC.Controls.Add(this.pbProducto);
             this.panelContenidoUC.Controls.Add(this.label3);
@@ -80,6 +82,39 @@
             this.panelContenidoUC.Size = new System.Drawing.Size(480, 1024);
             this.panelContenidoUC.TabIndex = 1;
             this.panelContenidoUC.Text = "panel1";
+            // 
+            // btnNuevaVenta
+            // 
+            this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevaVenta.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaVenta.ForeColor = System.Drawing.Color.White;
+            this.btnNuevaVenta.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnNuevaVenta.IconColor = System.Drawing.Color.White;
+            this.btnNuevaVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevaVenta.IconSize = 45;
+            this.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaVenta.Location = new System.Drawing.Point(31, 928);
+            this.btnNuevaVenta.Name = "btnNuevaVenta";
+            this.btnNuevaVenta.Size = new System.Drawing.Size(418, 55);
+            this.btnNuevaVenta.TabIndex = 14;
+            this.btnNuevaVenta.Text = "Guardar Cambios";
+            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            // 
+            // pbProducto
+            // 
+            this.pbProducto.BackColor = System.Drawing.Color.Gainsboro;
+            this.pbProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbProducto.Image = global::IlkaPoint.Properties.Resources.subir_imagen;
+            this.pbProducto.Location = new System.Drawing.Point(89, 786);
+            this.pbProducto.Name = "pbProducto";
+            this.pbProducto.Size = new System.Drawing.Size(234, 124);
+            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProducto.TabIndex = 12;
+            this.pbProducto.TabStop = false;
+            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
             // 
             // label3
             // 
@@ -232,38 +267,24 @@
             this.lblAgregarProducto.Text = "Editar Producto";
             this.lblAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnNuevaVenta
+            // btnCerrarPanel
             // 
-            this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevaVenta.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevaVenta.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnNuevaVenta.IconColor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevaVenta.IconSize = 45;
-            this.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(31, 943);
-            this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(361, 55);
-            this.btnNuevaVenta.TabIndex = 14;
-            this.btnNuevaVenta.Text = "Guardar Cambios";
-            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevaVenta.UseVisualStyleBackColor = false;
-            // 
-            // pbProducto
-            // 
-            this.pbProducto.BackColor = System.Drawing.Color.Gainsboro;
-            this.pbProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbProducto.Image = global::IlkaPoint.Properties.Resources.subir_imagen;
-            this.pbProducto.Location = new System.Drawing.Point(89, 786);
-            this.pbProducto.Name = "pbProducto";
-            this.pbProducto.Size = new System.Drawing.Size(234, 124);
-            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProducto.TabIndex = 12;
-            this.pbProducto.TabStop = false;
-            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
+            this.btnCerrarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarPanel.BackgroundImage = global::IlkaPoint.Properties.Resources.xmark;
+            this.btnCerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarPanel.FlatAppearance.BorderSize = 0;
+            this.btnCerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarPanel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCerrarPanel.IconColor = System.Drawing.Color.Black;
+            this.btnCerrarPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarPanel.Location = new System.Drawing.Point(391, 20);
+            this.btnCerrarPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrarPanel.Name = "btnCerrarPanel";
+            this.btnCerrarPanel.Size = new System.Drawing.Size(58, 65);
+            this.btnCerrarPanel.TabIndex = 16;
+            this.btnCerrarPanel.UseVisualStyleBackColor = false;
+            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
             // 
             // ucEditarProducto
             // 
@@ -296,5 +317,6 @@
         private AntdUI.Label lblCategoríaDeProducto;
         private AntdUI.Label lblIndicaciones;
         private AntdUI.Label lblAgregarProducto;
+        private FontAwesome.Sharp.IconButton btnCerrarPanel;
     }
 }
