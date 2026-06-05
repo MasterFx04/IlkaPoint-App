@@ -72,6 +72,7 @@
     <Compile Include="Clases\DetallesTransaccion.cs" />
     <Compile Include="Clases\Stock.cs" />
     <Compile Include="Clases\Transaccion.cs" />
+    <Compile Include="Clases\TransaccionService.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
@@ -117,28 +118,6 @@
     <Compile Include="Forms Oficiales\VerFactura.Designer.cs">
       <DependentUpon>VerFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDashboardPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDashboardPrincipal.Designer.cs">
-      <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInventario.Designer.cs">
-      <DependentUpon>FrmInventario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    <Compile Include="Clases\Transaccion.cs" />
-    <Compile Include="Clases\TransaccionService.cs" />
-    <Compile Include="Data\Modelos\Producto.cs" />
-    <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
-    <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
     <Compile Include="FormsPrueba\AgregarProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,12 +135,6 @@
     </Compile>
     <Compile Include="FormsPrueba\Form1Backup.Designer.cs">
       <DependentUpon>Form1Backup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Oficiales\Form1v2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Oficiales\Form1v2.Designer.cs">
-      <DependentUpon>Form1v2.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsPrueba\FormAgregarStock.cs">
       <SubType>Form</SubType>
@@ -186,6 +159,24 @@
     </Compile>
     <Compile Include="FormsPrueba\UserControlPrueba.Designer.cs">
       <DependentUpon>UserControlPrueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDashboardPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDashboardPrincipal.Designer.cs">
+      <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventario.Designer.cs">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202605152356197_InitialCreate.cs" />
     <Compile Include="Migrations\202605152356197_InitialCreate.Designer.cs">
@@ -240,14 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Oficiales\Form_FondoOscuro.resx">
       <DependentUpon>Form_FondoOscuro.cs</DependentUpon>
-    <EmbeddedResource Include="FormsPrueba\AgregarProducto.resx">
-      <DependentUpon>AgregarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormsPrueba\EditProduct.resx">
-      <DependentUpon>EditProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormsPrueba\Form1Backup.resx">
-      <DependentUpon>Form1Backup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Oficiales\Form1v2.resx">
       <DependentUpon>Form1v2.cs</DependentUpon>
@@ -264,14 +247,15 @@
     <EmbeddedResource Include="Forms Oficiales\VerFactura.resx">
       <DependentUpon>VerFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDashboardPrincipal.resx">
-      <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="FormsPrueba\AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInventario.resx">
-      <DependentUpon>FrmInventario.cs</DependentUpon>
+    <EmbeddedResource Include="FormsPrueba\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FormsPrueba\Form1Backup.resx">
+      <DependentUpon>Form1Backup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsPrueba\FormAgregarStock.resx">
       <DependentUpon>FormAgregarStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +267,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsPrueba\UserControlPrueba.resx">
       <DependentUpon>UserControlPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDashboardPrincipal.resx">
+      <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventario.resx">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605152356197_InitialCreate.resx">
       <DependentUpon>202605152356197_InitialCreate.cs</DependentUpon>
@@ -329,40 +322,6 @@
     <None Include="Resources\image-Photoroom %287%29.png" />
     <None Include="Resources\image-Photoroom %2810%291.png" />
     <None Include="Resources\image-Photoroom %2818%29.png" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-Photoroom (10).png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image (1).png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-Photoroom (17).png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-Photoroom (15).png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-Photoroom (12).png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-Photoroom (7).png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-Photoroom (10)1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-Photoroom (18).png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2.png" />
     <None Include="Resources\search-engine-optimization.png" />
   </ItemGroup>
