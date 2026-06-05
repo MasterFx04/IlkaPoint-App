@@ -226,6 +226,9 @@
     <EmbeddedResource Include="Forms Oficiales\Tarjeta de Ventas.resx">
       <DependentUpon>Tarjeta de Ventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CAMBIOS_IMPORTANTES_PARA_PULL.md" />
+    <None Include="GUIA_MERGE_A_MAIN.md" />
+    <None Include="INSTRUCCIONES_DESIGNERS.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -236,6 +239,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RESUMEN_CAMBIOS_GIT.md" />
+    <None Include="verificar_pull.bat" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
