@@ -81,11 +81,11 @@
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
-    <Compile Include="Forms Oficiales\Form1.cs">
+    <Compile Include="Forms Oficiales\Form1v2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Oficiales\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms Oficiales\Form1v2.Designer.cs">
+      <DependentUpon>Form1v2.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDashboardPrincipal.cs">
       <SubType>Form</SubType>
@@ -146,8 +146,8 @@
     <Compile Include="ucEditarProducto.Designer.cs">
       <DependentUpon>ucEditarProducto.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms Oficiales\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms Oficiales\Form1v2.resx">
+      <DependentUpon>Form1v2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboardPrincipal.resx">
       <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
