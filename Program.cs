@@ -20,11 +20,11 @@ namespace IlkaPoint
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
+
             Application.Run(new FormSimulaciónInventario());
-=======
+
             Application.Run(new Form1v2());
->>>>>>> origin/main
+
         }
     }
 }

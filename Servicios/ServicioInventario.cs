@@ -143,8 +143,7 @@ namespace IlkaPoint.Servicios
                 Producto producto = db.Productos.Find(idProducto);
                 if (producto != null)
                 {
-                    db.Productos.Remove(producto);
-                }
+                    db.Productos.Remove(producto);                }
 
                 db.SaveChanges();
             }
