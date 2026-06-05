@@ -114,6 +114,10 @@ namespace IlkaPoint
             }
         }
 
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

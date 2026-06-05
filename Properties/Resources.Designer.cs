@@ -226,6 +226,9 @@ namespace IlkaPoint.Properties {
         internal static System.Drawing.Bitmap subir_imagen {
             get {
                 object obj = ResourceManager.GetObject("subir imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
         internal static System.Drawing.Bitmap xmark {
             get {
                 object obj = ResourceManager.GetObject("xmark", resourceCulture);
