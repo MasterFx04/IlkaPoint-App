@@ -53,7 +53,7 @@
             this.label1.Location = new System.Drawing.Point(352, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 30);
+            this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 0;
             // 
             // panelMenu
@@ -67,7 +67,7 @@
             this.panelMenu.Controls.Add(this.btnInventario);
             this.panelMenu.Controls.Add(this.btnInicio);
             this.panelMenu.Controls.Add(this.lblNombreApp);
-            this.panelMenu.Location = new System.Drawing.Point(48, 38);
+            this.panelMenu.Location = new System.Drawing.Point(48, 43);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(376, 892);
@@ -209,7 +209,7 @@
             // lblNombreApp
             // 
             this.lblNombreApp.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblNombreApp.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreApp.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblNombreApp.Location = new System.Drawing.Point(70, 31);
             this.lblNombreApp.Margin = new System.Windows.Forms.Padding(4);
@@ -247,13 +247,14 @@
             this.btnNuevaVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevaVenta.IconSize = 45;
             this.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(508, 67);
+            this.btnNuevaVenta.Location = new System.Drawing.Point(611, 67);
             this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(369, 55);
+            this.btnNuevaVenta.Size = new System.Drawing.Size(266, 55);
             this.btnNuevaVenta.TabIndex = 3;
             this.btnNuevaVenta.Text = "Nueva Venta";
             this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // btnBuscar
             // 
@@ -270,7 +271,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.Location = new System.Drawing.Point(472, 138);
+            this.txtBuscar.Location = new System.Drawing.Point(423, 138);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.PlaceholderText = "Buscar ID o nombre del cliente...";
@@ -278,7 +279,7 @@
             this.txtBuscar.PrefixFormat = AntdUI.FormatFlags.Left;
             this.txtBuscar.PrefixSvg = "";
             this.txtBuscar.Radius = 0;
-            this.txtBuscar.Size = new System.Drawing.Size(345, 70);
+            this.txtBuscar.Size = new System.Drawing.Size(394, 70);
             this.txtBuscar.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
             this.txtBuscar.SuffixFormat = AntdUI.FormatFlags.Left;
             this.txtBuscar.SuffixSvg = "";
@@ -289,15 +290,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(42, 152);
+            this.label2.Location = new System.Drawing.Point(-10, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(422, 56);
+            this.label2.Size = new System.Drawing.Size(444, 58);
             this.label2.TabIndex = 0;
             this.label2.Text = "Registro de Ventas";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panelContenido
             // 
@@ -314,7 +314,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1422, 977);

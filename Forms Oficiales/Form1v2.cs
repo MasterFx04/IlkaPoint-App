@@ -1,15 +1,16 @@
 ﻿using FontAwesome.Sharp;
 using IlkaPoint.Clases;
+using IlkaPoint.Forms_Oficiales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization; // Necesario para formato de fecha XX-XX-XXXX
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using FontAwesome.Sharp; // Mantén esta línea arriba para que reconozca el tipo IconButton
 
 namespace IlkaPoint
 {
@@ -20,6 +21,92 @@ namespace IlkaPoint
         public static readonly Color AzulClaroTarjetas = ColorTranslator.FromHtml("#3059B6"); // Botones "Ver Factura"
         public static readonly Color BlancoTexto = ColorTranslator.FromHtml("#FFFFFF");       // Textos legibles
         public static readonly Color AzulMenu = ColorTranslator.FromHtml("#08243B");          // Menú lateral izquierdo
+
+        public class ItemVendido
+        {
+            public string Nombre { get; set; }
+            public int Cantidad { get; set; }
+            public decimal Precio { get; set; }
+            public decimal Subtotal => Cantidad * Precio;
+        }
+
+        public class RegistroVenta
+        {
+            public string IdVenta { get; set; }
+            public string MetodoPago { get; set; }
+            public string Fecha { get; set; }
+            public List<ItemVendido> Productos { get; set; } = new List<ItemVendido>();
+            public int TotalArticulos { get; set; }
+            public decimal MontoTotal { get; set; }
+        }
+
+        // Base de datos Simulada
+        public static List<RegistroVenta> BaseDatosVentas = new List<RegistroVenta>();
+
+        public void CargarHistorialVentas()
+        {
+            if (panelContenido == null) return;
+
+            panelContenido.Controls.Clear();
+
+            // Recorre lista central para crear tarjetas de ventas
+            foreach (var venta in BaseDatosVentas)
+            {
+                // Instancia de tarjeta de ventas real
+                Tarjeta_de_Ventas tarjeta = new Tarjeta_de_Ventas();
+
+                // Método para rellenar los textos de la tarjeta
+                tarjeta.CargarDatos(venta.IdVenta, venta.Fecha, venta.MetodoPago, (double)venta.MontoTotal);
+
+                tarjeta.btnVerFactura.Click += (sender, e) => {
+
+                    // Convertimos los productos de la venta al formato dinámico que espera el control 'VerFactura'
+                    List<dynamic> listaDynamic = new List<dynamic>();
+                    foreach (var p in venta.Productos)
+                    {
+                        listaDynamic.Add(new { Nombre = p.Nombre, Cantidad = p.Cantidad, Precio = p.Precio, Subtotal = p.Subtotal });
+                    }
+
+                    // Colocación del fondo oscuro
+                    Form_FondoOscuro fondo = new Form_FondoOscuro();
+                    fondo.StartPosition = FormStartPosition.Manual;
+                    fondo.Bounds = this.Bounds;
+                    fondo.Show(this);
+
+                    // Ventana para contener factura
+                    Form ventanaContenedor = new Form();
+                    ventanaContenedor.FormBorderStyle = FormBorderStyle.None;
+                    ventanaContenedor.Size = new Size(480, 1024);
+                    ventanaContenedor.StartPosition = FormStartPosition.Manual;
+                    ventanaContenedor.Location = new Point(this.Location.X + this.Width - 480, this.Location.Y);
+                    ventanaContenedor.ShowInTaskbar = false;
+
+                    // Instancia control de factura real
+                    VerFactura ucFactura = new VerFactura();
+                    ucFactura.Dock = DockStyle.Fill;
+
+                    // Cargamos los datos dinámicos directo en la instancia del control
+                    ucFactura.CargarDatosFactura(
+                        venta.IdVenta,
+                        venta.MetodoPago,
+                        venta.Fecha,
+                        listaDynamic,
+                        venta.TotalArticulos,
+                        venta.MontoTotal
+                    );
+
+                    // Ins3erta el diseño dentro de la ventana y lo muestra como un diálogo modal
+                    ventanaContenedor.Controls.Add(ucFactura);
+                    ventanaContenedor.ShowDialog(fondo);
+
+                    // Al cerrar la ventana, limpiamos la memoria del fondo oscuro
+                    fondo.Dispose();
+                };
+
+                // Agregamos la tarjeta estructurada a tu panel
+                panelContenido.Controls.Add(tarjeta);
+            }
+        }
 
         public Form1v2()
         {
@@ -64,7 +151,7 @@ namespace IlkaPoint
             }
             else
             {
-                b.BackColor = Color.Transparent; // Los demás inician transparentes hasta que se les hace click
+                b.BackColor = Color.Transparent;
             }
 
             // Alineación 
@@ -110,14 +197,20 @@ namespace IlkaPoint
             }
         }
 
-    private void ApplyThemeRec(Control parent)
+        private void ApplyThemeRec(Control parent)
         {
             foreach (Control c in parent.Controls)
             {
+                // No modificar
+                if (c.Name == "flpListaProductos" || c is InfoProducto || parent is InfoProducto)
+                {
+                    continue;
+                }
+
                 if (c == avatarLogo || c.Name == "avatarLogo")
                 {
                     if (c.HasChildren) ApplyThemeRec(c);
-                    continue; // Se salta el logo y sigue con los demás controles
+                    continue;
                 }
 
                 if (c is Button btn)
@@ -126,7 +219,6 @@ namespace IlkaPoint
                     btn.FlatStyle = FlatStyle.Flat;
                     btn.FlatAppearance.BorderSize = 0;
 
-                    // Filtro para no pintar de azul claro los botones del menú ni el de cerrar sesión
                     if (btn != btnInicio && btn != btnInventario && btn != btnVentas && btn != btnAyuda && !btn.Name.ToLower().Contains("cerrar"))
                     {
                         btn.BackColor = AzulClaroTarjetas;
@@ -158,22 +250,29 @@ namespace IlkaPoint
 
             ActualizarMenuActivo(btnVentas);
 
-            if (btnNuevaVenta != null) // Aseguramos que el botón exista
+            if (btnNuevaVenta != null)
             {
                 btnNuevaVenta.BackColor = AzulClaroTarjetas;
-                
             }
 
-            if (panelContenido != null)
+            // Al inciar el programa, La pantalla principal de ventas esta vacia. Con este se agrega una tarjeta por default.
+            if (BaseDatosVentas.Count == 0)
             {
-                panelContenido.Controls.Clear();
-                for (int i = 1; i <= 6; i++)
+                var ventaDemo = new RegistroVenta()
                 {
-                    Tarjeta_de_Ventas tarjetaPrueba = new Tarjeta_de_Ventas();
-                    tarjetaPrueba.CargarDatos($"000{i}", "27 de mayo 2026", "Cliente de Prueba", 15.50 * i);
-                    panelContenido.Controls.Add(tarjetaPrueba);
-                }
+                    IdVenta = "0001",
+                    MetodoPago = "Efectivo", 
+                    Fecha = "27-05-2026",  
+                    TotalArticulos = 4,
+                    MontoTotal = 5.05m
+                };
+                ventaDemo.Productos.Add(new ItemVendido { Nombre = "Coca Cola 2 ltrs", Cantidad = 1, Precio = 2.10m });
+                ventaDemo.Productos.Add(new ItemVendido { Nombre = "Jabon Corporal Palmolive", Cantidad = 3, Precio = 1.00m });
+
+                BaseDatosVentas.Add(ventaDemo);
             }
+
+            CargarHistorialVentas();
         }
 
         // Lógica de Navegación de Pestañas
@@ -194,26 +293,23 @@ namespace IlkaPoint
         private void btnInicio_Click(object sender, EventArgs e)
         {
             ActualizarMenuActivo(btnInicio);
-
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
             ActualizarMenuActivo(btnInventario);
-
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
             ActualizarMenuActivo(btnVentas);
-
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             ActualizarMenuActivo(btnAyuda);
-   
         }
+
         private void avatar1_Click(object sender, EventArgs e) { }
         private void panelMenu_Paint(object sender, PaintEventArgs e) { }
         private void panelEncabezado_Paint(object sender, PaintEventArgs e) { }
@@ -221,9 +317,34 @@ namespace IlkaPoint
         private void button1_Click(object sender, EventArgs e) { }
         private void datePicker1_ValueChanged(object sender, AntdUI.DateTimeNEventArgs e) { }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
+            // Creamos y mostramos el fondo oscuro estirado sobre todo el Form1
+            Form_FondoOscuro fondo = new Form_FondoOscuro(); 
+            fondo.StartPosition = FormStartPosition.Manual;
+            fondo.Bounds = this.Bounds;
+            fondo.Show(this);
 
+            // Ventana flotante limpia que contendrá tu panel lateral
+            Form ventanaContenedor = new Form();
+            ventanaContenedor.FormBorderStyle = FormBorderStyle.None;
+            ventanaContenedor.Size = new Size(480, 1024);
+            ventanaContenedor.StartPosition = FormStartPosition.Manual;
+
+            // Posición del botón
+            ventanaContenedor.Location = new Point(this.Location.X + this.Width - 480, this.Location.Y);
+            ventanaContenedor.ShowInTaskbar = false;
+
+            AgregarVenta panelVenta = new AgregarVenta();
+            panelVenta.Dock = DockStyle.Fill;
+            ventanaContenedor.Controls.Add(panelVenta);
+
+            ventanaContenedor.ShowDialog(fondo);
+
+            fondo.Dispose();
+
+            // Refresca el historial para mostrar la nueva venta
+            CargarHistorialVentas();
         }
     }
 }

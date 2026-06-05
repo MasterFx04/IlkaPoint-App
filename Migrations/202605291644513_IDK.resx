@@ -117,61 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="salesimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carbon--sales-ops.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
   </data>
-  <data name="inventoryimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic--sharp-inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homeimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8--home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (18)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (10)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (10)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image-Photoroom (17)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-Photoroom (17).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoutimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic--sharp-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="helpimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols--help-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search-engine-optimization" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-engine-optimization.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="subir imagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\subir imagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="xmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic--sharp-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lupaimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weui--search-outlined.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xredmarkimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic--outline-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

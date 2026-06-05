@@ -2,6 +2,7 @@
 using System.Globalization; // <- ESTA ES LA CLAVE para que reconozca CultureInfo
 using System.Threading;     // <- ESTA ES LA CLAVE para que reconozca Thread
 using System.Windows.Forms;
+using IlkaPoint.FormsPrueba;
 
 namespace IlkaPoint
 {
