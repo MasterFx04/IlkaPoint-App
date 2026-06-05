@@ -21,6 +21,11 @@ namespace IlkaPoint
         {
             try
             {
+                // Forzar que los títulos estén al frente
+                lblNumTotalArt.SendToBack();
+                lblNumArtAgotados.SendToBack();
+                label3.SendToBack();
+
                 // === 1. GRÁFICA DE TENDENCIA (Barras Horizontales) ===
                 chartTendencia.Series.Clear();
                 chartTendencia.Titles.Clear();
