@@ -80,6 +80,40 @@ namespace IlkaPoint.Servicios
             }
         }
 
+        public Dictionary<string, int> ObtenerProductosPorCategoria()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Productos
+                         .GroupBy(p => p.categoria)
+                         .ToDictionary(g => g.Key, g => g.Count());
+            }
+        }
+
+        public int ObtenerTotalArticulos()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks.Sum(s => (int?)s.Cantidad) ?? 0;
+            }
+        }
+
+        public int ObtenerStocksAgotados()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks.Count(s => s.Cantidad == 0);
+            }
+        }
+
+        public int ObtenerStocksBajos()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks.Count(s => s.Cantidad > 0 && s.Cantidad <= 15);
+            }
+        }
+
         /*
         public List<ProductoPorPeso> BuscarProductosTipoPeso()
         {

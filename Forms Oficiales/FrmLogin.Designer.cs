@@ -129,6 +129,7 @@
             this.txtContraseña.Text = "input1";
             this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
+            this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_TextClick);
             // 
             // lblContraseña
             // 
