@@ -34,13 +34,21 @@ namespace IlkaPoint
                 //DISEÑO CÓDIGO (LÍNEA 26 a 39)
 
                 // Forzar que los títulos estén al frente
+                
                 lblNumTotalArt.SendToBack();
                 lblNumArtAgotados.SendToBack();
                 label3.SendToBack();
+                
 
+                lblTotalDeArticulos.BringToFront();
+                lblNumArtAgotados.BringToFront();
+                label3.BringToFront();
+
+                /*
                 // === 1. GRÁFICA DE TENDENCIA (Barras Horizontales) ===
                 chartTendencia.Series.Clear();
                 chartTendencia.Titles.Clear();
+                */
 
                 // 1. Esquinas redondeadas para la gráfica de Tendencia
                 chartTendencia.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Raised;
@@ -48,6 +56,7 @@ namespace IlkaPoint
                 chartTendencia.BorderSkin.PageColor = System.Drawing.Color.Transparent;
                 chartTendencia.BorderSkin.BackColor = System.Drawing.ColorTranslator.FromHtml("#1A3560");
 
+                /*
                 // Añadimos el título oficial directamente en el componente para que no necesites Labels flojos
                 chartTendencia.Titles.Add("Tendencia de Stock por Producto");
 
@@ -72,12 +81,14 @@ namespace IlkaPoint
                 // === 2. GRÁFICA DE CATEGORÍAS (Dona) ===
                 chartCategorias.Series.Clear();
                 chartCategorias.Titles.Clear();
+                */
 
                 // 2. Esquinas redondeadas para la gráfica de Categorías (Dona)
                 chartCategorias.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Raised;
                 chartCategorias.BorderSkin.PageColor = System.Drawing.Color.Transparent;
                 chartCategorias.BorderSkin.BackColor = System.Drawing.ColorTranslator.FromHtml("#1A3560");
 
+                /*
                 chartCategorias.Titles.Add("Distribución por Categorías");
 
                 var serieDona = chartCategorias.Series.Add("Categorias");
@@ -135,6 +146,10 @@ namespace IlkaPoint
 
                 // Conectamos los datos al control visual
                 dgvInventarioRapido.DataSource = dt;
+                */
+
+                //CONECTANDO A LA BASE DE DATOS:
+                RefrescarDashBoard(); //Refrescamos la info nueva :D
             }
             catch (Exception ex)
             {
@@ -224,6 +239,10 @@ namespace IlkaPoint
         {
             ActualizarMenuActivo(btnInventario);
             // Tu código para abrir FrmInventario2 si estás en otra pantalla...
+            //ACA ES TEMPORAL, CUANDO PUEDAN VISUAL CAMBIENLO <<<<<<IMPORTANTE>>>>>>>>
+            this.Hide();
+            FrmInventario2 inventario = new FrmInventario2();
+            inventario.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
@@ -241,14 +260,16 @@ namespace IlkaPoint
         private void lblTituloMenuDp_Click(object sender, EventArgs e)
         {
 
-                RefrescarDashBoard(); //Refrescamos la info nueva :D
+                
 
-            }
+        }
+            /*
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrió un detalle al cargar las gráficas: " + ex.Message);
             }
-        }
+            */
+        
 
         private void FrmDashboardPrincipal_VisibleChanged(object sender, EventArgs e) //CADA QUE SE ABRA EL FORMS SE REFREZCA EL DASHBOARD
         {
@@ -257,10 +278,12 @@ namespace IlkaPoint
                 RefrescarDashBoard();
             }
         }
+        /*
         private void lblTituloMenuDp_Click(object sender, EventArgs e)
         {
 
         }
+        */
 
         public void RefrescarDashBoard() //CADA VEZ QUE ALGUIEN HAGA UN CAMBIO O ALGO LLAMARA A ESTA FUNCION
         {
@@ -440,12 +463,5 @@ namespace IlkaPoint
 
         }
 
-        private void btnInventario_Click(object sender, EventArgs e)
-        {
-            //ACA ES TEMPORAL, CUANDO PUEDAN VISUAL CAMBIENLO <<<<<<IMPORTANTE>>>>>>>>
-            this.Hide();
-            FrmInventario2 inventario = new FrmInventario2();
-            inventario.Show();
-        }
     }
 }
