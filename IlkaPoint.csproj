@@ -68,11 +68,29 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Administrador.cs" />
     <Compile Include="Clases\AppDBContext.cs" />
+    <Compile Include="Clases\CifradoXOR.cs" />
     <Compile Include="Clases\DetallesTransaccion.cs" />
     <Compile Include="Clases\Stock.cs" />
     <Compile Include="Clases\Transaccion.cs" />
-    <Compile Include="Clases\TransaccionService.cs" />
+    <Compile Include="Migrations\202606052239137_AgregarAdmin.cs" />
+    <Compile Include="Migrations\202606052239137_AgregarAdmin.Designer.cs">
+      <DependentUpon>202606052239137_AgregarAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606052304490_FixAdmin.cs" />
+    <Compile Include="Migrations\202606052304490_FixAdmin.Designer.cs">
+      <DependentUpon>202606052304490_FixAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606052308406_FixAdmin2.cs" />
+    <Compile Include="Migrations\202606052308406_FixAdmin2.Designer.cs">
+      <DependentUpon>202606052308406_FixAdmin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606052311118_FixAdmin3.cs" />
+    <Compile Include="Migrations\202606052311118_FixAdmin3.Designer.cs">
+      <DependentUpon>202606052311118_FixAdmin3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios\TransaccionService.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
     <Compile Include="Data\Modelos\ProductoPorUnidad.cs" />
@@ -160,22 +178,22 @@
     <Compile Include="FormsPrueba\UserControlPrueba.Designer.cs">
       <DependentUpon>UserControlPrueba.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDashboardPrincipal.cs">
+    <Compile Include="Forms Oficiales\FrmDashboardPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDashboardPrincipal.Designer.cs">
+    <Compile Include="Forms Oficiales\FrmDashboardPrincipal.Designer.cs">
       <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInventario2.cs">
+    <Compile Include="Forms Oficiales\FrmInventario2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInventario2.Designer.cs">
+    <Compile Include="Forms Oficiales\FrmInventario2.Designer.cs">
       <DependentUpon>FrmInventario2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="Forms Oficiales\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
+    <Compile Include="Forms Oficiales\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202605152356197_InitialCreate.cs" />
@@ -224,16 +242,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Servicios\ServicioInventario.cs" />
-    <Compile Include="ucAgregarProducto.cs">
+    <Compile Include="Forms Oficiales\ucAgregarProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucAgregarProducto.Designer.cs">
+    <Compile Include="Forms Oficiales\ucAgregarProducto.Designer.cs">
       <DependentUpon>ucAgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucEditarProducto.cs">
+    <Compile Include="Forms Oficiales\ucEditarProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucEditarProducto.Designer.cs">
+    <Compile Include="Forms Oficiales\ucEditarProducto.Designer.cs">
       <DependentUpon>ucEditarProducto.cs</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -280,13 +298,13 @@
     <EmbeddedResource Include="FormsPrueba\UserControlPrueba.resx">
       <DependentUpon>UserControlPrueba.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDashboardPrincipal.resx">
+    <EmbeddedResource Include="Forms Oficiales\FrmDashboardPrincipal.resx">
       <DependentUpon>FrmDashboardPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInventario2.resx">
+    <EmbeddedResource Include="Forms Oficiales\FrmInventario2.resx">
       <DependentUpon>FrmInventario2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="Forms Oficiales\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605152356197_InitialCreate.resx">
@@ -313,15 +331,27 @@
     <EmbeddedResource Include="Migrations\202605292202565_Fix1.resx">
       <DependentUpon>202605292202565_Fix1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606052239137_AgregarAdmin.resx">
+      <DependentUpon>202606052239137_AgregarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606052304490_FixAdmin.resx">
+      <DependentUpon>202606052304490_FixAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606052308406_FixAdmin2.resx">
+      <DependentUpon>202606052308406_FixAdmin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606052311118_FixAdmin3.resx">
+      <DependentUpon>202606052311118_FixAdmin3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucAgregarProducto.resx">
+    <EmbeddedResource Include="Forms Oficiales\ucAgregarProducto.resx">
       <DependentUpon>ucAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucEditarProducto.resx">
+    <EmbeddedResource Include="Forms Oficiales\ucEditarProducto.resx">
       <DependentUpon>ucEditarProducto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
