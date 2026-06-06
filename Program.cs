@@ -14,21 +14,50 @@ namespace IlkaPoint
         [STAThread]
         static void Main()
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-ES");
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            // Creamos el Login en memoria
+            FrmLogin login = new FrmLogin();
+
+            // Lo mostramos como un diálogo estricto. El código se detiene aquí temporalmente.
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                // Si el Login responde OK, pasamos al Dashboard Principal y lo volvemos el dueño de la app
+                Application.Run(new FrmDashboardPrincipal());
+            }
+            // Si cierran el login o fallan, el programa muere aquí limpiamente.
+
+            /*
             // Obliga a toda la aplicación y a AntdUI a usar el formato en español
             Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-ES");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
 
             Application.Run(new FormSimulaciónInventario());
 
             Application.Run(new Form1v2());
-
-=======
             Application.Run(new FrmInventario2());
->>>>>>> 18ce08eaf57dba8f566c334c2c735243388b2726
+
+            //Mostrar el login Primero
+            FrmLogin login = new FrmLogin();
+            if (login.ShowDialog() == DialogResult.OK )
+            {
+                //SI TODO SALIO BIEN D:
+                FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
+                //dashboard.WindowState = FormWindowState.Maximized;
+                Application.Run(dashboard);
+            }*/
+
         }
+    }
+
+    internal class FormSimulaciónInventario : Form
+    {
     }
 }

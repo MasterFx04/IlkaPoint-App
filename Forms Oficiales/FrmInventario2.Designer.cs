@@ -86,7 +86,7 @@
             this.tlpContenidos.Location = new System.Drawing.Point(376, 0);
             this.tlpContenidos.Name = "tlpContenidos";
             this.tlpContenidos.RowCount = 3;
-            this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 280F));
             this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpContenidos.Size = new System.Drawing.Size(1042, 968);
@@ -101,9 +101,10 @@
             this.panelEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEncabezado.Location = new System.Drawing.Point(3, 3);
             this.panelEncabezado.Name = "panelEncabezado";
-            this.panelEncabezado.Size = new System.Drawing.Size(1036, 294);
+            this.panelEncabezado.Size = new System.Drawing.Size(1036, 274);
             this.panelEncabezado.TabIndex = 0;
             this.panelEncabezado.Text = "panel1";
+            this.panelEncabezado.Click += new System.EventHandler(this.panelEncabezado_Click);
             // 
             // panel1
             // 
@@ -149,11 +150,11 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSizeMode = AntdUI.TAutoSize.Auto;
-            this.lblTitulo.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblTitulo.Location = new System.Drawing.Point(47, 115);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(305, 42);
+            this.lblTitulo.Size = new System.Drawing.Size(406, 56);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Inventario y Stock";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,16 +179,17 @@
             this.btnAgregarProducto.Text = "Añadir Producto";
             this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarProducto.UseVisualStyleBackColor = false;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // panelTablaInventario
             // 
             this.panelTablaInventario.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
             this.panelTablaInventario.Controls.Add(this.dgvInventario);
             this.panelTablaInventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTablaInventario.Location = new System.Drawing.Point(3, 303);
+            this.panelTablaInventario.Location = new System.Drawing.Point(3, 283);
             this.panelTablaInventario.Name = "panelTablaInventario";
-            this.panelTablaInventario.Padding = new System.Windows.Forms.Padding(20);
-            this.panelTablaInventario.Size = new System.Drawing.Size(1036, 642);
+            this.panelTablaInventario.Padding = new System.Windows.Forms.Padding(20, 0, 20, 20);
+            this.panelTablaInventario.Size = new System.Drawing.Size(1036, 662);
             this.panelTablaInventario.TabIndex = 1;
             this.panelTablaInventario.Text = "panel1";
             // 
@@ -203,12 +205,12 @@
             this.colEditar,
             this.colEliminar});
             this.dgvInventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInventario.Location = new System.Drawing.Point(20, 20);
+            this.dgvInventario.Location = new System.Drawing.Point(20, 0);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.RowHeadersVisible = false;
             this.dgvInventario.RowHeadersWidth = 62;
             this.dgvInventario.RowTemplate.Height = 28;
-            this.dgvInventario.Size = new System.Drawing.Size(996, 602);
+            this.dgvInventario.Size = new System.Drawing.Size(996, 642);
             this.dgvInventario.TabIndex = 1;
             this.dgvInventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellContentClick);
             this.dgvInventario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInventario_CellFormatting);
