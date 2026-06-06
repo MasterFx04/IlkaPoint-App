@@ -1,22 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Globalization; // <- ESTA ES LA CLAVE para que reconozca CultureInfo
+using System.Threading;     // <- ESTA ES LA CLAVE para que reconozca Thread
 using System.Windows.Forms;
+using IlkaPoint.FormsPrueba;
 
 namespace IlkaPoint
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            // Obliga a toda la aplicación y a AntdUI a usar el formato en español
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-ES");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            //Mostrar el login Primero
+            FrmLogin login = new FrmLogin();
+            if (login.ShowDialog() == DialogResult.OK )
+            {
+                //SI TODO SALIO BIEN D:
+                FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
+                //dashboard.WindowState = FormWindowState.Maximized;
+                Application.Run(dashboard);
+            }
         }
     }
 }

@@ -61,8 +61,131 @@ namespace IlkaPoint.Servicios
             }
         }
 
-        //trabajar en la logica para cuando se agrega la cantidad de los productos 
+        public List<Stock> BuscarStockPorNombre(string nombreDeBusqueda)
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks
+                        .Where(s => s.productoNombre.Contains(nombreDeBusqueda))
+                        .ToList();
+            }
+        }
 
+        
+        public Producto BuscarProductoPorId(int idProducto)
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Productos.Find(idProducto);
+            }
+        }
+
+        public Dictionary<string, int> ObtenerProductosPorCategoria()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Productos
+                         .GroupBy(p => p.categoria)
+                         .ToDictionary(g => g.Key, g => g.Count());
+            }
+        }
+
+        public int ObtenerTotalArticulos()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks.Sum(s => (int?)s.Cantidad) ?? 0;
+            }
+        }
+
+        public int ObtenerStocksAgotados()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks.Count(s => s.Cantidad == 0);
+            }
+        }
+
+        public int ObtenerStocksBajos()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks.Count(s => s.Cantidad > 0 && s.Cantidad <= 15);
+            }
+        }
+
+        /*
+        public List<ProductoPorPeso> BuscarProductosTipoPeso()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Productos
+                        .OfType<ProductoPorPeso>()
+                        .ToList();
+            }
+        }
+        */
+
+        public void EditarProducto(Producto productoEditado, Stock stockEditado)
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                
+                Producto producto = db.Productos.Find(productoEditado.id);
+
+                if (producto == null)
+                {
+                    throw new Exception("Producto no Encontrado");
+                }
+
+                producto.nombre = productoEditado.nombre;
+                producto.precio = productoEditado.precio;
+                producto.categoria = productoEditado.categoria;
+
+                db.SaveChanges();
+
+            }
+            using (AppDBContext db = new AppDBContext())
+            {
+
+
+                Stock stock = db.Stocks.Find(stockEditado.Id);
+                if (stock == null)
+                {
+                    throw new Exception("Producto no Encontrado");
+
+                }
+
+                stock.Cantidad = stockEditado.Cantidad;
+
+                db.SaveChanges();
+            }
+        }
+
+        public void EliminarProducto(int idProducto)
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                //ELIMINAMOS EL STOCK
+                Stock stock = db.Stocks.FirstOrDefault(s => s.ProductoId == idProducto);
+                if (stock != null)
+                {
+                    db.Stocks.Remove(stock);
+                }
+
+                //LUEGO ELIMINAMOS EL PRODUCTO
+                Producto producto = db.Productos.Find(idProducto);
+                if (producto != null)
+                {
+                    db.Productos.Remove(producto);
+                }
+
+                db.SaveChanges();
+            }
+        }
+        
+
+        //trabajar en la logica para cuando se agrega la cantidad de los productos 
         public bool AgregarCantidadStock(int productoId, int cantidadAgregar)
         {
             if (cantidadAgregar <= 0)
@@ -77,11 +200,7 @@ namespace IlkaPoint.Servicios
                     if (registrarStock == null)
                     {
                         //por si no existe un registro previo de stock del objeto prodcuto (ejemplo manzana) lo creamos
-                        Stock nuevoStock = new Stock()
-                        {
-                            ProductoId = productoId,
-                            Cantidad = cantidadAgregar,
-                        };
+                        Stock nuevoStock = new Stock(productoId, cantidadAgregar, db.Productos.Find(productoId).nombre);
 
                         db.Stocks.Add(nuevoStock);
                     }
@@ -109,6 +228,16 @@ namespace IlkaPoint.Servicios
 
             }
         }
+
+        public List<Stock> ObtenerElStockActual()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Stocks.ToList();
+            }
+        }
+
+
     }   
 
 
@@ -138,6 +267,8 @@ namespace IlkaPoint.Servicios
         }
         }
         */
+
+
 
        
 
