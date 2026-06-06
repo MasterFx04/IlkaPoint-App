@@ -34,15 +34,19 @@ namespace IlkaPoint
                 //DISEÑO CÓDIGO (LÍNEA 26 a 39)
 
                 // Forzar que los títulos estén al frente
-                
+                /*
                 lblNumTotalArt.SendToBack();
                 lblNumArtAgotados.SendToBack();
                 label3.SendToBack();
-                
-
+                */
+                /*
                 lblTotalDeArticulos.BringToFront();
                 lblNumArtAgotados.BringToFront();
                 label3.BringToFront();
+                */
+
+                lblNumTotalArt.BringToFront();
+                lblNumArtAgotados.BringToFront();
 
                 /*
                 // === 1. GRÁFICA DE TENDENCIA (Barras Horizontales) ===
