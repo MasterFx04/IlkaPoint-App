@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace IlkaPoint
@@ -70,7 +71,7 @@ namespace IlkaPoint
 
                 if (admin == null) //Por si un administrador no existe
                 {
-                    MessageBox.Show("Usuario no Encontrado");
+                    System.Windows.Forms.MessageBox.Show("Usuario no Encontrado");
                     return;
                 }
 
@@ -78,12 +79,14 @@ namespace IlkaPoint
 
                 if (contraDescrifrada == passSet)
                 {
-                    MessageBox.Show("Bienvenido Al Sistema");
-                    //Navegando al Dashboard
+                    System.Windows.Forms.MessageBox.Show("Bienvenido Al Sistema");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                    //Navegando al Dashboard desde Program.cs
                 }
                 else
                 {
-                    MessageBox.Show("Contraseña Incorrecta, intente nuevamente");
+                    System.Windows.Forms.MessageBox.Show("Contraseña Incorrecta, intente nuevamente");
                 }
             }
         }
