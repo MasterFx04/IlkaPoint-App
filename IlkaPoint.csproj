@@ -224,10 +224,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Servicios\ServicioInventario.cs" />
-    <Compile Include="ucAgregarProducto.cs">
+    <Compile Include="Forms Oficiales\ucAgregarProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucAgregarProducto.Designer.cs">
+    <Compile Include="Forms Oficiales\ucAgregarProducto.Designer.cs">
       <DependentUpon>ucAgregarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="ucEditarProducto.cs">
@@ -318,7 +318,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucAgregarProducto.resx">
+    <EmbeddedResource Include="Forms Oficiales\ucAgregarProducto.resx">
       <DependentUpon>ucAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucEditarProducto.resx">

@@ -342,6 +342,7 @@
             this.chartTendencia.Size = new System.Drawing.Size(454, 300);
             this.chartTendencia.TabIndex = 0;
             this.chartTendencia.Text = "chart1";
+            this.chartTendencia.Click += new System.EventHandler(this.chartTendencia_Click);
             // 
             // chartCategorias
             // 
@@ -394,11 +395,11 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label4.Location = new System.Drawing.Point(48, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 22);
+            this.label4.Size = new System.Drawing.Size(199, 45);
             this.label4.TabIndex = 0;
             this.label4.Text = "Bajo Stock";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -409,7 +410,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(48, 65);
+            this.label3.Location = new System.Drawing.Point(79, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 60);
             this.label3.TabIndex = 1;
@@ -433,11 +434,11 @@
             // 
             this.lblArticulosAgotados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblArticulosAgotados.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArticulosAgotados.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArticulosAgotados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblArticulosAgotados.Location = new System.Drawing.Point(29, 14);
             this.lblArticulosAgotados.Name = "lblArticulosAgotados";
-            this.lblArticulosAgotados.Size = new System.Drawing.Size(250, 36);
+            this.lblArticulosAgotados.Size = new System.Drawing.Size(250, 45);
             this.lblArticulosAgotados.TabIndex = 0;
             this.lblArticulosAgotados.Text = "Productos Agotados ";
             this.lblArticulosAgotados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -448,7 +449,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumArtAgotados.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumArtAgotados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblNumArtAgotados.Location = new System.Drawing.Point(49, 65);
+            this.lblNumArtAgotados.Location = new System.Drawing.Point(79, 65);
             this.lblNumArtAgotados.Name = "lblNumArtAgotados";
             this.lblNumArtAgotados.Size = new System.Drawing.Size(144, 60);
             this.lblNumArtAgotados.TabIndex = 1;
@@ -472,11 +473,11 @@
             // 
             this.lblTotalDeArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalDeArticulos.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeArticulos.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalDeArticulos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblTotalDeArticulos.Location = new System.Drawing.Point(23, 5);
+            this.lblTotalDeArticulos.Location = new System.Drawing.Point(40, 25);
             this.lblTotalDeArticulos.Name = "lblTotalDeArticulos";
-            this.lblTotalDeArticulos.Size = new System.Drawing.Size(199, 22);
+            this.lblTotalDeArticulos.Size = new System.Drawing.Size(230, 34);
             this.lblTotalDeArticulos.TabIndex = 0;
             this.lblTotalDeArticulos.Text = "Total de Artículos";
             this.lblTotalDeArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -487,7 +488,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumTotalArt.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumTotalArt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblNumTotalArt.Location = new System.Drawing.Point(49, 65);
+            this.lblNumTotalArt.Location = new System.Drawing.Point(81, 65);
             this.lblNumTotalArt.Name = "lblNumTotalArt";
             this.lblNumTotalArt.Size = new System.Drawing.Size(144, 60);
             this.lblNumTotalArt.TabIndex = 1;

@@ -30,6 +30,7 @@
         {
             this.panelFondoUC = new AntdUI.In.Panel();
             this.panelContenidoUC = new AntdUI.In.Panel();
+            this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
             this.btnNuevaVenta = new FontAwesome.Sharp.IconButton();
             this.pbProducto = new System.Windows.Forms.PictureBox();
             this.label3 = new AntdUI.Label();
@@ -43,7 +44,6 @@
             this.lblCategoríaDeProducto = new AntdUI.Label();
             this.lblIndicaciones = new AntdUI.Label();
             this.lblAgregarProducto = new AntdUI.Label();
-            this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
             this.panelFondoUC.SuspendLayout();
             this.panelContenidoUC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
@@ -83,6 +83,25 @@
             this.panelContenidoUC.TabIndex = 0;
             this.panelContenidoUC.Text = "panel1";
             // 
+            // btnCerrarPanel
+            // 
+            this.btnCerrarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarPanel.BackgroundImage = global::IlkaPoint.Properties.Resources.xmark;
+            this.btnCerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarPanel.FlatAppearance.BorderSize = 0;
+            this.btnCerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarPanel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCerrarPanel.IconColor = System.Drawing.Color.Black;
+            this.btnCerrarPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarPanel.Location = new System.Drawing.Point(397, 20);
+            this.btnCerrarPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrarPanel.Name = "btnCerrarPanel";
+            this.btnCerrarPanel.Size = new System.Drawing.Size(58, 65);
+            this.btnCerrarPanel.TabIndex = 15;
+            this.btnCerrarPanel.UseVisualStyleBackColor = false;
+            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
+            // 
             // btnNuevaVenta
             // 
             this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -108,7 +127,7 @@
             this.pbProducto.BackColor = System.Drawing.Color.Gainsboro;
             this.pbProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbProducto.Image = global::IlkaPoint.Properties.Resources.subir_imagen;
-            this.pbProducto.Location = new System.Drawing.Point(98, 789);
+            this.pbProducto.Location = new System.Drawing.Point(110, 789);
             this.pbProducto.Name = "pbProducto";
             this.pbProducto.Size = new System.Drawing.Size(224, 124);
             this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(12, 725);
+            this.label3.Location = new System.Drawing.Point(31, 724);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(437, 46);
             this.label3.TabIndex = 11;
@@ -133,7 +152,7 @@
             this.input1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.input1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input1.Location = new System.Drawing.Point(4, 641);
+            this.input1.Location = new System.Drawing.Point(27, 641);
             this.input1.Margin = new System.Windows.Forms.Padding(4);
             this.input1.Name = "input1";
             this.input1.PlaceholderText = "Ejemplo: 1.75";
@@ -154,7 +173,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(12, 588);
+            this.label2.Location = new System.Drawing.Point(29, 588);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(437, 46);
             this.label2.TabIndex = 9;
@@ -166,7 +185,8 @@
             this.inputNumberCantProducto.AlwaysShowControl = true;
             this.inputNumberCantProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNumberCantProducto.Location = new System.Drawing.Point(12, 499);
+            this.inputNumberCantProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNumberCantProducto.Location = new System.Drawing.Point(35, 499);
             this.inputNumberCantProducto.Name = "inputNumberCantProducto";
             this.inputNumberCantProducto.Size = new System.Drawing.Size(420, 83);
             this.inputNumberCantProducto.TabIndex = 8;
@@ -178,7 +198,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(12, 436);
+            this.label1.Location = new System.Drawing.Point(29, 436);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(437, 66);
             this.label1.TabIndex = 7;
@@ -189,7 +209,7 @@
             this.txtNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(12, 369);
+            this.txtNombreProducto.Location = new System.Drawing.Point(29, 369);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.PlaceholderText = "Ejemplo: Queso Amarillo Kraft";
@@ -210,7 +230,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombreProducto.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblNombreProducto.Location = new System.Drawing.Point(12, 317);
+            this.lblNombreProducto.Location = new System.Drawing.Point(31, 317);
             this.lblNombreProducto.Name = "lblNombreProducto";
             this.lblNombreProducto.Size = new System.Drawing.Size(420, 54);
             this.lblNombreProducto.TabIndex = 5;
@@ -220,7 +240,7 @@
             // 
             this.cmbCategorías.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 12.5F);
             this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.cmbCategorías.FormattingEnabled = true;
             this.cmbCategorías.Items.AddRange(new object[] {
@@ -229,9 +249,9 @@
             "Bebidas",
             "Limpieza",
             "Papelería"});
-            this.cmbCategorías.Location = new System.Drawing.Point(19, 256);
+            this.cmbCategorías.Location = new System.Drawing.Point(31, 256);
             this.cmbCategorías.Name = "cmbCategorías";
-            this.cmbCategorías.Size = new System.Drawing.Size(413, 35);
+            this.cmbCategorías.Size = new System.Drawing.Size(413, 40);
             this.cmbCategorías.TabIndex = 4;
             this.cmbCategorías.Text = "Seleccione la categoría";
             // 
@@ -241,7 +261,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCategoríaDeProducto.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoríaDeProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblCategoríaDeProducto.Location = new System.Drawing.Point(12, 196);
+            this.lblCategoríaDeProducto.Location = new System.Drawing.Point(31, 196);
             this.lblCategoríaDeProducto.Name = "lblCategoríaDeProducto";
             this.lblCategoríaDeProducto.Size = new System.Drawing.Size(420, 54);
             this.lblCategoríaDeProducto.TabIndex = 3;
@@ -251,7 +271,7 @@
             // 
             this.lblIndicaciones.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIndicaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.lblIndicaciones.Location = new System.Drawing.Point(19, 89);
+            this.lblIndicaciones.Location = new System.Drawing.Point(16, 98);
             this.lblIndicaciones.Name = "lblIndicaciones";
             this.lblIndicaciones.Size = new System.Drawing.Size(452, 77);
             this.lblIndicaciones.TabIndex = 1;
@@ -267,25 +287,6 @@
             this.lblAgregarProducto.TabIndex = 0;
             this.lblAgregarProducto.Text = "Agregar Producto";
             this.lblAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnCerrarPanel
-            // 
-            this.btnCerrarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarPanel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarPanel.BackgroundImage = global::IlkaPoint.Properties.Resources.xmark;
-            this.btnCerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarPanel.FlatAppearance.BorderSize = 0;
-            this.btnCerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarPanel.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCerrarPanel.IconColor = System.Drawing.Color.Black;
-            this.btnCerrarPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarPanel.Location = new System.Drawing.Point(397, 20);
-            this.btnCerrarPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCerrarPanel.Name = "btnCerrarPanel";
-            this.btnCerrarPanel.Size = new System.Drawing.Size(58, 65);
-            this.btnCerrarPanel.TabIndex = 15;
-            this.btnCerrarPanel.UseVisualStyleBackColor = false;
-            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
             // 
             // ucAgregarProducto
             // 
