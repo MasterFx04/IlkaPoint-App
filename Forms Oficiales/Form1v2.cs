@@ -95,7 +95,7 @@ namespace IlkaPoint
                         venta.MontoTotal
                     );
 
-                    // Ins3erta el diseño dentro de la ventana y lo muestra como un diálogo modal
+                    // Inserta el diseño dentro de la ventana y lo muestra como un diálogo modal
                     ventanaContenedor.Controls.Add(ucFactura);
                     ventanaContenedor.ShowDialog(fondo);
 
