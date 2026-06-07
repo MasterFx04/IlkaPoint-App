@@ -117,7 +117,7 @@ namespace IlkaPoint.Forms_Oficiales
             // Ancho FIJO
             int anchoFijoTarjeta = 360;
 
-            // 3. Le clavamos los tamaños exactos para que Windows Forms NO pueda alterarlo bajo ninguna condición
+            // Tamaños exactos - NO TOCAR
             nuevaFila.Size = new Size(anchoFijoTarjeta, 90);
             nuevaFila.MinimumSize = new Size(anchoFijoTarjeta, 90);
             nuevaFila.MaximumSize = new Size(anchoFijoTarjeta, 90);
@@ -260,6 +260,7 @@ namespace IlkaPoint.Forms_Oficiales
         {
 
         }
+
 
         private void flpListaProductos_Paint(object sender, PaintEventArgs e)
         {
