@@ -38,6 +38,7 @@
             this.lblContraseña = new AntdUI.Label();
             this.lblIniciarSesión = new AntdUI.Label();
             this.avatarLogo = new AntdUI.Avatar();
+            this.avatar1 = new AntdUI.Avatar();
             this.panelFondo.SuspendLayout();
             this.panelCentro.SuspendLayout();
             this.panelLogin.SuspendLayout();
@@ -58,6 +59,7 @@
             // panelCentro
             // 
             this.panelCentro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelCentro.Controls.Add(this.avatar1);
             this.panelCentro.Controls.Add(this.lblBienvenido);
             this.panelCentro.Controls.Add(this.panelLogin);
             this.panelCentro.Controls.Add(this.avatarLogo);
@@ -127,6 +129,7 @@
             this.txtContraseña.Text = "input1";
             this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
+            this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_TextClick);
             // 
             // lblContraseña
             // 
@@ -158,6 +161,19 @@
             this.avatarLogo.Size = new System.Drawing.Size(0, 0);
             this.avatarLogo.TabIndex = 3;
             // 
+            // avatar1
+            // 
+            this.avatar1.BackColor = System.Drawing.Color.White;
+            this.avatar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.avatar1.BorderColor = System.Drawing.Color.Transparent;
+            this.avatar1.Image = global::IlkaPoint.Properties.Resources._2;
+            this.avatar1.Location = new System.Drawing.Point(138, 254);
+            this.avatar1.Name = "avatar1";
+            this.avatar1.Round = true;
+            this.avatar1.Size = new System.Drawing.Size(377, 374);
+            this.avatar1.TabIndex = 10;
+            this.avatar1.Text = "";
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -187,5 +203,6 @@
         private AntdUI.Label lblBienvenido;
         private AntdUI.In.Panel panelCentro;
         private AntdUI.Avatar avatarCandado;
+        private AntdUI.Avatar avatar1;
     }
 }

@@ -20,7 +20,16 @@ namespace IlkaPoint
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+
+            //Mostrar el login Primero
+            FrmLogin login = new FrmLogin();
+            if (login.ShowDialog() == DialogResult.OK )
+            {
+                //SI TODO SALIO BIEN D:
+                FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
+                //dashboard.WindowState = FormWindowState.Maximized;
+                Application.Run(dashboard);
+            }
         }
     }
 }
