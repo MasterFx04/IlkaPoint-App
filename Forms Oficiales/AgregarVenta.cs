@@ -52,19 +52,6 @@ namespace IlkaPoint.Forms_Oficiales
             }
         }
 
-        private void AgregarVenta_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void btnCerrarPanel_Click(object sender, EventArgs e)
-        {
-            this.FindForm()?.Close();
-        }
-
-        private void lblTotal_Click(object sender, EventArgs e)
-        {
-        }
-
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Enter && txtBuscarProducto.Focused)
@@ -125,21 +112,27 @@ namespace IlkaPoint.Forms_Oficiales
         {
             InfoProducto nuevaFila = new InfoProducto();
 
-            // Para mantener un tamaño uniforme de las tarjetas, igual al diseño del mockup
-            nuevaFila.MinimumSize = new Size(400, 90);
-            nuevaFila.MaximumSize = new Size(400, 90);
-            nuevaFila.Width = 400;
-            nuevaFila.Height = 90;
+            nuevaFila.AutoSize = false;
 
-            nuevaFila.Margin = new Padding(0, 0, 0, 10);
+            // Ancho FIJO
+            int anchoFijoTarjeta = 360;
 
+            // Tamaños exactos - NO TOCAR
+            nuevaFila.Size = new Size(anchoFijoTarjeta, 90);
+            nuevaFila.MinimumSize = new Size(anchoFijoTarjeta, 90);
+            nuevaFila.MaximumSize = new Size(anchoFijoTarjeta, 90);
+
+            nuevaFila.Margin = new Padding(9, 0, 0, 8);
+
+            // Cargar los textos e imágenes
             nuevaFila.CargarDatos(prod.Id, prod.Nombre, prod.Precio, prod.Foto);
 
             flpListaProductos.Controls.Add(nuevaFila);
 
             nuevaFila.BringToFront();
+            flpListaProductos.Update();
+            flpListaProductos.ResumeLayout(true);
             flpListaProductos.PerformLayout();
-            flpListaProductos.Refresh();
 
             txtBuscarProducto.Clear();
             txtBuscarProducto.Focus();
@@ -266,6 +259,25 @@ namespace IlkaPoint.Forms_Oficiales
         private void lblNumVenta_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void flpListaProductos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AgregarVenta_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnCerrarPanel_Click(object sender, EventArgs e)
+        {
+            this.FindForm()?.Close();
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
         }
     }
 }
