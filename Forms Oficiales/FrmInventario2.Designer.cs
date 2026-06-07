@@ -129,6 +129,7 @@
             this.btnBuscarProducto.Size = new System.Drawing.Size(88, 67);
             this.btnBuscarProducto.TabIndex = 6;
             this.btnBuscarProducto.Type = AntdUI.TTypeMini.Primary;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // txtBuscarProducto
             // 
@@ -146,6 +147,7 @@
             this.txtBuscarProducto.SuffixSvg = "";
             this.txtBuscarProducto.SuffixWidth = 0;
             this.txtBuscarProducto.TabIndex = 5;
+            this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
             // 
             // lblTitulo
             // 
@@ -300,6 +302,7 @@
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click_1);
             // 
             // avatarLogo
             // 
@@ -382,6 +385,7 @@
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click_1);
             // 
             // btnInventario
             // 

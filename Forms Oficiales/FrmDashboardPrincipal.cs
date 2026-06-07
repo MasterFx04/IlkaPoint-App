@@ -233,46 +233,40 @@ namespace IlkaPoint
         }
 
         // Eventos de los botones del menú
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            ActualizarMenuActivo(btnInicio);
-            // Tu código para abrir FrmDashboardPrincipal si estás en otra pantalla...
-        }
+       
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnInventario);
-            // Tu código para abrir FrmInventario2 si estás en otra pantalla...
-            //ACA ES TEMPORAL, CUANDO PUEDAN VISUAL CAMBIENLO <<<<<<IMPORTANTE>>>>>>>>
+            FrmInventario2 pantallaInventario = new FrmInventario2();
+            pantallaInventario.Show();
             this.Hide();
-            FrmInventario2 inventario = new FrmInventario2();
-            inventario.Show();
+
+            /* ActualizarMenuActivo(btnInventario);
+             // Tu código para abrir FrmInventario2 si estás en otra pantalla...
+             //ACA ES TEMPORAL, CUANDO PUEDAN VISUAL CAMBIENLO <<<<<<IMPORTANTE>>>>>>>>
+             this.Hide();
+             FrmInventario2 inventario = new FrmInventario2();
+             inventario.Show();*/
+
+
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
+        private void btnVentas_Click_1(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnVentas);
+            Form1v2 pantallaVentas = new Form1v2();
+            pantallaVentas.Show();
+            this.Hide();
         }
+
+
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             ActualizarMenuActivo(btnAyuda);
         }
 
-        //Estos eventos se abrieron por erro mientras diseñaba el formulario
-        //pueden borrarolo porque no se utilizan.
-        private void lblTituloMenuDp_Click(object sender, EventArgs e)
-        {
-
-                
-
-        }
-            /*
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrió un detalle al cargar las gráficas: " + ex.Message);
-            }
-            */
+        
+            
         
 
         private void FrmDashboardPrincipal_VisibleChanged(object sender, EventArgs e) //CADA QUE SE ABRA EL FORMS SE REFREZCA EL DASHBOARD
@@ -413,59 +407,21 @@ namespace IlkaPoint
             label3.Text = servicio.ObtenerStocksBajos().ToString();
         }
 
-        private void menuLateral_SelectChanged(object sender, AntdUI.MenuSelectEventArgs e)
-        {
 
-        }
-
-        private void btnInicioMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelTotalArticulos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNumTotalArt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblArticulosAgotados_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flopTarjetasTop_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panelFondoDP_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnInventarioMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVentasMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCerrarSesionMenu_Click(object sender, EventArgs e)
-        {
-        }
+        
+       
 
         private void chartTendencia_Click(object sender, EventArgs e)
         {
 
         }
 
+       
     }
 }

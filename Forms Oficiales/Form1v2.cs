@@ -292,22 +292,28 @@ namespace IlkaPoint
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnInicio);
+            // ActualizarMenuActivo(btnInicio);
+            FrmDashboardPrincipal pantallaPrincipal = new FrmDashboardPrincipal();
+            pantallaPrincipal.Show();
+            this.Hide();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnInventario);
+            //ActualizarMenuActivo(btnInventario);
+            FrmInventario2 pantallaInventario = new FrmInventario2();
+            pantallaInventario.Show();
+            this.Hide();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnVentas);
+           // ActualizarMenuActivo(btnVentas);
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnAyuda);
+            ActualizarMenuActivo(btnAyuda); //meterle el archivo con las instrucciones de como se usa el sistema 
         }
 
         private void avatar1_Click(object sender, EventArgs e) { }

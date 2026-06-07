@@ -338,6 +338,58 @@ namespace IlkaPoint
         {
 
         }
+        //Flujo de los botones 
+        private void btnInicio_Click_1(object sender, EventArgs e)
+        {
+            FrmDashboardPrincipal principal = new FrmDashboardPrincipal();
+            principal.Show();
+            this.Hide(); // Cierra el inventario para no acumular ventanas
+
+
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+            Form1v2 pantallaVentas = new Form1v2();
+            pantallaVentas.Show();
+            this.Hide();
+        }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        { //reestricción para cuando se va a buscar un producto en la barra de busqueda 
+            /*string criterio = txtBuscarProducto.Text.Trim();
+
+           if (string.IsNullOrEmpty(criterio))
+           {
+               MessageBox.Show("Por favor, ingrese un nombre o ID para buscar.", "Campo Vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               return;
+           }*/
+        }
+
+        private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
+        {
+           /* using (AppDBContext db = new AppDBContext())
+       
+            {
+        // Busca si coincide con el Nombre O si coincide con el Código
+        var producto = db.Productos.FirstOrDefault(p => p.Nombre.Contains(criterio) || p.Codigo == criterio);
+
+        if (producto == null)
+        {
+            // Restricción
+            MessageBox.Show("Artículo No encontrado, por favor, ingrese el nombre correcto o el ID.", 
+                            "Busqueda Fallida", 
+                            MessageBoxButtons.OK, 
+                            MessageBoxIcon.Information);
+            
+            txtBuscarProducto.Focus(); // Devuelve el cursor al buscador para que vuelva a intentar
+            return;
+           }
+
+        }*/
+
+
+        }
     }
 }
 
