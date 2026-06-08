@@ -22,6 +22,9 @@ namespace IlkaPoint
         public FrmDashboardPrincipal()
         {
             InitializeComponent();
+            // === CONGELAR EL TAMAÑO ESTÁNDAR ===
+            this.Size = new Size(1440, 1024); // Pon aquí los pixeles exactos de tu Figma
+            this.MinimumSize = new Size(1024, 768); // Evita que la hagan más chica
         }
 
         private void FrmDashboardPrincipal_Load(object sender, EventArgs e)
@@ -473,5 +476,24 @@ namespace IlkaPoint
 
         }
 
+        private void lblTotalDeArticulos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumTotalArt_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumArtAgotados_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

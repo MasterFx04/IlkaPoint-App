@@ -26,6 +26,18 @@ namespace IlkaPoint
             stockSeleccionado = stock;
 
             CargarDatosProducto();
+            cmbCategorías.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            // 1. Evitar que herede escalados raros de la pantalla de inventario
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+
+            // 2. Congelar el tamaño exacto que le diste en tu diseño
+            // Pon aquí los pixeles exactos que mide tu panel lateral (ejemplo: 350 de ancho por 700 de alto)
+            this.MinimumSize = new Size(456, 968);
+            this.MaximumSize = new Size(480, 1018);
+            this.Size = new Size(456, 968);
+
+            // 3. Forzar que el botón Añadir mantenga su posición abajo
+            btnGuardarCambios.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
         }
 
         //DISEÑO CÓDIGO (LÍNEA 24 A 39)

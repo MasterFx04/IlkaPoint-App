@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panelCompra = new System.Windows.Forms.Panel();
+            this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
             this.lblNumVenta = new System.Windows.Forms.Label();
             this.lblTotalProductos = new System.Windows.Forms.Label();
             this.lblTotalPrecio = new System.Windows.Forms.Label();
             this.lblMetPago = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.Label();
             this.lblTextoCantidad = new System.Windows.Forms.Label();
-            this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
             this.btnRegistrarVenta1 = new AntdUI.Button();
             this.flpListaProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.panelArriba = new System.Windows.Forms.Panel();
@@ -62,6 +62,21 @@
             this.panelCompra.Name = "panelCompra";
             this.panelCompra.Size = new System.Drawing.Size(410, 218);
             this.panelCompra.TabIndex = 4;
+            // 
+            // cmbMetodoPago
+            // 
+            this.cmbMetodoPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbMetodoPago.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMetodoPago.FormattingEnabled = true;
+            this.cmbMetodoPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Yappy",
+            "Tarjeta"});
+            this.cmbMetodoPago.Location = new System.Drawing.Point(200, 105);
+            this.cmbMetodoPago.Name = "cmbMetodoPago";
+            this.cmbMetodoPago.Size = new System.Drawing.Size(181, 38);
+            this.cmbMetodoPago.TabIndex = 0;
+            this.cmbMetodoPago.SelectedIndexChanged += new System.EventHandler(this.cmbMetodoPago_SelectedIndexChanged);
             // 
             // lblNumVenta
             // 
@@ -110,7 +125,7 @@
             this.lblMetPago.ForeColor = System.Drawing.Color.White;
             this.lblMetPago.Location = new System.Drawing.Point(26, 105);
             this.lblMetPago.Name = "lblMetPago";
-            this.lblMetPago.Size = new System.Drawing.Size(189, 30);
+            this.lblMetPago.Size = new System.Drawing.Size(178, 30);
             this.lblMetPago.TabIndex = 6;
             this.lblMetPago.Text = "Forma de Pago:";
             this.lblMetPago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,7 +138,7 @@
             this.txtTotal.ForeColor = System.Drawing.Color.White;
             this.txtTotal.Location = new System.Drawing.Point(24, 159);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(80, 31);
+            this.txtTotal.Size = new System.Drawing.Size(76, 30);
             this.txtTotal.TabIndex = 1;
             this.txtTotal.Text = "Total:";
             this.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,25 +151,10 @@
             this.lblTextoCantidad.ForeColor = System.Drawing.Color.White;
             this.lblTextoCantidad.Location = new System.Drawing.Point(26, 55);
             this.lblTextoCantidad.Name = "lblTextoCantidad";
-            this.lblTextoCantidad.Size = new System.Drawing.Size(275, 30);
+            this.lblTextoCantidad.Size = new System.Drawing.Size(259, 30);
             this.lblTextoCantidad.TabIndex = 4;
             this.lblTextoCantidad.Text = "Cantidad de Productos:";
             this.lblTextoCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbMetodoPago
-            // 
-            this.cmbMetodoPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbMetodoPago.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMetodoPago.FormattingEnabled = true;
-            this.cmbMetodoPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Yappy",
-            "Tarjeta"});
-            this.cmbMetodoPago.Location = new System.Drawing.Point(200, 105);
-            this.cmbMetodoPago.Name = "cmbMetodoPago";
-            this.cmbMetodoPago.Size = new System.Drawing.Size(181, 38);
-            this.cmbMetodoPago.TabIndex = 0;
-            this.cmbMetodoPago.SelectedIndexChanged += new System.EventHandler(this.cmbMetodoPago_SelectedIndexChanged);
             // 
             // btnRegistrarVenta1
             // 
@@ -163,10 +163,10 @@
             this.btnRegistrarVenta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
             this.btnRegistrarVenta1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarVenta1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRegistrarVenta1.Location = new System.Drawing.Point(67, 922);
+            this.btnRegistrarVenta1.Location = new System.Drawing.Point(33, 922);
             this.btnRegistrarVenta1.Name = "btnRegistrarVenta1";
             this.btnRegistrarVenta1.Radius = 0;
-            this.btnRegistrarVenta1.Size = new System.Drawing.Size(351, 68);
+            this.btnRegistrarVenta1.Size = new System.Drawing.Size(418, 68);
             this.btnRegistrarVenta1.TabIndex = 3;
             this.btnRegistrarVenta1.Text = "Registrar Venta";
             this.btnRegistrarVenta1.Type = AntdUI.TTypeMini.Primary;
@@ -174,19 +174,19 @@
             // 
             // flpListaProductos
             // 
-            this.flpListaProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpListaProductos.AutoScroll = true;
             this.flpListaProductos.BackColor = System.Drawing.Color.Transparent;
+            this.flpListaProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flpListaProductos.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpListaProductos.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flpListaProductos.Location = new System.Drawing.Point(37, 195);
-            this.flpListaProductos.Margin = new System.Windows.Forms.Padding(1);
+            this.flpListaProductos.Location = new System.Drawing.Point(37, 200);
+            this.flpListaProductos.Margin = new System.Windows.Forms.Padding(0);
             this.flpListaProductos.Name = "flpListaProductos";
-            this.flpListaProductos.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.flpListaProductos.Size = new System.Drawing.Size(410, 479);
-            this.flpListaProductos.TabIndex = 5;
+            this.flpListaProductos.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.flpListaProductos.Size = new System.Drawing.Size(397, 479);
+            this.flpListaProductos.TabIndex = 1;
+            this.flpListaProductos.WrapContents = false;
+            this.flpListaProductos.Paint += new System.Windows.Forms.PaintEventHandler(this.flpListaProductos_Paint);
             // 
             // panelArriba
             // 
@@ -233,7 +233,7 @@
             this.txtBuscarProducto.PrefixFormat = AntdUI.FormatFlags.Left;
             this.txtBuscarProducto.PrefixSvg = "";
             this.txtBuscarProducto.Radius = 0;
-            this.txtBuscarProducto.Size = new System.Drawing.Size(386, 75);
+            this.txtBuscarProducto.Size = new System.Drawing.Size(402, 75);
             this.txtBuscarProducto.Suffix = global::IlkaPoint.Properties.Resources.lupaimg;
             this.txtBuscarProducto.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
             this.txtBuscarProducto.SuffixFormat = AntdUI.FormatFlags.Left;

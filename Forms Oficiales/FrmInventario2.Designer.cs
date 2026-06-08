@@ -31,9 +31,6 @@
             this.panelFondo = new AntdUI.Panel();
             this.tlpContenidos = new System.Windows.Forms.TableLayoutPanel();
             this.panelEncabezado = new AntdUI.Panel();
-            this.panel1 = new AntdUI.Panel();
-            this.btnBuscarProducto = new AntdUI.Button();
-            this.txtBuscarProducto = new AntdUI.Input();
             this.lblTitulo = new AntdUI.Label();
             this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
             this.panelTablaInventario = new AntdUI.Panel();
@@ -53,10 +50,11 @@
             this.btnInventario = new FontAwesome.Sharp.IconButton();
             this.lblNombreApp = new AntdUI.Label();
             this.panelMenuInv = new AntdUI.Panel();
+            this.txtBuscarProducto = new AntdUI.Input();
+            this.btnBuscar = new AntdUI.Button();
             this.panelFondo.SuspendLayout();
             this.tlpContenidos.SuspendLayout();
             this.panelEncabezado.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panelTablaInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -97,7 +95,8 @@
             // panelEncabezado
             // 
             this.panelEncabezado.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
-            this.panelEncabezado.Controls.Add(this.panel1);
+            this.panelEncabezado.Controls.Add(this.btnBuscar);
+            this.panelEncabezado.Controls.Add(this.txtBuscarProducto);
             this.panelEncabezado.Controls.Add(this.lblTitulo);
             this.panelEncabezado.Controls.Add(this.btnAgregarProducto);
             this.panelEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
@@ -273,6 +272,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panelMenu.Controls.Add(this.btnInicio);
             this.panelMenu.Controls.Add(this.avatarLogo);
             this.panelMenu.Controls.Add(this.btnCerrarsesion);
@@ -304,7 +304,7 @@
             this.btnInicio.Location = new System.Drawing.Point(28, 310);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(306, 53);
+            this.btnInicio.Size = new System.Drawing.Size(344, 84);
             this.btnInicio.TabIndex = 4;
             this.btnInicio.Text = " Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -339,10 +339,10 @@
             this.btnCerrarsesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarsesion.IconSize = 40;
             this.btnCerrarsesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarsesion.Location = new System.Drawing.Point(28, 696);
-            this.btnCerrarsesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCerrarsesion.Location = new System.Drawing.Point(-8, 853);
+            this.btnCerrarsesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarsesion.Name = "btnCerrarsesion";
-            this.btnCerrarsesion.Size = new System.Drawing.Size(306, 53);
+            this.btnCerrarsesion.Size = new System.Drawing.Size(384, 111);
             this.btnCerrarsesion.TabIndex = 8;
             this.btnCerrarsesion.Text = " Cerrar sesión";
             this.btnCerrarsesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,8 +362,8 @@
             this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAyuda.IconSize = 40;
             this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.Location = new System.Drawing.Point(28, 637);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAyuda.Location = new System.Drawing.Point(32, 779);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 20);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(306, 53);
             this.btnAyuda.TabIndex = 7;
@@ -385,8 +385,8 @@
             this.btnVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVentas.IconSize = 40;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(28, 446);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnVentas.Location = new System.Drawing.Point(32, 558);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(4, 15, 4, 4);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(306, 53);
             this.btnVentas.TabIndex = 6;
@@ -408,8 +408,8 @@
             this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventario.IconSize = 40;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(28, 378);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnInventario.Location = new System.Drawing.Point(32, 472);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 15, 4, 4);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(306, 53);
             this.btnInventario.TabIndex = 5;
@@ -445,11 +445,40 @@
             this.panelMenuInv.TabIndex = 1;
             this.panelMenuInv.Text = "panelMenuDP";
             // 
+            // txtBuscarProducto
+            // 
+            this.txtBuscarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarProducto.Location = new System.Drawing.Point(552, 101);
+            this.txtBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarProducto.Name = "txtBuscarProducto";
+            this.txtBuscarProducto.PlaceholderText = "Buscar producto...";
+            this.txtBuscarProducto.PrefixFore = System.Drawing.Color.Black;
+            this.txtBuscarProducto.PrefixFormat = AntdUI.FormatFlags.Left;
+            this.txtBuscarProducto.PrefixSvg = "";
+            this.txtBuscarProducto.Radius = 0;
+            this.txtBuscarProducto.Size = new System.Drawing.Size(394, 70);
+            this.txtBuscarProducto.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.txtBuscarProducto.SuffixFormat = AntdUI.FormatFlags.Left;
+            this.txtBuscarProducto.SuffixSvg = "";
+            this.txtBuscarProducto.SuffixWidth = 0;
+            this.txtBuscarProducto.TabIndex = 5;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.IconSvg = "SearchOutlined";
+            this.btnBuscar.Location = new System.Drawing.Point(953, 100);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Radius = 0;
+            this.btnBuscar.Size = new System.Drawing.Size(71, 71);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Type = AntdUI.TTypeMini.Primary;
+            // 
             // FrmInventario2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 774);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1418, 968);
             this.Controls.Add(this.panelFondo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1246, 649);
@@ -459,7 +488,6 @@
             this.tlpContenidos.ResumeLayout(false);
             this.panelEncabezado.ResumeLayout(false);
             this.panelEncabezado.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panelTablaInventario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.panelMenu.ResumeLayout(false);
@@ -483,8 +511,6 @@
         private AntdUI.Panel panelEncabezado;
         private AntdUI.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnAgregarProducto;
-        private AntdUI.Input txtBuscarProducto;
-        private AntdUI.Button btnBuscarProducto;
         private AntdUI.Panel panelTablaInventario;
         private System.Windows.Forms.DataGridView dgvInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoría;
@@ -493,6 +519,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewButtonColumn colEditar;
         private System.Windows.Forms.DataGridViewButtonColumn colEliminar;
-        private AntdUI.Panel panel1;
+        private AntdUI.Input txtBuscarProducto;
+        private AntdUI.Button btnBuscar;
     }
 }

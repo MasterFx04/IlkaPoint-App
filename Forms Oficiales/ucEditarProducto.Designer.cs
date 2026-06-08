@@ -31,7 +31,7 @@
             this.panelFondoUC = new AntdUI.In.Panel();
             this.panelContenidoUC = new AntdUI.In.Panel();
             this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
-            this.btnNuevaVenta = new FontAwesome.Sharp.IconButton();
+            this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
             this.pbProducto = new System.Windows.Forms.PictureBox();
             this.label3 = new AntdUI.Label();
             this.input1 = new AntdUI.Input();
@@ -64,7 +64,7 @@
             // panelContenidoUC
             // 
             this.panelContenidoUC.Controls.Add(this.btnCerrarPanel);
-            this.panelContenidoUC.Controls.Add(this.btnNuevaVenta);
+            this.panelContenidoUC.Controls.Add(this.btnGuardarCambios);
             this.panelContenidoUC.Controls.Add(this.pbProducto);
             this.panelContenidoUC.Controls.Add(this.label3);
             this.panelContenidoUC.Controls.Add(this.input1);
@@ -103,27 +103,26 @@
             this.btnCerrarPanel.UseVisualStyleBackColor = false;
             this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
             // 
-            // btnNuevaVenta
+            // btnGuardarCambios
             // 
-            this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevaVenta.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevaVenta.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnNuevaVenta.IconColor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevaVenta.IconSize = 45;
-            this.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(35, 748);
-            this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(372, 44);
-            this.btnNuevaVenta.TabIndex = 14;
-            this.btnNuevaVenta.Text = "Guardar Cambios";
-            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevaVenta.UseVisualStyleBackColor = false;
-            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
+            this.btnGuardarCambios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardarCambios.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarCambios.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCambios.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCambios.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnGuardarCambios.IconColor = System.Drawing.Color.White;
+            this.btnGuardarCambios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardarCambios.IconSize = 45;
+            this.btnGuardarCambios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardarCambios.Location = new System.Drawing.Point(49, 932);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(372, 55);
+            this.btnGuardarCambios.TabIndex = 14;
+            this.btnGuardarCambios.Text = "Guardar Cambios";
+            this.btnGuardarCambios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardarCambios.UseVisualStyleBackColor = false;
             // 
             // pbProducto
             // 
@@ -248,9 +247,10 @@
             // 
             this.cmbCategorías.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.cmbCategorías.FormattingEnabled = true;
+            this.cmbCategorías.ItemHeight = 36;
             this.cmbCategorías.Items.AddRange(new object[] {
             "Abarrotes",
             "Lácteos",
@@ -260,7 +260,7 @@
             this.cmbCategorías.Location = new System.Drawing.Point(28, 205);
             this.cmbCategorías.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategorías.Name = "cmbCategorías";
-            this.cmbCategorías.Size = new System.Drawing.Size(368, 34);
+            this.cmbCategorías.Size = new System.Drawing.Size(413, 44);
             this.cmbCategorías.TabIndex = 4;
             this.cmbCategorías.Text = "Seleccione la categoría";
             // 
@@ -302,8 +302,7 @@
             // 
             // ucEditarProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.panelFondoUC);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucEditarProducto";
@@ -319,7 +318,7 @@
 
         private AntdUI.In.Panel panelFondoUC;
         private AntdUI.In.Panel panelContenidoUC;
-        private FontAwesome.Sharp.IconButton btnNuevaVenta;
+        private FontAwesome.Sharp.IconButton btnGuardarCambios;
         private System.Windows.Forms.PictureBox pbProducto;
         private AntdUI.Label label3;
         private AntdUI.Input input1;

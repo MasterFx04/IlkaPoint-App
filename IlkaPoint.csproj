@@ -269,6 +269,7 @@
     <EmbeddedResource Include="Forms Oficiales\Form1v2.resx">
       <DependentUpon>Form1v2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Oficiales\IlkaPoint.FrmDashboardPrincipal.resources" />
     <EmbeddedResource Include="Forms Oficiales\InfoProducto.resx">
       <DependentUpon>InfoProducto.cs</DependentUpon>
     </EmbeddedResource>
