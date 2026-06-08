@@ -41,7 +41,7 @@
             this.lblCategoríaDeProducto = new AntdUI.Label();
             this.lblIndicaciones = new AntdUI.Label();
             this.lblAgregarProducto = new AntdUI.Label();
-            this.btnNuevaVenta = new AntdUI.Button();
+            this.btnGuardar = new AntdUI.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,7 +191,7 @@
             this.cmbCategorías.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.cmbCategorías.FormattingEnabled = true;
-            this.cmbCategorías.ItemHeight = 36;
+            this.cmbCategorías.ItemHeight = 27;
             this.cmbCategorías.Items.AddRange(new object[] {
             "Abarrotes",
             "Lácteos",
@@ -240,26 +240,27 @@
             this.lblAgregarProducto.TabIndex = 17;
             this.lblAgregarProducto.Text = "Editar Producto";
             // 
-            // btnNuevaVenta
+            // btnGuardar
             // 
-            this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevaVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnNuevaVenta.Location = new System.Drawing.Point(44, 918);
-            this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Radius = 0;
-            this.btnNuevaVenta.Size = new System.Drawing.Size(386, 68);
-            this.btnNuevaVenta.TabIndex = 31;
-            this.btnNuevaVenta.Text = "Guardar Cambios";
-            this.btnNuevaVenta.Type = AntdUI.TTypeMini.Primary;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGuardar.Location = new System.Drawing.Point(44, 918);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Radius = 0;
+            this.btnGuardar.Size = new System.Drawing.Size(386, 68);
+            this.btnGuardar.TabIndex = 31;
+            this.btnGuardar.Text = "Guardar Cambios";
+            this.btnGuardar.Type = AntdUI.TTypeMini.Primary;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // ucEditarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnNuevaVenta);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCerrarPanel);
             this.Controls.Add(this.pbProducto);
             this.Controls.Add(this.label3);
@@ -295,6 +296,6 @@
         private AntdUI.Label lblCategoríaDeProducto;
         private AntdUI.Label lblIndicaciones;
         private AntdUI.Label lblAgregarProducto;
-        private AntdUI.Button btnNuevaVenta;
+        private AntdUI.Button btnGuardar;
     }
 }

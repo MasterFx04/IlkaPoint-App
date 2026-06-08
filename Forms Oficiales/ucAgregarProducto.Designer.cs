@@ -43,7 +43,6 @@
             this.lblAgregarProducto = new AntdUI.Label();
             this.button1 = new AntdUI.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
-            this.panelContenido.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrarPanel
@@ -256,17 +255,6 @@
             this.button1.Text = "Añadir Productos";
             this.button1.Type = AntdUI.TTypeMini.Primary;
             // 
-            // panelContenido
-            // 
-            this.panelContenido.Controls.Add(this.btnAgregarProducto);
-            this.panelContenido.Controls.Add(this.pbProducto);
-            this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenido.Location = new System.Drawing.Point(0, 0);
-            this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(480, 1024);
-            this.panelContenido.TabIndex = 16;
-            this.panelContenido.Text = "panel1";
-            // 
             // ucAgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -289,7 +277,6 @@
             this.Name = "ucAgregarProducto";
             this.Size = new System.Drawing.Size(480, 1024);
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
-            this.panelContenido.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

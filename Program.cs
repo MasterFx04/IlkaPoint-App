@@ -23,7 +23,7 @@ namespace IlkaPoint
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Mostrar el login Primero
-            FrmInventario2 login = new FrmInventario2();
+            FrmLogin login = new FrmLogin();
             if (login.ShowDialog() == DialogResult.OK )
             {
                 //SI TODO SALIO BIEN D:

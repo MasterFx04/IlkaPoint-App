@@ -25,6 +25,7 @@ namespace IlkaPoint
         {
             InitializeComponent();
             this.BackColor = ColorTranslator.FromHtml("#1A3560");
+        }
         private Stock stockSeleccionado;
         private Producto _producoSeleccionado;
         public ucEditarProducto(Stock stock)
@@ -43,8 +44,8 @@ namespace IlkaPoint
             this.MaximumSize = new Size(480, 1018);
             this.Size = new Size(456, 968);
 
-            // 3. Forzar que el botón Añadir mantenga su posición abajo
-            btnGuardarCambios.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            // 3. Forzar que el botón Guardar mantenga su posición abajo
+            btnGuardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
 
         //DISEÑO CÓDIGO (LÍNEA 24 A 39)
@@ -87,7 +88,7 @@ namespace IlkaPoint
             // 2. Calcular el espacio vertical disponible entre el campo de texto 4 y el botón
             // Tomamos la posición Y del botón de abajo y la Y del campo de arriba
             int limiteSuperior = txtPrecio2.Location.Y + txtPrecio2.Height;
-            int limiteInferior = btnNuevaVenta.Location.Y;
+            int limiteInferior = btnGuardar.Location.Y;
 
             // 3. Encontrar el centro exacto de ese espacio vacío
             int espacioDisponible = limiteInferior - limiteSuperior;
@@ -103,6 +104,7 @@ namespace IlkaPoint
         private void btnCerrarPanel_Click_1(object sender, EventArgs e)
         {
             this.FindForm()?.Close();
+        }
         private void CargarDatosProducto()
         {
             ServicioInventario inventario = new ServicioInventario();
@@ -114,7 +116,7 @@ namespace IlkaPoint
                 txtNombreProducto.Text = _producoSeleccionado.nombre;
                 cmbCategorías.Text = _producoSeleccionado.categoria;
                 inputNumberCantProducto.Value = stockSeleccionado.Cantidad;
-                input1.Text = _producoSeleccionado.precio.ToString();
+                txtPrecio2.Text = _producoSeleccionado.precio.ToString();
             }
 
             if (_producoSeleccionado.rutaImagenPng != null && _producoSeleccionado.rutaImagenPng.Length > 0)
@@ -126,7 +128,7 @@ namespace IlkaPoint
             }
         }
 
-        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             /*
             OpenFileDialog abrir = new OpenFileDialog();
@@ -142,7 +144,7 @@ namespace IlkaPoint
             {
                 _producoSeleccionado.nombre = txtNombreProducto.Text;
                 _producoSeleccionado.categoria = cmbCategorías.Text;
-                _producoSeleccionado.precio = decimal.Parse(input1.Text);
+                _producoSeleccionado.precio = decimal.Parse(txtPrecio2.Text);
                 stockSeleccionado.Cantidad = (int)inputNumberCantProducto.Value;
                 // convertir imagen a bytes si se cambió
                 if (rutaImagen != "")
@@ -164,47 +166,6 @@ namespace IlkaPoint
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            /*
-            try
-            {
-                _producoSeleccionado.nombre = txtNombreProducto.Text;
-                _producoSeleccionado.categoria = cmbCategorías.Text;
-                _producoSeleccionado.precio = decimal.Parse(input1.Text);
-
-                // convertir imagen a bytes si se cambió
-                if (rutaImagen != "")
-                {
-                    using (MemoryStream ms = new MemoryStream())
-                    {
-                        pbProducto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                        _producoSeleccionado.rutaImagenPng = ms.ToArray();
-                    }
-                }
-
-                ServicioInventario servicio = new ServicioInventario();
-                servicio.EditarProducto(_producoSeleccionado, stockSeleccionado);
-
-                // actualizar stock si cambió la cantidad
-                int nuevaCantidad = int.Parse(inputNumberCantProducto.Text);
-                if (nuevaCantidad != stockSeleccionado.Cantidad)
-                {
-                    int diferencia = nuevaCantidad - stockSeleccionado.Cantidad;
-                    if (diferencia > 0)
-                        servicio.AgregarCantidadStock(_producoSeleccionado.id, diferencia);
-                }
-
-                MessageBox.Show("Producto actualizado correctamente");
-                this.FindForm()?.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            */
         }
     }
 }

@@ -32,7 +32,7 @@ namespace IlkaPoint
             this.Size = new Size(456, 968);
 
             // 3. Forzar que el botón Añadir mantenga su posición abajo
-            btnAgregarProducto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
      
 
@@ -107,6 +107,7 @@ namespace IlkaPoint
         private void btnCerrarPanel_Click_1(object sender, EventArgs e)
         {
             this.FindForm()?.Close();
+        }
         private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
             ServicioInventario servicio = new ServicioInventario();

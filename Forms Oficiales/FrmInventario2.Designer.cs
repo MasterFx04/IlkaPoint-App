@@ -355,7 +355,6 @@
             this.panelTablaInventario.Size = new System.Drawing.Size(994, 722);
             this.panelTablaInventario.TabIndex = 1;
             this.panelTablaInventario.Text = "panel1";
-            this.panelTablaInventario.Click += new System.EventHandler(this.panelTablaInventario_Click);
             // 
             // dgvInventario
             // 
@@ -455,6 +454,8 @@
         private AntdUI.Panel panelEncabezado;
         private AntdUI.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnAgregarProducto;
+        private AntdUI.Button btnBuscarProducto;
+        private AntdUI.Input txtBuscarProducto;
         private AntdUI.Panel panelTablaInventario;
         private System.Windows.Forms.DataGridView dgvInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoría;
