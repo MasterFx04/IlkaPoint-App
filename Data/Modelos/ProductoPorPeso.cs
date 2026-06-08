@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace IlkaPoint.Data.Modelos
         public decimal peso { get; set; }
 
         public ProductoPorPeso() { }
-        public ProductoPorPeso(string nombre, string categoria, string proveedor, decimal precio, string rutaImagenPng, decimal peso): base(nombre, categoria, proveedor, precio, rutaImagenPng)
+        public ProductoPorPeso(string nombre, string categoria, string proveedor, decimal precio, byte[] rutaImagenPng, decimal peso): base(nombre, categoria, proveedor, precio, rutaImagenPng)
         {
             this.peso = peso;
         }

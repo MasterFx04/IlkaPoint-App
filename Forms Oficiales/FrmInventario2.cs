@@ -1,6 +1,9 @@
 ﻿using AntdUI;
+using IlkaPoint.Clases;
+using IlkaPoint.Data.Modelos;
 using IlkaPoint.Forms_Oficiales;
 using IlkaPoint.FormsPrueba;
+using IlkaPoint.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +19,8 @@ namespace IlkaPoint
 {
     public partial class FrmInventario2 : Form
     {
+        
+
         //DISEÑO CÓDIGO (LÍNEA 21)
         // Paleta de colores para la sombra del menú
         public static readonly System.Drawing.Color AzulFondo = System.Drawing.ColorTranslator.FromHtml("#1A3560");
@@ -45,10 +50,15 @@ namespace IlkaPoint
         //DATOS DE PRUEBA
         //Creado con Datos de Prueba, en tu caso aquí deberías conectar a tu base de datos
         //(Línea 42 a 64)
+        //<<<< CONECTANDO LA BASE DE DATOS....>>>>>>>
         private void CargarDatos()
         {
+            ServicioInventario servicio = new ServicioInventario();
+            List<Stock> stocks = servicio.ObtenerElStockActual();
+
             dgvInventario.Rows.Clear();
 
+            /*
             dgvInventario.Rows.Add("Abarrotes", "Arroz Gold Special 5lb", 120, "Abundante");
             dgvInventario.Rows.Add("Abarrotes", "Aceite Vegetal Gourmet 1L", 45, "Abundante");
             dgvInventario.Rows.Add("Abarrotes", "Porotos Chícharos 400g", 85, "Abundante");
@@ -67,12 +77,49 @@ namespace IlkaPoint
             dgvInventario.Rows.Add("Limpieza", "Cloro Max", 50, "Agotado");
             dgvInventario.Rows.Add("Limpieza", "Detergente en Polvo", 40, "Abundante");
             dgvInventario.Rows.Add("Limpieza", "Desinfectante", 3, "Bajo Stock");
+            */
+
+
+            foreach (Stock stock in stocks)
+            {
+                Producto producto = servicio.BuscarProductoPorId(stock.ProductoId);
+
+                //Describimos el estado del producto
+                string estado;
+                if (stock.Cantidad <= 5 && stock.Cantidad > 0)
+                {
+                    estado = "Critico";
+                }
+                else if (stock.Cantidad > 5 && stock.Cantidad <= 15)
+                {
+                    estado = "Bajo Stock";
+                }
+                else if (stock.Cantidad > 15)
+                {
+                    estado = "Abundante";
+                }
+                else
+                {
+                    estado = "No definido";
+                }
+
+                // 1. Agregamos los datos visuales y guardamos el índice de la fila que se acaba de crear
+                int indiceFila = dgvInventario.Rows.Add(
+                    producto.categoria,
+                    producto.nombre,
+                    stock.Cantidad,
+                    estado
+                );
+
+                // 2. Metemos el objeto 'stock' completito en el "bolsillo" (Tag) de esa fila
+                dgvInventario.Rows[indiceFila].Tag = stock;
+            }
         }
 
         //DISEÑO CÓDIGO
         // Este método se encarga de abrir la ventana lateral para editar un producto específico.
         //(LÍNEA 70 A 98)
-        private void AbrirEditarProductoLateral(string idProducto)
+        private void AbrirEditarProductoLateral(Stock stock)
         {
             // 1. Fondo oscuro
             Form_FondoOscuro fondo = new Form_FondoOscuro();
@@ -89,7 +136,7 @@ namespace IlkaPoint
             ventanaContenedor.ShowInTaskbar = false;
 
             // 3. Instancia de tu User Control de EDITAR
-            ucEditarProducto panelEditar = new ucEditarProducto();
+            ucEditarProducto panelEditar = new ucEditarProducto(stock);
             panelEditar.Dock = DockStyle.Fill;
 
             // Aquí le pasas el ID al control si tienes un método interno para cargar los datos
@@ -100,6 +147,7 @@ namespace IlkaPoint
             // 4. Mostrar y limpiar
             ventanaContenedor.ShowDialog(fondo);
             fondo.Dispose();
+            CargarDatos();
         }
 
         //DISEÑO CÓDIGO (LÍNEA 105 A 126)
@@ -138,6 +186,7 @@ namespace IlkaPoint
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            /* <<<<<ANTES>>>>>>
             foreach (DataGridViewRow fila in dgvInventario.Rows)
             {
                 fila.Visible = fila.Cells[1]
@@ -145,6 +194,9 @@ namespace IlkaPoint
                     .ToLower()
                     .Contains(txtBuscarProducto.Text.ToLower());
             }
+            <<<<<<<<<<<<<<<<<<<<<<<<<<<<<BUSCAR LA FUNCION TXTBUSCARPRODUCTOCHANGED>>>>>>>>>>>>>>>>>>>>>>>> 
+            */
+
         }
 
 
@@ -164,8 +216,9 @@ namespace IlkaPoint
 
             if (dgvInventario.Columns[e.ColumnIndex].Name == "colEditar")
             {
-                MessageBox.Show("Editar producto");
-                // aquí va tu lógica de editar
+                MessageBox.Show("Ingrese los datos actuales del producto a editar");
+                // aquí va tu lógica de editarId);
+                CargarDatos();
             }
 
             if (dgvInventario.Columns[e.ColumnIndex].Name == "colEliminar")
@@ -178,7 +231,12 @@ namespace IlkaPoint
 
                 if (respuesta == DialogResult.Yes)
                 {
-                    dgvInventario.Rows.RemoveAt(e.RowIndex);
+                    //dgvInventario.Rows.RemoveAt(e.RowIndex); <<<<<<<<<<<<<<ELIMINANDO EL STOCK EN LA DB>>>>>>>>>>>
+                    Stock stockSeleccionado = (Stock)dgvInventario.Rows[e.RowIndex].Tag;
+                    ServicioInventario inventario = new ServicioInventario();
+                    inventario.EliminarProducto(stockSeleccionado.ProductoId);
+                    CargarDatos();
+
                 }
             }
             if (e.RowIndex < 0) return;
@@ -190,7 +248,9 @@ namespace IlkaPoint
                 string idProductoSeleccionado = dgvInventario.Rows[e.RowIndex].Cells["Producto"].Value.ToString();
 
                 // LLAMAMOS AL MÉTODO DE ARRIBA
-                AbrirEditarProductoLateral(idProductoSeleccionado);
+                ServicioInventario servicio = new ServicioInventario();
+                Stock stockSeleccionado = (Stock)dgvInventario.Rows[e.RowIndex].Tag;
+                AbrirEditarProductoLateral(stockSeleccionado);
             }
         }
 
@@ -240,7 +300,7 @@ namespace IlkaPoint
             fondo.Dispose();
 
             // Puedes agregar un método para refrescar tu Grid o lista de inventario si lo necesitas:
-            // CargarInventario();
+            CargarDatos();
         }
 
 
@@ -337,6 +397,60 @@ namespace IlkaPoint
         private void panelEncabezado_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
+        {
+            //<<<<<<<<<<<<AHORA>>>>>>>>>>>>
+            ServicioInventario servicio = new ServicioInventario();
+            List<Stock> stocks = servicio.BuscarStockPorNombre(txtBuscarProducto.Text);
+
+            dgvInventario.Rows.Clear();
+
+            foreach (Stock stock in stocks)
+            {
+                Producto producto = servicio.BuscarProductoPorId(stock.ProductoId);
+
+                //Describimos el estado del producto
+                string estado;
+                if (stock.Cantidad <= 5 && stock.Cantidad > 0)
+                {
+                    estado = "Critico";
+                }
+                else if (stock.Cantidad > 5 && stock.Cantidad <= 15)
+                {
+                    estado = "Bajo Stock";
+                }
+                else if (stock.Cantidad > 15)
+                {
+                    estado = "Abundante";
+                }
+                else
+                {
+                    estado = "No definido";
+                }
+
+                // 1. Agregamos los datos visuales y guardamos el índice de la fila que se acaba de crear
+                int indiceFila = dgvInventario.Rows.Add(
+                    producto.categoria,
+                    producto.nombre,
+                    stock.Cantidad,
+                    estado
+                );
+
+                // 2. Metemos el objeto 'stock' completito en el "bolsillo" (Tag) de esa fila
+                dgvInventario.Rows[indiceFila].Tag = stock;
+            }
+        }
+
+        private void btnInicio_Click_1(object sender, EventArgs e)
+        {
+            FrmDashboardPrincipal dashboard = Application.OpenForms.OfType<FrmDashboardPrincipal>().FirstOrDefault();
+           // FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
+            this.Hide();
+            dashboard?.RefrescarDashBoard();
+            dashboard?.Show();
+            
         }
     }
 }

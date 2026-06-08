@@ -157,7 +157,13 @@ namespace IlkaPoint
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un detalle al cargar las gráficas: " + ex.Message);
+                string mensaje = ex.Message;
+                if (ex.InnerException != null)
+                    mensaje += "\n\nDetalle: " + ex.InnerException.Message;
+                if (ex.InnerException?.InnerException != null)
+                    mensaje += "\n\nDetalle2: " + ex.InnerException.InnerException.Message;
+
+                MessageBox.Show(mensaje);
             }
         }
 
