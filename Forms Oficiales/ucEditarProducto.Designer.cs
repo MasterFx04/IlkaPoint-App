@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelFondoUC = new AntdUI.In.Panel();
-            this.panelContenidoUC = new AntdUI.In.Panel();
             this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
-            this.btnNuevaVenta = new FontAwesome.Sharp.IconButton();
             this.pbProducto = new System.Windows.Forms.PictureBox();
             this.label3 = new AntdUI.Label();
-            this.input1 = new AntdUI.Input();
+            this.txtPrecio2 = new AntdUI.Input();
             this.label2 = new AntdUI.Label();
             this.inputNumberCantProducto = new AntdUI.InputNumber();
             this.label1 = new AntdUI.Label();
@@ -44,44 +41,9 @@
             this.lblCategoríaDeProducto = new AntdUI.Label();
             this.lblIndicaciones = new AntdUI.Label();
             this.lblAgregarProducto = new AntdUI.Label();
-            this.panelFondoUC.SuspendLayout();
-            this.panelContenidoUC.SuspendLayout();
+            this.btnNuevaVenta = new AntdUI.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelFondoUC
-            // 
-            this.panelFondoUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
-            this.panelFondoUC.Controls.Add(this.panelContenidoUC);
-            this.panelFondoUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFondoUC.Location = new System.Drawing.Point(0, 0);
-            this.panelFondoUC.Name = "panelFondoUC";
-            this.panelFondoUC.Size = new System.Drawing.Size(480, 1024);
-            this.panelFondoUC.TabIndex = 0;
-            this.panelFondoUC.Text = "panel1";
-            // 
-            // panelContenidoUC
-            // 
-            this.panelContenidoUC.Controls.Add(this.btnCerrarPanel);
-            this.panelContenidoUC.Controls.Add(this.btnNuevaVenta);
-            this.panelContenidoUC.Controls.Add(this.pbProducto);
-            this.panelContenidoUC.Controls.Add(this.label3);
-            this.panelContenidoUC.Controls.Add(this.input1);
-            this.panelContenidoUC.Controls.Add(this.label2);
-            this.panelContenidoUC.Controls.Add(this.inputNumberCantProducto);
-            this.panelContenidoUC.Controls.Add(this.label1);
-            this.panelContenidoUC.Controls.Add(this.txtNombreProducto);
-            this.panelContenidoUC.Controls.Add(this.lblNombreProducto);
-            this.panelContenidoUC.Controls.Add(this.cmbCategorías);
-            this.panelContenidoUC.Controls.Add(this.lblCategoríaDeProducto);
-            this.panelContenidoUC.Controls.Add(this.lblIndicaciones);
-            this.panelContenidoUC.Controls.Add(this.lblAgregarProducto);
-            this.panelContenidoUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenidoUC.Location = new System.Drawing.Point(0, 0);
-            this.panelContenidoUC.Name = "panelContenidoUC";
-            this.panelContenidoUC.Size = new System.Drawing.Size(480, 1024);
-            this.panelContenidoUC.TabIndex = 1;
-            this.panelContenidoUC.Text = "panel1";
             // 
             // btnCerrarPanel
             // 
@@ -94,44 +56,25 @@
             this.btnCerrarPanel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCerrarPanel.IconColor = System.Drawing.Color.Black;
             this.btnCerrarPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarPanel.Location = new System.Drawing.Point(391, 20);
-            this.btnCerrarPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrarPanel.Location = new System.Drawing.Point(378, 43);
             this.btnCerrarPanel.Name = "btnCerrarPanel";
-            this.btnCerrarPanel.Size = new System.Drawing.Size(58, 65);
-            this.btnCerrarPanel.TabIndex = 16;
+            this.btnCerrarPanel.Size = new System.Drawing.Size(52, 52);
+            this.btnCerrarPanel.TabIndex = 30;
             this.btnCerrarPanel.UseVisualStyleBackColor = false;
-            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
-            // 
-            // btnNuevaVenta
-            // 
-            this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevaVenta.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevaVenta.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnNuevaVenta.IconColor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevaVenta.IconSize = 45;
-            this.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(39, 935);
-            this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(418, 55);
-            this.btnNuevaVenta.TabIndex = 14;
-            this.btnNuevaVenta.Text = "Guardar Cambios";
-            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click_1);
             // 
             // pbProducto
             // 
+            this.pbProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pbProducto.BackColor = System.Drawing.Color.Gainsboro;
             this.pbProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbProducto.Image = global::IlkaPoint.Properties.Resources.subir_imagen;
-            this.pbProducto.Location = new System.Drawing.Point(106, 773);
+            this.pbProducto.Location = new System.Drawing.Point(137, 762);
+            this.pbProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbProducto.Name = "pbProducto";
-            this.pbProducto.Size = new System.Drawing.Size(234, 124);
+            this.pbProducto.Size = new System.Drawing.Size(210, 140);
             this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProducto.TabIndex = 12;
+            this.pbProducto.TabIndex = 28;
             this.pbProducto.TabStop = false;
             this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
             // 
@@ -139,44 +82,46 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(31, 721);
+            this.label3.Location = new System.Drawing.Point(44, 718);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(437, 46);
-            this.label3.TabIndex = 11;
+            this.label3.Size = new System.Drawing.Size(374, 37);
+            this.label3.TabIndex = 27;
             this.label3.Text = "5. Agregar Imagen";
             // 
-            // input1
+            // txtPrecio2
             // 
-            this.input1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtPrecio2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.input1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input1.Location = new System.Drawing.Point(29, 641);
-            this.input1.Margin = new System.Windows.Forms.Padding(4);
-            this.input1.Name = "input1";
-            this.input1.PlaceholderText = "Ejemplo: 1.75";
-            this.input1.PrefixFore = System.Drawing.Color.Black;
-            this.input1.PrefixFormat = AntdUI.FormatFlags.Left;
-            this.input1.PrefixSvg = "";
-            this.input1.Radius = 0;
-            this.input1.Size = new System.Drawing.Size(428, 62);
-            this.input1.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.input1.SuffixFormat = AntdUI.FormatFlags.Left;
-            this.input1.SuffixSvg = "";
-            this.input1.SuffixWidth = 0;
-            this.input1.TabIndex = 10;
+            this.txtPrecio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio2.Location = new System.Drawing.Point(70, 628);
+            this.txtPrecio2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPrecio2.Name = "txtPrecio2";
+            this.txtPrecio2.PlaceholderText = "Ejemplo: 1.75";
+            this.txtPrecio2.PrefixFore = System.Drawing.Color.Black;
+            this.txtPrecio2.PrefixFormat = AntdUI.FormatFlags.Left;
+            this.txtPrecio2.PrefixSvg = "";
+            this.txtPrecio2.Radius = 0;
+            this.txtPrecio2.Size = new System.Drawing.Size(360, 64);
+            this.txtPrecio2.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.txtPrecio2.SuffixFormat = AntdUI.FormatFlags.Left;
+            this.txtPrecio2.SuffixSvg = "";
+            this.txtPrecio2.SuffixWidth = 0;
+            this.txtPrecio2.TabIndex = 26;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(29, 588);
+            this.label2.Location = new System.Drawing.Point(44, 577);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(437, 46);
-            this.label2.TabIndex = 9;
+            this.label2.Size = new System.Drawing.Size(394, 37);
+            this.label2.TabIndex = 25;
             this.label2.Text = "4. Precio unitario ($)";
             // 
             // inputNumberCantProducto
@@ -185,61 +130,65 @@
             this.inputNumberCantProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inputNumberCantProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputNumberCantProducto.Location = new System.Drawing.Point(29, 499);
+            this.inputNumberCantProducto.Location = new System.Drawing.Point(68, 494);
+            this.inputNumberCantProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputNumberCantProducto.Name = "inputNumberCantProducto";
-            this.inputNumberCantProducto.Size = new System.Drawing.Size(420, 83);
-            this.inputNumberCantProducto.TabIndex = 8;
+            this.inputNumberCantProducto.Radius = 0;
+            this.inputNumberCantProducto.Size = new System.Drawing.Size(360, 64);
+            this.inputNumberCantProducto.TabIndex = 24;
             this.inputNumberCantProducto.Text = "0";
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(31, 427);
+            this.label1.Location = new System.Drawing.Point(44, 440);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 66);
-            this.label1.TabIndex = 7;
+            this.label1.Size = new System.Drawing.Size(394, 53);
+            this.label1.TabIndex = 23;
             this.label1.Text = "3. Cantidad por unidad";
             // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(29, 369);
-            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProducto.Location = new System.Drawing.Point(68, 352);
+            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.PlaceholderText = "Ejemplo: Queso Amarillo Kraft";
             this.txtNombreProducto.PrefixFore = System.Drawing.Color.Black;
             this.txtNombreProducto.PrefixFormat = AntdUI.FormatFlags.Left;
             this.txtNombreProducto.PrefixSvg = "";
             this.txtNombreProducto.Radius = 0;
-            this.txtNombreProducto.Size = new System.Drawing.Size(420, 60);
+            this.txtNombreProducto.Size = new System.Drawing.Size(360, 64);
             this.txtNombreProducto.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
             this.txtNombreProducto.SuffixFormat = AntdUI.FormatFlags.Left;
             this.txtNombreProducto.SuffixSvg = "";
             this.txtNombreProducto.SuffixWidth = 0;
-            this.txtNombreProducto.TabIndex = 6;
+            this.txtNombreProducto.TabIndex = 22;
             // 
             // lblNombreProducto
             // 
             this.lblNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombreProducto.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreProducto.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblNombreProducto.Location = new System.Drawing.Point(29, 308);
+            this.lblNombreProducto.Location = new System.Drawing.Point(43, 307);
+            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(420, 54);
-            this.lblNombreProducto.TabIndex = 5;
-            this.lblNombreProducto.Text = "2. Nombre del Producto";
+            this.lblNombreProducto.Size = new System.Drawing.Size(376, 43);
+            this.lblNombreProducto.TabIndex = 21;
+            this.lblNombreProducto.Text = "2. Nombre del producto";
             // 
             // cmbCategorías
             // 
             this.cmbCategorías.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategorías.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.cmbCategorías.FormattingEnabled = true;
             this.cmbCategorías.Items.AddRange(new object[] {
@@ -248,67 +197,94 @@
             "Bebidas",
             "Limpieza",
             "Papelería"});
-            this.cmbCategorías.Location = new System.Drawing.Point(31, 256);
+            this.cmbCategorías.Location = new System.Drawing.Point(70, 238);
+            this.cmbCategorías.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategorías.Name = "cmbCategorías";
-            this.cmbCategorías.Size = new System.Drawing.Size(413, 37);
-            this.cmbCategorías.TabIndex = 4;
+            this.cmbCategorías.Size = new System.Drawing.Size(352, 35);
+            this.cmbCategorías.TabIndex = 20;
             this.cmbCategorías.Text = "Seleccione la categoría";
             // 
             // lblCategoríaDeProducto
             // 
             this.lblCategoríaDeProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCategoríaDeProducto.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoríaDeProducto.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoríaDeProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblCategoríaDeProducto.Location = new System.Drawing.Point(31, 196);
+            this.lblCategoríaDeProducto.Location = new System.Drawing.Point(44, 182);
+            this.lblCategoríaDeProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblCategoríaDeProducto.Name = "lblCategoríaDeProducto";
-            this.lblCategoríaDeProducto.Size = new System.Drawing.Size(420, 54);
-            this.lblCategoríaDeProducto.TabIndex = 3;
-            this.lblCategoríaDeProducto.Text = "1. Categoría de Producto";
+            this.lblCategoríaDeProducto.Size = new System.Drawing.Size(374, 43);
+            this.lblCategoríaDeProducto.TabIndex = 19;
+            this.lblCategoríaDeProducto.Text = "1. Categoría de producto";
             // 
             // lblIndicaciones
             // 
-            this.lblIndicaciones.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIndicaciones.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIndicaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.lblIndicaciones.Location = new System.Drawing.Point(19, 98);
+            this.lblIndicaciones.Location = new System.Drawing.Point(45, 101);
+            this.lblIndicaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblIndicaciones.Name = "lblIndicaciones";
-            this.lblIndicaciones.Size = new System.Drawing.Size(452, 77);
-            this.lblIndicaciones.TabIndex = 1;
+            this.lblIndicaciones.Size = new System.Drawing.Size(378, 62);
+            this.lblIndicaciones.TabIndex = 18;
             this.lblIndicaciones.Text = "Para editar un producto complete los siguientes campos:";
             // 
             // lblAgregarProducto
             // 
-            this.lblAgregarProducto.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarProducto.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblAgregarProducto.Location = new System.Drawing.Point(31, 20);
+            this.lblAgregarProducto.Location = new System.Drawing.Point(44, 39);
+            this.lblAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblAgregarProducto.Name = "lblAgregarProducto";
-            this.lblAgregarProducto.Size = new System.Drawing.Size(360, 72);
-            this.lblAgregarProducto.TabIndex = 0;
+            this.lblAgregarProducto.Size = new System.Drawing.Size(320, 58);
+            this.lblAgregarProducto.TabIndex = 17;
             this.lblAgregarProducto.Text = "Editar Producto";
-            this.lblAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnNuevaVenta
+            // 
+            this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNuevaVenta.Location = new System.Drawing.Point(44, 918);
+            this.btnNuevaVenta.Name = "btnNuevaVenta";
+            this.btnNuevaVenta.Radius = 0;
+            this.btnNuevaVenta.Size = new System.Drawing.Size(386, 68);
+            this.btnNuevaVenta.TabIndex = 31;
+            this.btnNuevaVenta.Text = "Guardar Cambios";
+            this.btnNuevaVenta.Type = AntdUI.TTypeMini.Primary;
             // 
             // ucEditarProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelFondoUC);
+            this.Controls.Add(this.btnNuevaVenta);
+            this.Controls.Add(this.btnCerrarPanel);
+            this.Controls.Add(this.pbProducto);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPrecio2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.inputNumberCantProducto);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNombreProducto);
+            this.Controls.Add(this.lblNombreProducto);
+            this.Controls.Add(this.cmbCategorías);
+            this.Controls.Add(this.lblCategoríaDeProducto);
+            this.Controls.Add(this.lblIndicaciones);
+            this.Controls.Add(this.lblAgregarProducto);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucEditarProducto";
             this.Size = new System.Drawing.Size(480, 1024);
-            this.panelFondoUC.ResumeLayout(false);
-            this.panelContenidoUC.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private AntdUI.In.Panel panelFondoUC;
-        private AntdUI.In.Panel panelContenidoUC;
-        private FontAwesome.Sharp.IconButton btnNuevaVenta;
+        private FontAwesome.Sharp.IconButton btnCerrarPanel;
         private System.Windows.Forms.PictureBox pbProducto;
         private AntdUI.Label label3;
-        private AntdUI.Input input1;
+        private AntdUI.Input txtPrecio2;
         private AntdUI.Label label2;
         private AntdUI.InputNumber inputNumberCantProducto;
         private AntdUI.Label label1;
@@ -318,6 +294,6 @@
         private AntdUI.Label lblCategoríaDeProducto;
         private AntdUI.Label lblIndicaciones;
         private AntdUI.Label lblAgregarProducto;
-        private FontAwesome.Sharp.IconButton btnCerrarPanel;
+        private AntdUI.Button btnNuevaVenta;
     }
 }

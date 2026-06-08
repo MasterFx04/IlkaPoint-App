@@ -19,6 +19,10 @@ namespace IlkaPoint
         //DISEÑO CÓDIGO (LÍNEA 21)
         // Paleta de colores para la sombra del menú
         public static readonly System.Drawing.Color AzulFondo = System.Drawing.ColorTranslator.FromHtml("#1A3560");
+        // Paleta de Colores Estética
+        public static readonly Color AzulClaroTarjetas = ColorTranslator.FromHtml("#3059B6"); // Botones "Ver Factura"
+        public static readonly Color BlancoTexto = ColorTranslator.FromHtml("#FFFFFF");       // Textos legibles
+        public static readonly Color AzulMenu = ColorTranslator.FromHtml("#08243B");          // Menú lateral izquierdo
         public FrmInventario2()
         {
             InitializeComponent();
@@ -27,8 +31,15 @@ namespace IlkaPoint
             // se ejecute el código dentro de FrmInventario_Load
             this.Load += FrmInventario_Load;
 
+            ApplyTheme();
         }
 
+        private void ApplyTheme()
+        {
+
+            // Fondos de los contenedores principales
+            if (panelMenu != null) panelMenu.BackColor = AzulMenu;
+        }
 
         private void FrmInventario_Load(object sender, EventArgs e)
         {
@@ -335,6 +346,11 @@ namespace IlkaPoint
         //Este evento se abrió por error mientras diseñaba el formulario, pueden borrarlo
         //porque no se utiliza.
         private void panelEncabezado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelTablaInventario_Click(object sender, EventArgs e)
         {
 
         }

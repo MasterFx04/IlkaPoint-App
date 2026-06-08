@@ -19,7 +19,7 @@ namespace IlkaPoint
         public FrmLogin()
         {
             InitializeComponent();
-            panelCentro.BackColor = Color.Transparent;
+            pnlLoginContainer.BackColor = Color.Transparent;
            
 
         }
@@ -103,6 +103,16 @@ namespace IlkaPoint
         private void lblContraseña_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelFondo_Resize(object sender, EventArgs e)
+        {
+           
         }
     }
 }

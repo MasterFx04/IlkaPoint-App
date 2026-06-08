@@ -3,6 +3,7 @@ using System.Globalization; // <- ESTA ES LA CLAVE para que reconozca CultureInf
 using System.Threading;     // <- ESTA ES LA CLAVE para que reconozca Thread
 using System.Windows.Forms;
 using IlkaPoint.FormsPrueba;
+using IlkaPoint.Forms_Oficiales;
 
 namespace IlkaPoint
 {
@@ -22,7 +23,7 @@ namespace IlkaPoint
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Mostrar el login Primero
-            FrmLogin login = new FrmLogin();
+            FrmInventario2 login = new FrmInventario2();
             if (login.ShowDialog() == DialogResult.OK )
             {
                 //SI TODO SALIO BIEN D:

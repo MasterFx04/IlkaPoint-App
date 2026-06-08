@@ -346,5 +346,10 @@ namespace IlkaPoint
             // Refresca el historial para mostrar la nueva venta
             CargarHistorialVentas();
         }
+
+        private void avatarLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

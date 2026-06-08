@@ -17,6 +17,7 @@ namespace IlkaPoint
         public ucAgregarProducto()
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#1A3560");
         }
 
         //Este evento lo geeneré por error mientras diseñaba, pueden borrarlo.
@@ -67,6 +68,16 @@ namespace IlkaPoint
         //DISEÑO CÓDIGO (LÍNEA 69 A 70)
         //Este evento configura la "X" para cerrar la ventana de agregar producto.
         private void btnCerrarPanel_Click(object sender, EventArgs e)
+        {
+            this.FindForm()?.Close();
+        }
+
+        private void panelContenidoUC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrarPanel_Click_1(object sender, EventArgs e)
         {
             this.FindForm()?.Close();
         }
