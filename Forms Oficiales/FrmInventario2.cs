@@ -22,6 +22,9 @@ namespace IlkaPoint
         public FrmInventario2()
         {
             InitializeComponent();
+            // === CONGELAR EL TAMAÑO ESTÁNDAR ===
+            this.Size = new Size(1440, 1024); // Pon aquí los pixeles exactos de tu Figma
+            this.MinimumSize = new Size(1024, 768); // Evita que la hagan más chica
             // Asociamos el evento Load del formulario a nuestro método personalizado
             // Esto asegura que cuando el formulario se cargue,
             // se ejecute el código dentro de FrmInventario_Load
