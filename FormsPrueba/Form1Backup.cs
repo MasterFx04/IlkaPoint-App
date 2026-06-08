@@ -30,7 +30,7 @@ namespace IlkaPoint.FormsPrueba
             string proovedor = textBox3.Text;
             decimal precio = decimal.Parse(textBox4.Text);
 
-            Producto productoPrueba = new ProductoPorUnidad(nombre, categoria, proovedor, precio, "skibidi");
+            Producto productoPrueba = new ProductoPorUnidad(nombre, categoria, proovedor, precio, null); //LA IMAGEN NO ME FUNCIONA PERO IGUAL EL FORMS NO SIRVE, ES DE EJEMPLO
 
             /*
             if (comboBox1.SelectedItem.ToString() == "Unitario")

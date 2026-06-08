@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace IlkaPoint.Data.Modelos
         public string proveedor { get; set; }
         public decimal precio { get; set; }
         
-        public string rutaImagenPng { get; set; }
+        public byte[] rutaImagenPng { get; set; }
         //Propongo en ves de rutaImagen, poner: public Image rutaImagenPng {get; set;};
 
 
@@ -29,7 +30,7 @@ namespace IlkaPoint.Data.Modelos
         */
 
         public Producto() { }
-        public Producto (string nombre, string categoria, string proveedor, decimal precio, string rutaImagenPng)
+        public Producto (string nombre, string categoria, string proveedor, decimal precio, byte[] rutaImagenPng)
         {
             this.nombre = nombre;
             this.categoria = categoria;
