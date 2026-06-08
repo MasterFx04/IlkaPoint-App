@@ -31,8 +31,6 @@
             this.panelFondoUC = new AntdUI.In.Panel();
             this.panelContenidoUC = new AntdUI.In.Panel();
             this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
-            this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
-            this.pbProducto = new System.Windows.Forms.PictureBox();
             this.label3 = new AntdUI.Label();
             this.input1 = new AntdUI.Input();
             this.label2 = new AntdUI.Label();
@@ -45,10 +43,12 @@
             this.lblIndicaciones = new AntdUI.Label();
             this.lblAgregarProducto = new AntdUI.Label();
             this.panelContenido = new AntdUI.In.Panel();
+            this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
+            this.pbProducto = new System.Windows.Forms.PictureBox();
             this.panelFondoUC.SuspendLayout();
             this.panelContenidoUC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             this.panelContenido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFondoUC
@@ -105,42 +105,6 @@
             this.btnCerrarPanel.TabIndex = 15;
             this.btnCerrarPanel.UseVisualStyleBackColor = false;
             this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
-            // 
-            // btnAgregarProducto
-            // 
-            this.btnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarProducto.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarProducto.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnAgregarProducto.IconColor = System.Drawing.Color.White;
-            this.btnAgregarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregarProducto.IconSize = 45;
-            this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(35, 928);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(365, 55);
-            this.btnAgregarProducto.TabIndex = 14;
-            this.btnAgregarProducto.Text = "Añadir Producto";
-            this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarProducto.UseVisualStyleBackColor = false;
-            // 
-            // pbProducto
-            // 
-            this.pbProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbProducto.BackColor = System.Drawing.Color.Gainsboro;
-            this.pbProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbProducto.Image = global::IlkaPoint.Properties.Resources.subir_imagen;
-            this.pbProducto.Location = new System.Drawing.Point(107, 776);
-            this.pbProducto.Name = "pbProducto";
-            this.pbProducto.Size = new System.Drawing.Size(199, 100);
-            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProducto.TabIndex = 12;
-            this.pbProducto.TabStop = false;
-            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
             // 
             // label3
             // 
@@ -309,9 +273,46 @@
             this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenido.Location = new System.Drawing.Point(0, 0);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(480, 1024);
+            this.panelContenido.Size = new System.Drawing.Size(427, 819);
             this.panelContenido.TabIndex = 16;
             this.panelContenido.Text = "panel1";
+            // 
+            // btnAgregarProducto
+            // 
+            this.btnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarProducto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarProducto.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAgregarProducto.IconColor = System.Drawing.Color.White;
+            this.btnAgregarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarProducto.IconSize = 45;
+            this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarProducto.Location = new System.Drawing.Point(35, 928);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(312, 55);
+            this.btnAgregarProducto.TabIndex = 14;
+            this.btnAgregarProducto.Text = "Añadir Producto";
+            this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarProducto.UseVisualStyleBackColor = false;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnNuevaVenta_Click);
+            // 
+            // pbProducto
+            // 
+            this.pbProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbProducto.BackColor = System.Drawing.Color.Gainsboro;
+            this.pbProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbProducto.Image = global::IlkaPoint.Properties.Resources.subir_imagen;
+            this.pbProducto.Location = new System.Drawing.Point(107, 776);
+            this.pbProducto.Name = "pbProducto";
+            this.pbProducto.Size = new System.Drawing.Size(146, 100);
+            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProducto.TabIndex = 12;
+            this.pbProducto.TabStop = false;
+            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
             // 
             // ucAgregarProducto
             // 
@@ -322,8 +323,8 @@
             this.Size = new System.Drawing.Size(427, 819);
             this.panelFondoUC.ResumeLayout(false);
             this.panelContenidoUC.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.panelContenido.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -128,46 +128,5 @@ namespace IlkaPoint
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            /*
-            try
-            {
-                _producoSeleccionado.nombre = txtNombreProducto.Text;
-                _producoSeleccionado.categoria = cmbCategorías.Text;
-                _producoSeleccionado.precio = decimal.Parse(input1.Text);
-
-                // convertir imagen a bytes si se cambió
-                if (rutaImagen != "")
-                {
-                    using (MemoryStream ms = new MemoryStream())
-                    {
-                        pbProducto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                        _producoSeleccionado.rutaImagenPng = ms.ToArray();
-                    }
-                }
-
-                ServicioInventario servicio = new ServicioInventario();
-                servicio.EditarProducto(_producoSeleccionado, stockSeleccionado);
-
-                // actualizar stock si cambió la cantidad
-                int nuevaCantidad = int.Parse(inputNumberCantProducto.Text);
-                if (nuevaCantidad != stockSeleccionado.Cantidad)
-                {
-                    int diferencia = nuevaCantidad - stockSeleccionado.Cantidad;
-                    if (diferencia > 0)
-                        servicio.AgregarCantidadStock(_producoSeleccionado.id, diferencia);
-                }
-
-                MessageBox.Show("Producto actualizado correctamente");
-                this.FindForm()?.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            */
-        }
     }
 }

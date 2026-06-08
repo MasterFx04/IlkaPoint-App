@@ -123,6 +123,7 @@
             this.btnGuardarCambios.Text = "Guardar Cambios";
             this.btnGuardarCambios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // pbProducto
             // 
@@ -250,7 +251,7 @@
             this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.cmbCategorías.FormattingEnabled = true;
-            this.cmbCategorías.ItemHeight = 36;
+            this.cmbCategorías.ItemHeight = 28;
             this.cmbCategorías.Items.AddRange(new object[] {
             "Abarrotes",
             "Lácteos",
@@ -260,7 +261,7 @@
             this.cmbCategorías.Location = new System.Drawing.Point(28, 205);
             this.cmbCategorías.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategorías.Name = "cmbCategorías";
-            this.cmbCategorías.Size = new System.Drawing.Size(413, 44);
+            this.cmbCategorías.Size = new System.Drawing.Size(413, 36);
             this.cmbCategorías.TabIndex = 4;
             this.cmbCategorías.Text = "Seleccione la categoría";
             // 
