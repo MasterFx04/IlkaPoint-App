@@ -90,6 +90,10 @@
     <Compile Include="Migrations\202606052311118_FixAdmin3.Designer.cs">
       <DependentUpon>202606052311118_FixAdmin3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202606071536109_AgregarImagenProducto.cs" />
+    <Compile Include="Migrations\202606071536109_AgregarImagenProducto.Designer.cs">
+      <DependentUpon>202606071536109_AgregarImagenProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Servicios\TransaccionService.cs" />
     <Compile Include="Data\Modelos\Producto.cs" />
     <Compile Include="Data\Modelos\ProductoPorPeso.cs" />
@@ -265,6 +269,7 @@
     <EmbeddedResource Include="Forms Oficiales\Form1v2.resx">
       <DependentUpon>Form1v2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Oficiales\IlkaPoint.FrmDashboardPrincipal.resources" />
     <EmbeddedResource Include="Forms Oficiales\InfoProducto.resx">
       <DependentUpon>InfoProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202606052311118_FixAdmin3.resx">
       <DependentUpon>202606052311118_FixAdmin3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606071536109_AgregarImagenProducto.resx">
+      <DependentUpon>202606071536109_AgregarImagenProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

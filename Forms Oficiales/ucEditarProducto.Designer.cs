@@ -191,6 +191,7 @@
             this.cmbCategorías.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.cmbCategorías.FormattingEnabled = true;
+            this.cmbCategorías.ItemHeight = 36;
             this.cmbCategorías.Items.AddRange(new object[] {
             "Abarrotes",
             "Lácteos",

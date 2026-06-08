@@ -289,7 +289,7 @@
             this.txtBuscarProducto.Location = new System.Drawing.Point(506, 135);
             this.txtBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtBuscarProducto.Name = "txtBuscarProducto";
-            this.txtBuscarProducto.PlaceholderText = "Buscar nombre de producto...";
+            this.txtBuscarProducto.PlaceholderText = "Buscar producto...";
             this.txtBuscarProducto.PrefixFore = System.Drawing.Color.Black;
             this.txtBuscarProducto.PrefixFormat = AntdUI.FormatFlags.Left;
             this.txtBuscarProducto.PrefixSvg = "";
@@ -300,6 +300,7 @@
             this.txtBuscarProducto.SuffixSvg = "";
             this.txtBuscarProducto.SuffixWidth = 0;
             this.txtBuscarProducto.TabIndex = 5;
+            this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
             // 
             // lblTitulo
             // 
@@ -454,8 +455,6 @@
         private AntdUI.Panel panelEncabezado;
         private AntdUI.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnAgregarProducto;
-        private AntdUI.Input txtBuscarProducto;
-        private AntdUI.Button btnBuscarProducto;
         private AntdUI.Panel panelTablaInventario;
         private System.Windows.Forms.DataGridView dgvInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoría;

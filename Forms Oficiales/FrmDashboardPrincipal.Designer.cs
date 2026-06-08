@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelFondoDP = new AntdUI.Panel();
             this.panelMenuDP = new AntdUI.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -49,18 +49,18 @@
             this.dgvInventarioRapido = new System.Windows.Forms.DataGridView();
             this.labelInventarioRapido = new AntdUI.Label();
             this.tableLayoutPanelGraficosMedios = new System.Windows.Forms.TableLayoutPanel();
-            this.chartTendencia = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartCategorias = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartTendencia = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanelTarjetas = new System.Windows.Forms.TableLayoutPanel();
             this.panelBajoStock = new AntdUI.Panel();
             this.label4 = new AntdUI.Label();
             this.label3 = new AntdUI.Label();
-            this.panelArticulosAgotados = new AntdUI.Panel();
-            this.lblArticulosAgotados = new AntdUI.Label();
-            this.lblNumArtAgotados = new AntdUI.Label();
             this.panelTotalArticulos = new AntdUI.Panel();
             this.lblTotalDeArticulos = new AntdUI.Label();
             this.lblNumTotalArt = new AntdUI.Label();
+            this.panelArticulosAgotados = new AntdUI.Panel();
+            this.lblArticulosAgotados = new AntdUI.Label();
+            this.lblNumArtAgotados = new AntdUI.Label();
             this.panelFondoDP.SuspendLayout();
             this.panelMenuDP.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -68,12 +68,12 @@
             this.panelInventarioRapido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventarioRapido)).BeginInit();
             this.tableLayoutPanelGraficosMedios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartTendencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTendencia)).BeginInit();
             this.tableLayoutPanelTarjetas.SuspendLayout();
             this.panelBajoStock.SuspendLayout();
-            this.panelArticulosAgotados.SuspendLayout();
             this.panelTotalArticulos.SuspendLayout();
+            this.panelArticulosAgotados.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelFondoDP
@@ -86,7 +86,7 @@
             this.panelFondoDP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFondoDP.Name = "panelFondoDP";
             this.panelFondoDP.Radius = 0;
-            this.panelFondoDP.Size = new System.Drawing.Size(1260, 774);
+            this.panelFondoDP.Size = new System.Drawing.Size(1418, 968);
             this.panelFondoDP.TabIndex = 0;
             this.panelFondoDP.Text = "panelFondoDP";
             this.panelFondoDP.Click += new System.EventHandler(this.panelFondoDP_Click);
@@ -98,11 +98,11 @@
             this.panelMenuDP.Back = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(59)))));
             this.panelMenuDP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panelMenuDP.Controls.Add(this.panelMenu);
-            this.panelMenuDP.Location = new System.Drawing.Point(38, 28);
+            this.panelMenuDP.Location = new System.Drawing.Point(43, 35);
             this.panelMenuDP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenuDP.Name = "panelMenuDP";
             this.panelMenuDP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panelMenuDP.Size = new System.Drawing.Size(334, 742);
+            this.panelMenuDP.Size = new System.Drawing.Size(376, 928);
             this.panelMenuDP.TabIndex = 0;
             this.panelMenuDP.Text = "panelMenuDP";
             // 
@@ -117,9 +117,9 @@
             this.panelMenu.Controls.Add(this.lblNombreApp);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(334, 742);
+            this.panelMenu.Size = new System.Drawing.Size(376, 928);
             this.panelMenu.TabIndex = 3;
             // 
             // avatarLogo
@@ -128,11 +128,11 @@
             this.avatarLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.avatarLogo.BorderColor = System.Drawing.Color.Transparent;
             this.avatarLogo.Image = global::IlkaPoint.Properties.Resources._2;
-            this.avatarLogo.Location = new System.Drawing.Point(62, 92);
+            this.avatarLogo.Location = new System.Drawing.Point(70, 115);
             this.avatarLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.avatarLogo.Name = "avatarLogo";
             this.avatarLogo.Round = true;
-            this.avatarLogo.Size = new System.Drawing.Size(208, 187);
+            this.avatarLogo.Size = new System.Drawing.Size(234, 234);
             this.avatarLogo.TabIndex = 9;
             this.avatarLogo.Text = "";
             // 
@@ -140,6 +140,7 @@
             // 
             this.btnCerrarsesion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarsesion.AutoSize = true;
             this.btnCerrarsesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarsesion.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,10 +150,10 @@
             this.btnCerrarsesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarsesion.IconSize = 40;
             this.btnCerrarsesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarsesion.Location = new System.Drawing.Point(28, 664);
-            this.btnCerrarsesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCerrarsesion.Location = new System.Drawing.Point(32, 824);
+            this.btnCerrarsesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarsesion.Name = "btnCerrarsesion";
-            this.btnCerrarsesion.Size = new System.Drawing.Size(306, 53);
+            this.btnCerrarsesion.Size = new System.Drawing.Size(344, 100);
             this.btnCerrarsesion.TabIndex = 8;
             this.btnCerrarsesion.Text = " Cerrar sesión";
             this.btnCerrarsesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,10 +173,10 @@
             this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAyuda.IconSize = 40;
             this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.Location = new System.Drawing.Point(28, 605);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAyuda.Location = new System.Drawing.Point(32, 756);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(306, 53);
+            this.btnAyuda.Size = new System.Drawing.Size(344, 66);
             this.btnAyuda.TabIndex = 7;
             this.btnAyuda.Text = " Ayuda";
             this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,10 +196,10 @@
             this.btnVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVentas.IconSize = 40;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(28, 446);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnVentas.Location = new System.Drawing.Point(32, 558);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(4);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(306, 53);
+            this.btnVentas.Size = new System.Drawing.Size(344, 66);
             this.btnVentas.TabIndex = 6;
             this.btnVentas.Text = " Ventas";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,10 +219,10 @@
             this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventario.IconSize = 40;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(28, 378);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnInventario.Location = new System.Drawing.Point(32, 472);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(306, 53);
+            this.btnInventario.Size = new System.Drawing.Size(344, 66);
             this.btnInventario.TabIndex = 5;
             this.btnInventario.Text = " Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,10 +243,10 @@
             this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInicio.IconSize = 40;
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(28, 310);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnInicio.Location = new System.Drawing.Point(32, 388);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(4);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(306, 53);
+            this.btnInicio.Size = new System.Drawing.Size(344, 66);
             this.btnInicio.TabIndex = 4;
             this.btnInicio.Text = " Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -257,10 +258,10 @@
             this.lblNombreApp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNombreApp.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblNombreApp.Location = new System.Drawing.Point(62, 25);
-            this.lblNombreApp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.lblNombreApp.Location = new System.Drawing.Point(70, 31);
+            this.lblNombreApp.Margin = new System.Windows.Forms.Padding(4);
             this.lblNombreApp.Name = "lblNombreApp";
-            this.lblNombreApp.Size = new System.Drawing.Size(212, 60);
+            this.lblNombreApp.Size = new System.Drawing.Size(238, 75);
             this.lblNombreApp.TabIndex = 2;
             this.lblNombreApp.Text = "Ilca Point";
             this.lblNombreApp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,10 +274,10 @@
             this.panelContenidoDP.Controls.Add(this.panelInventarioRapido);
             this.panelContenidoDP.Controls.Add(this.tableLayoutPanelGraficosMedios);
             this.panelContenidoDP.Controls.Add(this.tableLayoutPanelTarjetas);
-            this.panelContenidoDP.Location = new System.Drawing.Point(379, 28);
+            this.panelContenidoDP.Location = new System.Drawing.Point(426, 35);
             this.panelContenidoDP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenidoDP.Name = "panelContenidoDP";
-            this.panelContenidoDP.Size = new System.Drawing.Size(879, 744);
+            this.panelContenidoDP.Size = new System.Drawing.Size(989, 930);
             this.panelContenidoDP.TabIndex = 1;
             this.panelContenidoDP.Text = "panelContenidoDP";
             // 
@@ -287,10 +288,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInventarioRapido.Controls.Add(this.dgvInventarioRapido);
             this.panelInventarioRapido.Controls.Add(this.labelInventarioRapido);
-            this.panelInventarioRapido.Location = new System.Drawing.Point(0, 466);
-            this.panelInventarioRapido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelInventarioRapido.Location = new System.Drawing.Point(0, 648);
+            this.panelInventarioRapido.Margin = new System.Windows.Forms.Padding(3, 20, 3, 2);
             this.panelInventarioRapido.Name = "panelInventarioRapido";
-            this.panelInventarioRapido.Size = new System.Drawing.Size(806, 226);
+            this.panelInventarioRapido.Size = new System.Drawing.Size(989, 282);
             this.panelInventarioRapido.TabIndex = 9;
             this.panelInventarioRapido.Text = "panel1";
             // 
@@ -301,21 +302,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInventarioRapido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventarioRapido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventarioRapido.Location = new System.Drawing.Point(0, 32);
+            this.dgvInventarioRapido.Location = new System.Drawing.Point(0, 40);
             this.dgvInventarioRapido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvInventarioRapido.Name = "dgvInventarioRapido";
             this.dgvInventarioRapido.RowHeadersWidth = 62;
             this.dgvInventarioRapido.RowTemplate.Height = 28;
-            this.dgvInventarioRapido.Size = new System.Drawing.Size(806, 194);
+            this.dgvInventarioRapido.Size = new System.Drawing.Size(989, 242);
             this.dgvInventarioRapido.TabIndex = 1;
             // 
             // labelInventarioRapido
             // 
             this.labelInventarioRapido.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInventarioRapido.Location = new System.Drawing.Point(12, 4);
+            this.labelInventarioRapido.Location = new System.Drawing.Point(14, 5);
             this.labelInventarioRapido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelInventarioRapido.Name = "labelInventarioRapido";
-            this.labelInventarioRapido.Size = new System.Drawing.Size(221, 22);
+            this.labelInventarioRapido.Size = new System.Drawing.Size(249, 28);
             this.labelInventarioRapido.TabIndex = 0;
             this.labelInventarioRapido.Text = "Inventario Rápido";
             // 
@@ -323,84 +324,86 @@
             // 
             this.tableLayoutPanelGraficosMedios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanelGraficosMedios.AutoSize = true;
             this.tableLayoutPanelGraficosMedios.ColumnCount = 2;
             this.tableLayoutPanelGraficosMedios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelGraficosMedios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelGraficosMedios.Controls.Add(this.chartTendencia, 0, 0);
             this.tableLayoutPanelGraficosMedios.Controls.Add(this.chartCategorias, 1, 0);
-            this.tableLayoutPanelGraficosMedios.Location = new System.Drawing.Point(16, 170);
-            this.tableLayoutPanelGraficosMedios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanelGraficosMedios.Controls.Add(this.chartTendencia, 0, 0);
+            this.tableLayoutPanelGraficosMedios.Location = new System.Drawing.Point(7, 225);
+            this.tableLayoutPanelGraficosMedios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
             this.tableLayoutPanelGraficosMedios.Name = "tableLayoutPanelGraficosMedios";
+            this.tableLayoutPanelGraficosMedios.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.tableLayoutPanelGraficosMedios.RowCount = 1;
             this.tableLayoutPanelGraficosMedios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelGraficosMedios.Size = new System.Drawing.Size(818, 275);
+            this.tableLayoutPanelGraficosMedios.Size = new System.Drawing.Size(982, 344);
             this.tableLayoutPanelGraficosMedios.TabIndex = 8;
+            // 
+            // chartCategorias
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chartCategorias.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartCategorias.Legends.Add(legend5);
+            this.chartCategorias.Location = new System.Drawing.Point(501, 17);
+            this.chartCategorias.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
+            this.chartCategorias.Name = "chartCategorias";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartCategorias.Series.Add(series5);
+            this.chartCategorias.Size = new System.Drawing.Size(453, 300);
+            this.chartCategorias.TabIndex = 1;
+            this.chartCategorias.Text = "chart2";
             // 
             // chartTendencia
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chartTendencia.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartTendencia.Legends.Add(legend7);
-            this.chartTendencia.Location = new System.Drawing.Point(3, 2);
-            this.chartTendencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            chartArea6.Name = "ChartArea1";
+            this.chartTendencia.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartTendencia.Legends.Add(legend6);
+            this.chartTendencia.Location = new System.Drawing.Point(10, 17);
+            this.chartTendencia.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
             this.chartTendencia.Name = "chartTendencia";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chartTendencia.Series.Add(series7);
-            this.chartTendencia.Size = new System.Drawing.Size(403, 240);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartTendencia.Series.Add(series6);
+            this.chartTendencia.Size = new System.Drawing.Size(453, 300);
             this.chartTendencia.TabIndex = 0;
             this.chartTendencia.Text = "chart1";
             this.chartTendencia.Click += new System.EventHandler(this.chartTendencia_Click);
             // 
-            // chartCategorias
-            // 
-            chartArea8.Name = "ChartArea1";
-            this.chartCategorias.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartCategorias.Legends.Add(legend8);
-            this.chartCategorias.Location = new System.Drawing.Point(412, 2);
-            this.chartCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chartCategorias.Name = "chartCategorias";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartCategorias.Series.Add(series8);
-            this.chartCategorias.Size = new System.Drawing.Size(403, 240);
-            this.chartCategorias.TabIndex = 1;
-            this.chartCategorias.Text = "chart2";
-            // 
             // tableLayoutPanelTarjetas
             // 
-            this.tableLayoutPanelTarjetas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanelTarjetas.AutoSize = true;
             this.tableLayoutPanelTarjetas.ColumnCount = 3;
-            this.tableLayoutPanelTarjetas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.51007F));
-            this.tableLayoutPanelTarjetas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.0859F));
-            this.tableLayoutPanelTarjetas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelTarjetas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.53378F));
+            this.tableLayoutPanelTarjetas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.10931F));
+            this.tableLayoutPanelTarjetas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.35691F));
             this.tableLayoutPanelTarjetas.Controls.Add(this.panelBajoStock, 2, 0);
-            this.tableLayoutPanelTarjetas.Controls.Add(this.panelArticulosAgotados, 1, 0);
             this.tableLayoutPanelTarjetas.Controls.Add(this.panelTotalArticulos, 0, 0);
-            this.tableLayoutPanelTarjetas.Location = new System.Drawing.Point(16, 2);
-            this.tableLayoutPanelTarjetas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanelTarjetas.Controls.Add(this.panelArticulosAgotados, 1, 0);
+            this.tableLayoutPanelTarjetas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanelTarjetas.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelTarjetas.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelTarjetas.Name = "tableLayoutPanelTarjetas";
             this.tableLayoutPanelTarjetas.RowCount = 1;
-            this.tableLayoutPanelTarjetas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanelTarjetas.Size = new System.Drawing.Size(855, 120);
+            this.tableLayoutPanelTarjetas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanelTarjetas.Size = new System.Drawing.Size(989, 180);
             this.tableLayoutPanelTarjetas.TabIndex = 7;
             // 
             // panelBajoStock
             // 
-            this.panelBajoStock.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelBajoStock.Back = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(208)))), ((int)(((byte)(131)))));
             this.panelBajoStock.Controls.Add(this.label4);
             this.panelBajoStock.Controls.Add(this.label3);
-            this.panelBajoStock.Location = new System.Drawing.Point(574, 2);
-            this.panelBajoStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelBajoStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBajoStock.Location = new System.Drawing.Point(668, 10);
+            this.panelBajoStock.Margin = new System.Windows.Forms.Padding(10);
             this.panelBajoStock.Name = "panelBajoStock";
             this.panelBajoStock.Radius = 10;
-            this.panelBajoStock.Size = new System.Drawing.Size(276, 115);
+            this.panelBajoStock.Size = new System.Drawing.Size(311, 160);
             this.panelBajoStock.TabIndex = 9;
             this.panelBajoStock.Text = "panel2";
             // 
@@ -410,10 +413,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(43, 11);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.label4.Location = new System.Drawing.Point(82, 19);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 36);
+            this.label4.Size = new System.Drawing.Size(159, 51);
             this.label4.TabIndex = 0;
             this.label4.Text = "Bajo Stock";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -424,25 +427,70 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(70, 52);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.label3.Location = new System.Drawing.Point(62, 70);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 48);
+            this.label3.Size = new System.Drawing.Size(210, 60);
             this.label3.TabIndex = 1;
             this.label3.Text = "2";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // panelTotalArticulos
+            // 
+            this.panelTotalArticulos.Back = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(112)))), ((int)(((byte)(210)))));
+            this.panelTotalArticulos.Controls.Add(this.lblTotalDeArticulos);
+            this.panelTotalArticulos.Controls.Add(this.lblNumTotalArt);
+            this.panelTotalArticulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelTotalArticulos.Location = new System.Drawing.Point(10, 10);
+            this.panelTotalArticulos.Margin = new System.Windows.Forms.Padding(10);
+            this.panelTotalArticulos.Name = "panelTotalArticulos";
+            this.panelTotalArticulos.Radius = 10;
+            this.panelTotalArticulos.Size = new System.Drawing.Size(311, 160);
+            this.panelTotalArticulos.TabIndex = 7;
+            this.panelTotalArticulos.Text = "panel1";
+            // 
+            // lblTotalDeArticulos
+            // 
+            this.lblTotalDeArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalDeArticulos.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeArticulos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblTotalDeArticulos.Location = new System.Drawing.Point(34, 21);
+            this.lblTotalDeArticulos.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTotalDeArticulos.Name = "lblTotalDeArticulos";
+            this.lblTotalDeArticulos.Size = new System.Drawing.Size(239, 50);
+            this.lblTotalDeArticulos.TabIndex = 0;
+            this.lblTotalDeArticulos.Text = "Total de Artículos";
+            this.lblTotalDeArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotalDeArticulos.Click += new System.EventHandler(this.lblTotalDeArticulos_Click);
+            // 
+            // lblNumTotalArt
+            // 
+            this.lblNumTotalArt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNumTotalArt.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumTotalArt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblNumTotalArt.Location = new System.Drawing.Point(92, 83);
+            this.lblNumTotalArt.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNumTotalArt.Name = "lblNumTotalArt";
+            this.lblNumTotalArt.Size = new System.Drawing.Size(104, 47);
+            this.lblNumTotalArt.TabIndex = 1;
+            this.lblNumTotalArt.Text = "1990";
+            this.lblNumTotalArt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNumTotalArt.Click += new System.EventHandler(this.lblNumTotalArt_Click_1);
             // 
             // panelArticulosAgotados
             // 
-            this.panelArticulosAgotados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelArticulosAgotados.Back = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(228)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.panelArticulosAgotados.Controls.Add(this.lblArticulosAgotados);
             this.panelArticulosAgotados.Controls.Add(this.lblNumArtAgotados);
-            this.panelArticulosAgotados.Location = new System.Drawing.Point(289, 2);
-            this.panelArticulosAgotados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelArticulosAgotados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelArticulosAgotados.Location = new System.Drawing.Point(341, 10);
+            this.panelArticulosAgotados.Margin = new System.Windows.Forms.Padding(10);
             this.panelArticulosAgotados.Name = "panelArticulosAgotados";
             this.panelArticulosAgotados.Radius = 10;
-            this.panelArticulosAgotados.Size = new System.Drawing.Size(276, 115);
+            this.panelArticulosAgotados.Size = new System.Drawing.Size(307, 160);
             this.panelArticulosAgotados.TabIndex = 8;
             this.panelArticulosAgotados.Text = "panel1";
             // 
@@ -452,10 +500,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblArticulosAgotados.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArticulosAgotados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblArticulosAgotados.Location = new System.Drawing.Point(26, 11);
-            this.lblArticulosAgotados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblArticulosAgotados.Location = new System.Drawing.Point(22, 19);
+            this.lblArticulosAgotados.Margin = new System.Windows.Forms.Padding(0);
             this.lblArticulosAgotados.Name = "lblArticulosAgotados";
-            this.lblArticulosAgotados.Size = new System.Drawing.Size(222, 36);
+            this.lblArticulosAgotados.Size = new System.Drawing.Size(258, 52);
             this.lblArticulosAgotados.TabIndex = 0;
             this.lblArticulosAgotados.Text = "Productos Agotados ";
             this.lblArticulosAgotados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -466,80 +514,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumArtAgotados.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumArtAgotados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblNumArtAgotados.Location = new System.Drawing.Point(70, 52);
-            this.lblNumArtAgotados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblNumArtAgotados.Location = new System.Drawing.Point(85, 70);
+            this.lblNumArtAgotados.Margin = new System.Windows.Forms.Padding(0);
             this.lblNumArtAgotados.Name = "lblNumArtAgotados";
-            this.lblNumArtAgotados.Size = new System.Drawing.Size(128, 48);
+            this.lblNumArtAgotados.Size = new System.Drawing.Size(141, 60);
             this.lblNumArtAgotados.TabIndex = 1;
             this.lblNumArtAgotados.Text = "2";
             this.lblNumArtAgotados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelTotalArticulos
-            // 
-            this.panelTotalArticulos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelTotalArticulos.Back = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(112)))), ((int)(((byte)(210)))));
-            this.panelTotalArticulos.Controls.Add(this.lblTotalDeArticulos);
-            this.panelTotalArticulos.Controls.Add(this.lblNumTotalArt);
-            this.panelTotalArticulos.Location = new System.Drawing.Point(5, 2);
-            this.panelTotalArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTotalArticulos.Name = "panelTotalArticulos";
-            this.panelTotalArticulos.Radius = 10;
-            this.panelTotalArticulos.Size = new System.Drawing.Size(276, 115);
-            this.panelTotalArticulos.TabIndex = 7;
-            this.panelTotalArticulos.Text = "panel1";
-            // 
-            // lblTotalDeArticulos
-            // 
-            this.lblTotalDeArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalDeArticulos.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDeArticulos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblTotalDeArticulos.Location = new System.Drawing.Point(36, 20);
-            this.lblTotalDeArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lblTotalDeArticulos.Name = "lblTotalDeArticulos";
-            this.lblTotalDeArticulos.Size = new System.Drawing.Size(204, 27);
-            this.lblTotalDeArticulos.TabIndex = 0;
-            this.lblTotalDeArticulos.Text = "Total de Artículos";
-            this.lblTotalDeArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNumTotalArt
-            // 
-            this.lblNumTotalArt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNumTotalArt.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumTotalArt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblNumTotalArt.Location = new System.Drawing.Point(72, 52);
-            this.lblNumTotalArt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lblNumTotalArt.Name = "lblNumTotalArt";
-            this.lblNumTotalArt.Size = new System.Drawing.Size(128, 48);
-            this.lblNumTotalArt.TabIndex = 1;
-            this.lblNumTotalArt.Text = "1990";
-            this.lblNumTotalArt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNumArtAgotados.Click += new System.EventHandler(this.lblNumArtAgotados_Click);
             // 
             // FrmDashboardPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 774);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1418, 968);
             this.Controls.Add(this.panelFondoDP);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(758, 649);
+            this.MinimumSize = new System.Drawing.Size(850, 797);
             this.Name = "FrmDashboardPrincipal";
             this.Text = "Dashboard Principal";
             this.Load += new System.EventHandler(this.FrmDashboardPrincipal_Load);
             this.panelFondoDP.ResumeLayout(false);
             this.panelMenuDP.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.panelContenidoDP.ResumeLayout(false);
+            this.panelContenidoDP.PerformLayout();
             this.panelInventarioRapido.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventarioRapido)).EndInit();
             this.tableLayoutPanelGraficosMedios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartTendencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTendencia)).EndInit();
             this.tableLayoutPanelTarjetas.ResumeLayout(false);
             this.panelBajoStock.ResumeLayout(false);
-            this.panelArticulosAgotados.ResumeLayout(false);
             this.panelTotalArticulos.ResumeLayout(false);
+            this.panelArticulosAgotados.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
