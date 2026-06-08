@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace IlkaPoint.Data.Modelos
      //cuando el sistema necesite saber como se vendera el producto digamos 5latas
 
         public ProductoPorUnidad() { }
-        public ProductoPorUnidad(string nombre, string categoria, string proveedor, decimal precio, string rutaImagenPng) : base(nombre, categoria, proveedor, precio, rutaImagenPng)
+        public ProductoPorUnidad(string nombre, string categoria, string proveedor, decimal precio, byte[] rutaImagenPng) : base(nombre, categoria, proveedor, precio, rutaImagenPng)
         {
             
         }

@@ -37,27 +37,29 @@
             // 
             // lblNombre
             // 
-            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoEllipsis = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(124, 20);
+            this.lblNombre.Location = new System.Drawing.Point(120, 20);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(177, 24);
+            this.lblNombre.Size = new System.Drawing.Size(137, 24);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "label1";
             this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // lblPrecio
             // 
-            this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrecio.AutoEllipsis = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.ForeColor = System.Drawing.Color.White;
-            this.lblPrecio.Location = new System.Drawing.Point(124, 49);
+            this.lblPrecio.Location = new System.Drawing.Point(120, 49);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(173, 24);
+            this.lblPrecio.Size = new System.Drawing.Size(133, 24);
             this.lblPrecio.TabIndex = 2;
             this.lblPrecio.Text = "label2";
             this.lblPrecio.Click += new System.EventHandler(this.lblPrecio_Click);
@@ -66,7 +68,7 @@
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(311, 10);
+            this.txtCantidad.Location = new System.Drawing.Point(271, 10);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(0);
             this.txtCantidad.MaximumSize = new System.Drawing.Size(70, 70);
             this.txtCantidad.MinimumSize = new System.Drawing.Size(70, 70);
@@ -84,24 +86,24 @@
             this.picref.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picref.Location = new System.Drawing.Point(15, 3);
             this.picref.Margin = new System.Windows.Forms.Padding(0);
-            this.picref.MaximumSize = new System.Drawing.Size(85, 85);
-            this.picref.MinimumSize = new System.Drawing.Size(85, 85);
+            this.picref.MaximumSize = new System.Drawing.Size(83, 83);
+            this.picref.MinimumSize = new System.Drawing.Size(83, 83);
             this.picref.Name = "picref";
-            this.picref.Size = new System.Drawing.Size(85, 85);
+            this.picref.Size = new System.Drawing.Size(83, 83);
             this.picref.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picref.TabIndex = 0;
             this.picref.TabStop = false;
             // 
             // InfoProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.picref);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "InfoProducto";
-            this.Size = new System.Drawing.Size(400, 90);
+            this.Size = new System.Drawing.Size(360, 90);
             this.Load += new System.EventHandler(this.InfoProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picref)).EndInit();
             this.ResumeLayout(false);

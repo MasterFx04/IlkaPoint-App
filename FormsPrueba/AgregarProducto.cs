@@ -39,8 +39,9 @@ namespace IlkaPoint.FormsPrueba
             decimal precio = decimal.Parse(textBox4.Text);
             string categoria = textBox2.Text;
             int cantidad = int.Parse(textBox1.Text);
+            byte[] image = null; //ESTO NO TIENE SENTIDO PERO COMO YA NO USAMOS EL FORMS :D
 
-            Producto productoNuevo = new Producto(nombre, categoria, "proovedor prueba", precio, "ofi");
+            Producto productoNuevo = new Producto(nombre, categoria, "proovedor prueba", precio, image);
             
 
             ServicioInventario inventario = new ServicioInventario();

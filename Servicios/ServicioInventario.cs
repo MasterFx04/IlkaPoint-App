@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using IlkaPoint.Clases;
+using System.Windows;
 
 
 namespace IlkaPoint.Servicios
@@ -114,6 +115,17 @@ namespace IlkaPoint.Servicios
             }
         }
 
+        public List<string> ObtenerCategorias()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Productos
+                         .Select(p  => p.categoria)
+                         .Distinct()
+                         .ToList();
+            }
+        }
+
         /*
         public List<ProductoPorPeso> BuscarProductosTipoPeso()
         {
@@ -141,6 +153,12 @@ namespace IlkaPoint.Servicios
                 producto.nombre = productoEditado.nombre;
                 producto.precio = productoEditado.precio;
                 producto.categoria = productoEditado.categoria;
+
+                
+                if (productoEditado.rutaImagenPng != null)
+                {
+                    producto.rutaImagenPng = productoEditado.rutaImagenPng;
+                }
 
                 db.SaveChanges();
 
