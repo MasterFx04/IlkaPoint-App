@@ -334,6 +334,7 @@
             this.btnCerrarsesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarsesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarsesion.UseVisualStyleBackColor = true;
+            this.btnCerrarsesion.Click += new System.EventHandler(this.btnCerrarsesion_Click);
             // 
             // btnAyuda
             // 
@@ -380,6 +381,7 @@
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click_1);
             // 
             // btnInventario
             // 

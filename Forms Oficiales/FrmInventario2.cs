@@ -455,6 +455,26 @@ namespace IlkaPoint
             dashboard?.Show();
             
         }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+            Form1v2 frmVentas;
+            if (!Application.OpenForms.OfType<Form1v2>().Any())
+            {
+                frmVentas = new Form1v2();
+            }
+            else
+            {
+                frmVentas = Application.OpenForms.OfType<Form1v2>().FirstOrDefault();
+            }
+            this.Hide();
+            frmVentas.Show();
+        }
+
+        private void btnCerrarsesion_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
 

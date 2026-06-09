@@ -109,6 +109,7 @@
             this.btnCerrarsesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarsesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarsesion.UseVisualStyleBackColor = true;
+            this.btnCerrarsesion.Click += new System.EventHandler(this.btnCerrarsesion_Click);
             // 
             // btnAyuda
             // 
@@ -295,7 +296,7 @@
             this.label2.Location = new System.Drawing.Point(-10, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(444, 58);
+            this.label2.Size = new System.Drawing.Size(435, 57);
             this.label2.TabIndex = 0;
             this.label2.Text = "Registro de Ventas";
             // 
@@ -312,7 +313,7 @@
             this.panelContenido.TabIndex = 3;
             this.panelContenido.Text = "flowLayoutPanel1";
             // 
-            // Form1
+            // Form1v2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -325,7 +326,7 @@
             this.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1200, 700);
-            this.Name = "Form1";
+            this.Name = "Form1v2";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);

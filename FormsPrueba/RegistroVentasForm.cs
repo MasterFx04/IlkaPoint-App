@@ -109,6 +109,7 @@ namespace IlkaPoint.FormsPrueba
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             //Para llevar la transaccion al form de Transacciones
 
             if (transaccion.Detalles.Count == 0)
