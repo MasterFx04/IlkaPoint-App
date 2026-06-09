@@ -104,5 +104,10 @@ namespace IlkaPoint
         {
 
         }
+
+        private void lblmessag_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
