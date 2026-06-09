@@ -35,28 +35,27 @@
             this.txtBuscarProducto = new AntdUI.Input();
             this.lblTitulo = new AntdUI.Label();
             this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
-            this.panelTablaInventario = new AntdUI.Panel();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEditar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colEditar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelTablaInventario = new AntdUI.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.avatarLogo = new AntdUI.Avatar();
             this.btnCerrarsesion = new FontAwesome.Sharp.IconButton();
             this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.btnVentas = new FontAwesome.Sharp.IconButton();
             this.btnInventario = new FontAwesome.Sharp.IconButton();
+            this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.lblNombreApp = new AntdUI.Label();
-            this.panelMenuInv = new AntdUI.Panel();
             this.panelFondo.SuspendLayout();
             this.tlpContenidos.SuspendLayout();
             this.panelEncabezado.SuspendLayout();
-            this.panelTablaInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
+            this.panelTablaInventario.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,9 +63,8 @@
             // 
             this.panelFondo.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
             this.panelFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
-            this.panelFondo.Controls.Add(this.tlpContenidos);
             this.panelFondo.Controls.Add(this.panelMenu);
-            this.panelFondo.Controls.Add(this.panelMenuInv);
+            this.panelFondo.Controls.Add(this.tlpContenidos);
             this.panelFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFondo.Location = new System.Drawing.Point(0, 0);
             this.panelFondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -77,33 +75,35 @@
             // 
             // tlpContenidos
             // 
+            this.tlpContenidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpContenidos.ColumnCount = 1;
             this.tlpContenidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpContenidos.Controls.Add(this.panelEncabezado, 0, 0);
             this.tlpContenidos.Controls.Add(this.panelTablaInventario, 0, 1);
-            this.tlpContenidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpContenidos.Location = new System.Drawing.Point(376, 0);
+            this.tlpContenidos.Location = new System.Drawing.Point(439, 0);
             this.tlpContenidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpContenidos.Name = "tlpContenidos";
             this.tlpContenidos.RowCount = 3;
             this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tlpContenidos.Size = new System.Drawing.Size(1042, 968);
+            this.tlpContenidos.Size = new System.Drawing.Size(979, 943);
             this.tlpContenidos.TabIndex = 2;
             // 
             // panelEncabezado
             // 
+            this.panelEncabezado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelEncabezado.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
             this.panelEncabezado.Controls.Add(this.btnBuscar);
             this.panelEncabezado.Controls.Add(this.txtBuscarProducto);
             this.panelEncabezado.Controls.Add(this.lblTitulo);
             this.panelEncabezado.Controls.Add(this.btnAgregarProducto);
-            this.panelEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEncabezado.Location = new System.Drawing.Point(3, 2);
             this.panelEncabezado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelEncabezado.Name = "panelEncabezado";
-            this.panelEncabezado.Size = new System.Drawing.Size(1036, 219);
+            this.panelEncabezado.Size = new System.Drawing.Size(973, 219);
             this.panelEncabezado.TabIndex = 0;
             this.panelEncabezado.Text = "panel1";
             this.panelEncabezado.Click += new System.EventHandler(this.panelEncabezado_Click);
@@ -113,17 +113,18 @@
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.IconSvg = "SearchOutlined";
-            this.btnBuscar.Location = new System.Drawing.Point(1069, 100);
+            this.btnBuscar.Location = new System.Drawing.Point(891, 100);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Radius = 0;
             this.btnBuscar.Size = new System.Drawing.Size(71, 71);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Type = AntdUI.TTypeMini.Primary;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscarProducto
             // 
             this.txtBuscarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarProducto.Location = new System.Drawing.Point(668, 101);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(490, 101);
             this.txtBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.PlaceholderText = "Buscar producto...";
@@ -138,6 +139,7 @@
             this.txtBuscarProducto.SuffixWidth = 0;
             this.txtBuscarProducto.TabIndex = 5;
             this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
+            this.txtBuscarProducto.Click += new System.EventHandler(this.txtBuscarProducto_TextChanged);
             // 
             // lblTitulo
             // 
@@ -147,7 +149,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(42, 92);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(339, 47);
+            this.lblTitulo.Size = new System.Drawing.Size(406, 56);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Inventario y Stock";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,28 +167,15 @@
             this.btnAgregarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarProducto.IconSize = 45;
             this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(695, 22);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(597, 22);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(316, 53);
+            this.btnAgregarProducto.Size = new System.Drawing.Size(351, 56);
             this.btnAgregarProducto.TabIndex = 4;
             this.btnAgregarProducto.Text = "Añadir Producto";
             this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarProducto.UseVisualStyleBackColor = false;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
-            // 
-            // panelTablaInventario
-            // 
-            this.panelTablaInventario.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
-            this.panelTablaInventario.Controls.Add(this.dgvInventario);
-            this.panelTablaInventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTablaInventario.Location = new System.Drawing.Point(3, 226);
-            this.panelTablaInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTablaInventario.Name = "panelTablaInventario";
-            this.panelTablaInventario.Padding = new System.Windows.Forms.Padding(18, 0, 18, 16);
-            this.panelTablaInventario.Size = new System.Drawing.Size(1036, 724);
-            this.panelTablaInventario.TabIndex = 1;
-            this.panelTablaInventario.Text = "panel1";
             // 
             // dgvInventario
             // 
@@ -199,54 +188,16 @@
             this.Estado,
             this.colEditar,
             this.colEliminar});
-            this.dgvInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInventario.Location = new System.Drawing.Point(18, 0);
             this.dgvInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.RowHeadersVisible = false;
             this.dgvInventario.RowHeadersWidth = 62;
             this.dgvInventario.RowTemplate.Height = 28;
-            this.dgvInventario.Size = new System.Drawing.Size(1000, 708);
+            this.dgvInventario.Size = new System.Drawing.Size(961, 708);
             this.dgvInventario.TabIndex = 1;
             this.dgvInventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellContentClick);
             this.dgvInventario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInventario_CellFormatting);
-            // 
-            // Categoría
-            // 
-            this.Categoría.HeaderText = "Categoría";
-            this.Categoría.MinimumWidth = 8;
-            this.Categoría.Name = "Categoría";
-            this.Categoría.Width = 150;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.MinimumWidth = 8;
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 150;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 8;
-            this.Stock.Name = "Stock";
-            this.Stock.Width = 150;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 8;
-            this.Estado.Name = "Estado";
-            this.Estado.Width = 150;
-            // 
-            // colEditar
-            // 
-            this.colEditar.HeaderText = "Editar";
-            this.colEditar.MinimumWidth = 8;
-            this.colEditar.Name = "colEditar";
-            this.colEditar.Text = "✏️";
-            this.colEditar.UseColumnTextForButtonValue = true;
-            this.colEditar.Width = 150;
             // 
             // colEliminar
             // 
@@ -257,47 +208,75 @@
             this.colEliminar.UseColumnTextForButtonValue = true;
             this.colEliminar.Width = 150;
             // 
+            // colEditar
+            // 
+            this.colEditar.HeaderText = "Editar";
+            this.colEditar.MinimumWidth = 8;
+            this.colEditar.Name = "colEditar";
+            this.colEditar.Text = "✏️";
+            this.colEditar.UseColumnTextForButtonValue = true;
+            this.colEditar.Width = 150;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 8;
+            this.Estado.Name = "Estado";
+            this.Estado.Width = 150;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 8;
+            this.Stock.Name = "Stock";
+            this.Stock.Width = 150;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.MinimumWidth = 8;
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 150;
+            // 
+            // Categoría
+            // 
+            this.Categoría.HeaderText = "Categoría";
+            this.Categoría.MinimumWidth = 8;
+            this.Categoría.Name = "Categoría";
+            this.Categoría.Width = 150;
+            // 
+            // panelTablaInventario
+            // 
+            this.panelTablaInventario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTablaInventario.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
+            this.panelTablaInventario.Controls.Add(this.dgvInventario);
+            this.panelTablaInventario.Location = new System.Drawing.Point(3, 226);
+            this.panelTablaInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTablaInventario.Name = "panelTablaInventario";
+            this.panelTablaInventario.Padding = new System.Windows.Forms.Padding(18, 0, 18, 16);
+            this.panelTablaInventario.Size = new System.Drawing.Size(973, 699);
+            this.panelTablaInventario.TabIndex = 1;
+            this.panelTablaInventario.Text = "panel1";
+            // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panelMenu.Controls.Add(this.btnInicio);
+            this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(59)))));
             this.panelMenu.Controls.Add(this.avatarLogo);
             this.panelMenu.Controls.Add(this.btnCerrarsesion);
             this.panelMenu.Controls.Add(this.btnAyuda);
             this.panelMenu.Controls.Add(this.btnVentas);
             this.panelMenu.Controls.Add(this.btnInventario);
+            this.panelMenu.Controls.Add(this.btnInicio);
             this.panelMenu.Controls.Add(this.lblNombreApp);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Location = new System.Drawing.Point(45, 24);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(376, 968);
+            this.panelMenu.Size = new System.Drawing.Size(376, 892);
             this.panelMenu.TabIndex = 3;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.Color.White;
-            this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnInicio.IconColor = System.Drawing.Color.White;
-            this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInicio.IconSize = 40;
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(32, 387);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(344, 84);
-            this.btnInicio.TabIndex = 4;
-            this.btnInicio.Text = " Inicio";
-            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click_1);
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint_1);
             // 
             // avatarLogo
             // 
@@ -325,10 +304,10 @@
             this.btnCerrarsesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarsesion.IconSize = 40;
             this.btnCerrarsesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarsesion.Location = new System.Drawing.Point(32, 853);
+            this.btnCerrarsesion.Location = new System.Drawing.Point(32, 794);
             this.btnCerrarsesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarsesion.Name = "btnCerrarsesion";
-            this.btnCerrarsesion.Size = new System.Drawing.Size(344, 111);
+            this.btnCerrarsesion.Size = new System.Drawing.Size(344, 66);
             this.btnCerrarsesion.TabIndex = 8;
             this.btnCerrarsesion.Text = " Cerrar sesión";
             this.btnCerrarsesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -349,8 +328,8 @@
             this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAyuda.IconSize = 40;
             this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.Location = new System.Drawing.Point(32, 779);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 20);
+            this.btnAyuda.Location = new System.Drawing.Point(32, 720);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(344, 66);
             this.btnAyuda.TabIndex = 7;
@@ -358,6 +337,7 @@
             this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAyuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnVentas
             // 
@@ -373,7 +353,7 @@
             this.btnVentas.IconSize = 40;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Location = new System.Drawing.Point(32, 558);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(4, 15, 4, 4);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(4);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(344, 66);
             this.btnVentas.TabIndex = 6;
@@ -397,7 +377,7 @@
             this.btnInventario.IconSize = 40;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventario.Location = new System.Drawing.Point(32, 472);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 15, 4, 4);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(344, 66);
             this.btnInventario.TabIndex = 5;
@@ -406,32 +386,42 @@
             this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInventario.UseVisualStyleBackColor = true;
             // 
+            // btnInicio
+            // 
+            this.btnInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnInicio.IconColor = System.Drawing.Color.White;
+            this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInicio.IconSize = 40;
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(32, 387);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(344, 66);
+            this.btnInicio.TabIndex = 4;
+            this.btnInicio.Text = " Inicio";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
             // lblNombreApp
             // 
             this.lblNombreApp.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblNombreApp.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreApp.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblNombreApp.Location = new System.Drawing.Point(83, 25);
-            this.lblNombreApp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.lblNombreApp.Location = new System.Drawing.Point(70, 31);
+            this.lblNombreApp.Margin = new System.Windows.Forms.Padding(4);
             this.lblNombreApp.Name = "lblNombreApp";
-            this.lblNombreApp.Size = new System.Drawing.Size(212, 60);
+            this.lblNombreApp.Size = new System.Drawing.Size(239, 75);
             this.lblNombreApp.TabIndex = 2;
             this.lblNombreApp.Text = "Ilca Point";
             this.lblNombreApp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelMenuInv
-            // 
-            this.panelMenuInv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelMenuInv.Back = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(59)))));
-            this.panelMenuInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panelMenuInv.Location = new System.Drawing.Point(24, 22);
-            this.panelMenuInv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelMenuInv.Name = "panelMenuInv";
-            this.panelMenuInv.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panelMenuInv.Size = new System.Drawing.Size(334, 936);
-            this.panelMenuInv.TabIndex = 1;
-            this.panelMenuInv.Text = "panelMenuDP";
             // 
             // FrmInventario2
             // 
@@ -446,8 +436,8 @@
             this.tlpContenidos.ResumeLayout(false);
             this.panelEncabezado.ResumeLayout(false);
             this.panelEncabezado.PerformLayout();
-            this.panelTablaInventario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
+            this.panelTablaInventario.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -456,19 +446,12 @@
         #endregion
 
         private AntdUI.Panel panelFondo;
-        private AntdUI.Panel panelMenuInv;
-        private System.Windows.Forms.Panel panelMenu;
-        private AntdUI.Avatar avatarLogo;
-        private FontAwesome.Sharp.IconButton btnCerrarsesion;
-        private FontAwesome.Sharp.IconButton btnAyuda;
-        private FontAwesome.Sharp.IconButton btnVentas;
-        private FontAwesome.Sharp.IconButton btnInventario;
-        private FontAwesome.Sharp.IconButton btnInicio;
-        private AntdUI.Label lblNombreApp;
         private System.Windows.Forms.TableLayoutPanel tlpContenidos;
         private AntdUI.Panel panelEncabezado;
         private AntdUI.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnAgregarProducto;
+        private AntdUI.Input txtBuscarProducto;
+        private AntdUI.Button btnBuscar;
         private AntdUI.Panel panelTablaInventario;
         private System.Windows.Forms.DataGridView dgvInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoría;
@@ -477,7 +460,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewButtonColumn colEditar;
         private System.Windows.Forms.DataGridViewButtonColumn colEliminar;
-        private AntdUI.Input txtBuscarProducto;
-        private AntdUI.Button btnBuscar;
+        private System.Windows.Forms.Panel panelMenu;
+        private AntdUI.Avatar avatarLogo;
+        private FontAwesome.Sharp.IconButton btnCerrarsesion;
+        private FontAwesome.Sharp.IconButton btnAyuda;
+        private FontAwesome.Sharp.IconButton btnVentas;
+        private FontAwesome.Sharp.IconButton btnInventario;
+        private FontAwesome.Sharp.IconButton btnInicio;
+        private AntdUI.Label lblNombreApp;
     }
 }
