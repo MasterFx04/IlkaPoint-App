@@ -23,15 +23,20 @@ namespace IlkaPoint
             CargarCategorias();
             // 1. Evitar que herede escalados raros de la pantalla de inventario
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = Color.FromArgb(26, 53, 96);
 
+            /*
             // 2. Congelar el tamaño exacto que le diste en tu diseño
             // Pon aquí los pixeles exactos que mide tu panel lateral (ejemplo: 350 de ancho por 700 de alto)
-            this.MinimumSize = new Size(456, 968);
-            this.MaximumSize = new Size(480, 1018);
-            this.Size = new Size(456, 968);
+            this.MinimumSize = new Size(480, 1024);
+            this.MaximumSize = new Size(480, 1024);
+            this.Size = new Size(480, 1024);
+            */
 
+            
             // 3. Forzar que el botón Añadir mantenga su posición abajo
             btnAgregarProducto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            
         }
      
 
@@ -82,10 +87,8 @@ namespace IlkaPoint
 
         //DISEÑO CÓDIGO (LÍNEA 69 A 70)
         //Este evento configura la "X" para cerrar la ventana de agregar producto.
-        private void btnCerrarPanel_Click(object sender, EventArgs e)
-        {
-            this.FindForm()?.Close();
-        }
+       // private void btnCerrarPanel_Click(object sender, EventArgs e)
+        
 
         private void CargarCategorias()
         {
@@ -128,6 +131,11 @@ namespace IlkaPoint
             MessageBox.Show("Producto guardado con ID: P" + producto.id.ToString("D4"));
             this.FindForm()?.Close();
 
+        }
+
+        private void btnCerrarPanel_Click_1(object sender, EventArgs e)
+        {
+            this.FindForm()?.Close();
         }
     }
 }

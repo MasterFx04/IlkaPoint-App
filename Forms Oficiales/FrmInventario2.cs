@@ -24,18 +24,22 @@ namespace IlkaPoint
         //DISEÑO CÓDIGO (LÍNEA 21)
         // Paleta de colores para la sombra del menú
         public static readonly System.Drawing.Color AzulFondo = System.Drawing.ColorTranslator.FromHtml("#1A3560");
+        public static readonly Color BlancoTexto = ColorTranslator.FromHtml("#FFFFFF"); // Texto
+        public static readonly Color AzulMenu = ColorTranslator.FromHtml("#08243B");   // Color del menú izquierdo
         public FrmInventario2()
         {
             InitializeComponent();
+
             // === CONGELAR EL TAMAÑO ESTÁNDAR ===
             this.Size = new Size(1440, 1024); // Pon aquí los pixeles exactos de tu Figma
             this.MinimumSize = new Size(1024, 768); // Evita que la hagan más chica
+
             // Asociamos el evento Load del formulario a nuestro método personalizado
             // Esto asegura que cuando el formulario se cargue,
             // se ejecute el código dentro de FrmInventario_Load
             this.Load += FrmInventario_Load;
-
         }
+        
 
 
         private void FrmInventario_Load(object sender, EventArgs e)
@@ -374,24 +378,22 @@ namespace IlkaPoint
         // Eventos de los botones del menú
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnInicio);
-            // Tu código para abrir FrmDashboardPrincipal si estás en otra pantalla...
+
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnInventario);
-            
+
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnVentas);
+
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            ActualizarMenuActivo(btnAyuda);
+
         }
 
 
@@ -474,6 +476,11 @@ namespace IlkaPoint
         private void btnCerrarsesion_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void panelMenu_Paint_1(object sender, PaintEventArgs e)
+        {
+            this.BackColor = Color.FromArgb(8, 36, 59);
         }
     }
 }
