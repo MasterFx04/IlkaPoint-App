@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using System.Windows;
 
 namespace IlkaPoint.Clases
 {
@@ -40,7 +42,11 @@ namespace IlkaPoint.Clases
                         throw new Exception($"No existe stock registrado para el producto {detalle.Producto.nombre}");
 
                     if (stock.Cantidad < detalle.Cantidad)
-                        throw new Exception($"Stock insuficiente para {detalle.Producto.nombre}. Disponible: {stock.Cantidad}");
+                    {
+                        MessageBox.Show("No hay stock disponible para el deseado");
+                        return;
+                    }
+                        //throw new Exception($"Stock insuficiente para {detalle.Producto.nombre}. Disponible: {stock.Cantidad}");
 
                     // reduce la cantidad
                     stock.Cantidad -= detalle.Cantidad;
@@ -49,6 +55,17 @@ namespace IlkaPoint.Clases
                 transaccion.Total = transaccion.CalcularTotal();
                 db.Transacciones.Add(transaccion);
                 db.SaveChanges();
+            }
+        }
+
+        public List<Transaccion> ObtenerTodasLasTransacciones()
+        {
+            using (AppDBContext db = new AppDBContext())
+            {
+                return db.Transacciones
+                         .Include(c => c.Detalles)
+                         .OrderByDescending(c => c.Fecha)
+                         .ToList();
             }
         }
     }

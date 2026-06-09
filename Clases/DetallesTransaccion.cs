@@ -57,6 +57,10 @@ namespace IlkaPoint.Clases
         }
 
         //Constructor
+        public DetallesTransaccion()
+        {
+
+        }
         public DetallesTransaccion(Producto producto, int cantidad)
         {
             //this.Producto = producto;

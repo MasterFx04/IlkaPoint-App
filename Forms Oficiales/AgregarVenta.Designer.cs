@@ -240,6 +240,7 @@
             this.txtBuscarProducto.SuffixSvg = "";
             this.txtBuscarProducto.SuffixWidth = 45;
             this.txtBuscarProducto.TabIndex = 3;
+            this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
             // 
             // lblNuevaV
             // 

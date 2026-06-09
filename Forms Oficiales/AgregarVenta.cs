@@ -1,8 +1,13 @@
+using IlkaPoint.Clases;
+using IlkaPoint.Data.Modelos;
+using IlkaPoint.FormsPrueba;
+using IlkaPoint.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +17,9 @@ namespace IlkaPoint.Forms_Oficiales
 {
     public partial class AgregarVenta : UserControl
     {
+
+        // Pon esto arriba, junto a las otras variables globales de tu Form
+        private ToolStripDropDown menuBusqueda = new ToolStripDropDown();
         // Estructura temporal para simular los productos de la BD
         private class ProductoSimulado
         {
@@ -54,61 +62,70 @@ namespace IlkaPoint.Forms_Oficiales
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            // 1. Verificamos si se presionó Enter y si el cursor está en la caja de búsqueda
             if (keyData == Keys.Enter && txtBuscarProducto.Focused)
             {
                 string criterio = txtBuscarProducto.Text.Trim();
 
                 if (!string.IsNullOrEmpty(criterio))
                 {
-                    // Para obtener coincidencias de la base de datos simulada
-                    List<ProductoSimulado> coincidencias = BuscarCoincidenciasEnBD(criterio);
+                    ServicioInventario servicio = new ServicioInventario();
+
+                    // 2. Buscamos directamente en el Stock en lugar de Producto
+                    List<Stock> coincidencias = servicio.BuscarStockPorNombre(criterio);
 
                     if (coincidencias.Count == 1)
                     {
-                        // Coincidencia única exacta: se agrega directo
+                        // Coincidencia única exacta: pasamos el objeto Stock directo
                         AgregarTarjetaALista(coincidencias[0]);
+                        txtBuscarProducto.Clear();
                     }
                     else if (coincidencias.Count > 1)
                     {
-                        // Menu flotante para seleccionar entre las coincidencias encontradas
+                        // Menú flotante para seleccionar entre las coincidencias encontradas
                         ContextMenuStrip menuSeleccion = new ContextMenuStrip();
 
-                        foreach (var prod in coincidencias)
+                        foreach (Stock stockItem in coincidencias)
                         {
-                            // Menú mostrando Nombre y Precio
-                            ToolStripMenuItem item = new ToolStripMenuItem($"{prod.Nombre} - ${prod.Precio:F2}");
+                            // Mostramos el nombre del producto y la cantidad disponible en el menú
+                            ToolStripMenuItem item = new ToolStripMenuItem($"{stockItem.productoNombre} - (Disponibles: {stockItem.Cantidad})");
 
-                            // Guardamos el objeto completo dentro del tag de la opción
-                            item.Tag = prod;
+                            // Guardamos el objeto Stock dentro del tag
+                            item.Tag = stockItem;
 
-                            // Evento al hacer clic en este producto específico
+                            // Evento al hacer clic
                             item.Click += (s, ev) => {
                                 ToolStripMenuItem itemClickeado = (ToolStripMenuItem)s;
-                                ProductoSimulado prodSeleccionado = (ProductoSimulado)itemClickeado.Tag;
-                                AgregarTarjetaALista(prodSeleccionado);
+                                Stock stockSeleccionado = (Stock)itemClickeado.Tag;
+
+                                // Pasamos el Stock seleccionado a tu función visual
+                                AgregarTarjetaALista(stockSeleccionado);
+                                txtBuscarProducto.Clear(); // Limpiamos la búsqueda
                             };
 
                             menuSeleccion.Items.Add(item);
                         }
 
-                        // Refleja el menu flotante justo debajo del textbox de búsqueda
+                        // Refleja el menú flotante justo debajo del textbox de búsqueda
                         menuSeleccion.Show(txtBuscarProducto, new Point(0, txtBuscarProducto.Height));
                     }
                     else
                     {
-                        MessageBox.Show("No se encontraron productos que coincidan con la búsqueda.", "Ilca Point", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("No se encontró stock que coincida con la búsqueda.", "Ilka Point", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtBuscarProducto.Clear();
                         txtBuscarProducto.Focus();
                     }
                 }
 
+                // Retornamos true para indicar que ya procesamos la tecla Enter
                 return true;
             }
 
+            // Comportamiento por defecto para otras teclas
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void AgregarTarjetaALista(ProductoSimulado prod)
+        private void AgregarTarjetaALista(Stock prod)
         {
             InfoProducto nuevaFila = new InfoProducto();
 
@@ -125,9 +142,19 @@ namespace IlkaPoint.Forms_Oficiales
             nuevaFila.Margin = new Padding(9, 0, 0, 8);
 
             // Cargar los textos e imágenes
-            nuevaFila.CargarDatos(prod.Id, prod.Nombre, prod.Precio, prod.Foto);
+            ServicioInventario inventario = new ServicioInventario();
+            Producto producto = inventario.BuscarProductoPorId(prod.Id);
+            Image imagenProducto = ConvertirBytesAImagen(producto.rutaImagenPng);
+
+            nuevaFila.CargarDatos(prod.Id, prod.productoNombre, producto.precio, imagenProducto);
+
+            nuevaFila.txtCantidad.TextChanged += (s, e) => {
+                ActualizarTotales();
+            };
 
             flpListaProductos.Controls.Add(nuevaFila);
+
+            ActualizarTotales();
 
             nuevaFila.BringToFront();
             flpListaProductos.Update();
@@ -137,7 +164,22 @@ namespace IlkaPoint.Forms_Oficiales
             txtBuscarProducto.Clear();
             txtBuscarProducto.Focus();
 
-            ActualizarTotales();
+            //ActualizarTotales();
+        }
+
+        public Image ConvertirBytesAImagen(byte[] imagenBytes)
+        {
+            // Validación por si el producto no tiene imagen guardada en la base de datos
+            if (imagenBytes == null || imagenBytes.Length == 0)
+            {
+                return null; // Opcional: Aquí podrías retornar un 'Properties.Resources.ImagenPorDefecto'
+            }
+
+            // Usamos MemoryStream para leer los bytes y transformarlos en un objeto Image
+            using (MemoryStream ms = new MemoryStream(imagenBytes))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
         private void ActualizarTotales()
@@ -165,14 +207,15 @@ namespace IlkaPoint.Forms_Oficiales
         }
 
         // Datos Prueba - Cambiar por base de datos
-        private List<ProductoSimulado> BuscarCoincidenciasEnBD(string criterio)
+        private List<Stock> BuscarCoincidenciasEnBD(string criterio)
         {
             string termino = criterio.ToLower().Trim();
-            List<ProductoSimulado> resultado = new List<ProductoSimulado>();
+            List<Stock> resultado = new List<Stock>();
 
             // Foto por default en caso tal el producto no tenga una imagen asignada en la base de datos
             Image fotoDefecto = Properties.Resources.xredmarkimg;
 
+            /*
             List<ProductoSimulado> inventarioBD = new List<ProductoSimulado>()
             {
                 new ProductoSimulado { Id = 101, Nombre = "Coca Cola 2 ltrs", Precio = 2.10m, Foto = fotoDefecto },
@@ -183,10 +226,14 @@ namespace IlkaPoint.Forms_Oficiales
                 new ProductoSimulado { Id = 502, Nombre = "Arroz La Morenita 5 lb", Precio = 3.25m, Foto = fotoDefecto },
                 new ProductoSimulado { Id = 503, Nombre = "Leche Evaporada Clavel", Precio = 0.85m, Foto = fotoDefecto }
             };
+            */
 
-            foreach (var prod in inventarioBD)
+            ServicioInventario inventario = new ServicioInventario();
+            List<Stock> inventarioDB = inventario.BuscarStockPorNombre(termino);
+
+            foreach (var prod in inventarioDB)
             {
-                if (prod.Nombre.ToLower().Contains(termino) || prod.Id.ToString() == termino)
+                if (prod.productoNombre.ToLower().Contains(termino) || prod.Id.ToString() == termino)
                 {
                     resultado.Add(prod);
                 }
@@ -206,52 +253,94 @@ namespace IlkaPoint.Forms_Oficiales
 
         private void btnRegistrarVenta1_Click(object sender, EventArgs e)
         {
-            // Validación de existencia de productos en la venta antes de registrar
-            if (flpListaProductos.Controls.Count == 0)
+            try
             {
-                MessageBox.Show("Debe agregar al menos un producto a la venta.", "Ilka Point", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Validacion del metodo de pago
-            string metodoPagoSeleccionado = (cmbMetodoPago != null && cmbMetodoPago.SelectedItem != null)
-                                           ? cmbMetodoPago.SelectedItem.ToString()
-                                           : "Efectivo";
-
-            // Para recalcular totales (total de productos) antes de guardar
-            ActualizarTotales();
-
-            var nuevaVenta = new Form1v2.RegistroVenta()
-            {
-                IdVenta = "00" + (Form1v2.BaseDatosVentas.Count + 1), 
-                MetodoPago = metodoPagoSeleccionado, 
-                Fecha = DateTime.Now.ToString("dd-MM-yyyy"),
-                TotalArticulos = int.Parse(lblTotalProductos.Text),
-                MontoTotal = decimal.Parse(lblTotalPrecio.Text.Replace("$", ""))
-            };
-
-            // Extracción de productos desde la tarjeta para agregarlos a la factura
-            foreach (Control control in flpListaProductos.Controls)
-            {
-                if (control is InfoProducto item)
+                // 1. Validación de existencia de controles (productos) en la UI
+                if (flpListaProductos.Controls.Count == 0)
                 {
-                    if (int.TryParse(item.txtCantidad.Text, out int cant) && cant > 0)
+                    MessageBox.Show("Debe agregar al menos un producto a la venta.", "Ilka Point", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 2. Validación del método de pago
+                string metodoPagoSeleccionado = (cmbMetodoPago != null && cmbMetodoPago.SelectedItem != null)
+                                                ? cmbMetodoPago.SelectedItem.ToString()
+                                                : null;
+
+                if (string.IsNullOrEmpty(metodoPagoSeleccionado))
+                {
+                    MessageBox.Show("Seleccione un método de pago.", "Ilka Point", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 3. Inicializar la Transacción
+                // Asumo que tienes un constructor vacío o pasas un booleano según tu prueba anterior.
+                Transaccion nuevaTransaccion = new Transaccion(false);
+
+                // Inicializamos la lista si tu modelo no lo hace automáticamente en el constructor
+                if (nuevaTransaccion.Detalles == null)
+                {
+                    nuevaTransaccion.Detalles = new List<DetallesTransaccion>();
+                }
+
+                nuevaTransaccion.MetodoPago = metodoPagoSeleccionado;
+                // nuevaTransaccion.Fecha = DateTime.Now; // Descomenta si tu modelo requiere setear la fecha manualmente
+
+                TransaccionService service = new TransaccionService();
+
+                // 4. Extracción de productos desde la tarjeta UI
+                foreach (Control control in flpListaProductos.Controls)
+                {
+                    if (control is InfoProducto item)
                     {
-                        nuevaVenta.Productos.Add(new Form1v2.ItemVendido
+                        if (int.TryParse(item.txtCantidad.Text, out int cant) && cant > 0)
                         {
-                            Nombre = item.lblNombre.Text,
-                            Cantidad = cant,
-                            Precio = item.PrecioUnitario
-                        });
+                            // Asumimos que tu UserControl 'InfoProducto' tiene una propiedad pública ProductoId
+                            int productoId = item.IdProducto;
+
+                            // El servicio busca el producto real en la DB y crea el detalle
+                            DetallesTransaccion detalle = service.CrearDetalle(productoId, cant);
+                            nuevaTransaccion.Detalles.Add(detalle);
+                        }
                     }
                 }
+
+                // Validación extra por si había controles pero con cantidades en 0 o inválidas
+                if (nuevaTransaccion.Detalles.Count == 0)
+                {
+                    MessageBox.Show("Las cantidades de los productos no son válidas.", "Ilka Point", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 5. Registrar la transacción en la Base de Datos (calcula totales y descuenta stock)
+                service.RegistrarTransaccion(nuevaTransaccion);
+
+                // 6. Mostrar la Factura / Comprobante
+                Form host = new Form
+                {
+                    StartPosition = FormStartPosition.CenterParent,
+                    Width = 800,
+                    Height = 600,
+                    Text = "Factura de Venta"
+                };
+
+                //var muestroDeFactura = new UserControlPrueba(nuevaTransaccion) { Dock = DockStyle.Fill };
+                //host.Controls.Add(muestroDeFactura);
+                //host.ShowDialog(this); // Mejor usar ShowDialog para bloquear la ventana principal hasta cerrar la factura
+
+                // 7. Limpiar la interfaz para una Nueva Venta
+                flpListaProductos.Controls.Clear();
+                ActualizarTotales(); // Llama a tu método para resetear los labels visuales a $0.00
+
+                // (Opcional) Si tienes un grid de inventario en esta pantalla, actualízalo aquí:
+                // ServicioInventario inventario = new ServicioInventario();
+                // dataGridView1.DataSource = inventario.ObtenerElStockActual();
             }
-
-            // Guardamos venta
-            Form1v2.BaseDatosVentas.Add(nuevaVenta);
-
-            MessageBox.Show($"¡Venta registrada con éxito (ID: {nuevaVenta.IdVenta})!", "Ilka Point", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            catch (Exception ex)
+            {
+                // 8. Manejo de Errores (Atrapa las excepciones de Stock o Producto no encontrado que lanzaste en el Service)
+                MessageBox.Show($"Ocurrió un error al registrar la venta:\n\n{ex.Message}", "Error de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             // Cerrar formulario
             this.FindForm()?.Close();
         }
@@ -278,6 +367,53 @@ namespace IlkaPoint.Forms_Oficiales
 
         private void lblTotal_Click(object sender, EventArgs e)
         {
+        }
+
+        private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
+        {
+            string criterio = txtBuscarProducto.Text.Trim();
+
+            if (string.IsNullOrEmpty(criterio) || criterio.Length < 2) // Solo busca si hay al menos 2 letras
+            {
+                menuBusqueda.Close();
+                return;
+            }
+
+            ServicioInventario servicio = new ServicioInventario();
+            List<Stock> coincidencias = servicio.BuscarStockPorNombre(criterio);
+
+            menuBusqueda.Items.Clear();
+
+            if (coincidencias.Count > 0)
+            {
+                foreach (Stock stockItem in coincidencias)
+                {
+                    ToolStripMenuItem item = new ToolStripMenuItem($"{stockItem.productoNombre} - (Disp: {stockItem.Cantidad})");
+                    item.Tag = stockItem;
+
+                    item.Click += (s, ev) =>
+                    {
+                        Stock seleccionado = (Stock)((ToolStripMenuItem)s).Tag;
+                        AgregarTarjetaALista(seleccionado);
+
+                        txtBuscarProducto.Clear();
+                        menuBusqueda.Close();
+                        txtBuscarProducto.Focus();
+                    };
+
+                    menuBusqueda.Items.Add(item);
+                }
+
+                // --- LA MAGIA ESTÁ AQUÍ ---
+                // 'AutoClose' en false ayuda a mantener el control
+                menuBusqueda.AutoClose = true;
+
+                // Mostramos el menú PERO le decimos que NO tome el foco
+                menuBusqueda.Show(txtBuscarProducto, new Point(0, txtBuscarProducto.Height), ToolStripDropDownDirection.BelowRight);
+
+                // Forzamos al textbox a recuperar el foco inmediatamente después de mostrar el menú
+                txtBuscarProducto.Focus();
+            }
         }
     }
 }

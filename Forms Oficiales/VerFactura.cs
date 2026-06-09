@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IlkaPoint.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +34,7 @@ namespace IlkaPoint.Forms_Oficiales
         /// Carga los datos de la venta seleccionada en la interfaz estética de la factura.
         /// </summary>
         /// <param name="metodoPago">El método de pago utilizado (ej: Efectivo, Yappy)</param>
-        public void CargarDatosFactura(string idVenta, string metodoPago, string fecha, List<dynamic> productos, int totalArticulos, decimal montoTotal)
+        public void CargarDatosFactura(string idVenta, string metodoPago, string fecha, List<DetallesTransaccion> productos, int totalArticulos, decimal montoTotal)
         {
             // Encabezado
             lblNumVenta.Text = $"Factura #{idVenta}";
@@ -50,10 +51,10 @@ namespace IlkaPoint.Forms_Oficiales
                 ItemProducto renglon = new ItemProducto();
 
                 renglon.ConfigurarRenglon(
-                    prod.Nombre,
+                    prod.ProductoNombre,
                     (int)prod.Cantidad,
-                    (decimal)prod.Precio,
-                    (decimal)prod.Subtotal
+                    (decimal)prod.PrecioUnitario,
+                    (decimal)prod.SubTotal
                 );
 
                 // Propiedades para cada renglon
@@ -71,6 +72,7 @@ namespace IlkaPoint.Forms_Oficiales
 
             // Datos de totales o precios
             lblTotalProductos.Text = totalArticulos.ToString();
+            lblFormPago.Text = metodoPago;
             lblTotalPrecio.Text = $"${montoTotal:F2}";
         }
 

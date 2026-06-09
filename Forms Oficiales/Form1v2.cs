@@ -1,6 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using IlkaPoint.Clases;
 using IlkaPoint.Forms_Oficiales;
+using IlkaPoint.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,7 @@ namespace IlkaPoint
             public decimal Subtotal => Cantidad * Precio;
         }
 
+        /*
         public class RegistroVenta
         {
             public string IdVenta { get; set; }
@@ -39,41 +41,43 @@ namespace IlkaPoint
             public int TotalArticulos { get; set; }
             public decimal MontoTotal { get; set; }
         }
+        */
 
         // Base de datos Simulada
-        public static List<RegistroVenta> BaseDatosVentas = new List<RegistroVenta>();
+        //public static List<RegistroVenta> BaseDatosVentas = new List<RegistroVenta>();
+        // Base de Datos REAL
+        public static List<TransaccionService> BaseDatosVentas = new List<TransaccionService>();
+        
 
         public void CargarHistorialVentas()
         {
+            TransaccionService serviceTransaccion = new TransaccionService();
+            List<Transaccion> Transacciones = serviceTransaccion.ObtenerTodasLasTransacciones();
+
             if (panelContenido == null) return;
 
             panelContenido.Controls.Clear();
 
             // Recorre lista central para crear tarjetas de ventas
-            foreach (var venta in BaseDatosVentas)
+            foreach (Transaccion venta in Transacciones)
             {
                 // Instancia de tarjeta de ventas real
                 Tarjeta_de_Ventas tarjeta = new Tarjeta_de_Ventas();
 
                 // Método para rellenar los textos de la tarjeta
-                tarjeta.CargarDatos(venta.IdVenta, venta.Fecha, venta.MetodoPago, (double)venta.MontoTotal);
+                tarjeta.CargarDatos(venta.idTransaccion.ToString("D4"), venta.Fecha.ToString("dd-MM-yyyy"), venta.MetodoPago, (double)venta.Total);
 
                 tarjeta.btnVerFactura.Click += (sender, e) => {
 
                     // Convertimos los productos de la venta al formato dinámico que espera el control 'VerFactura'
-                    List<dynamic> listaDynamic = new List<dynamic>();
-                    foreach (var p in venta.Productos)
-                    {
-                        listaDynamic.Add(new { Nombre = p.Nombre, Cantidad = p.Cantidad, Precio = p.Precio, Subtotal = p.Subtotal });
-                    }
+                    //List<dynamic> listaDynamic = new List<dynamic>();
+                    List<DetallesTransaccion> detalles = venta.Detalles ?? new List<DetallesTransaccion>();
 
-                    // Colocación del fondo oscuro
                     Form_FondoOscuro fondo = new Form_FondoOscuro();
                     fondo.StartPosition = FormStartPosition.Manual;
                     fondo.Bounds = this.Bounds;
                     fondo.Show(this);
 
-                    // Ventana para contener factura
                     Form ventanaContenedor = new Form();
                     ventanaContenedor.FormBorderStyle = FormBorderStyle.None;
                     ventanaContenedor.Size = new Size(480, 1024);
@@ -81,19 +85,16 @@ namespace IlkaPoint
                     ventanaContenedor.Location = new Point(this.Location.X + this.Width - 480, this.Location.Y);
                     ventanaContenedor.ShowInTaskbar = false;
 
-                    // Instancia control de factura real
                     VerFactura ucFactura = new VerFactura();
                     ucFactura.Dock = DockStyle.Fill;
-
-                    // Cargamos los datos dinámicos directo en la instancia del control
                     ucFactura.CargarDatosFactura(
-                        venta.IdVenta,
+                        "T" + venta.idTransaccion.ToString("D4"),
                         venta.MetodoPago,
-                        venta.Fecha,
-                        listaDynamic,
-                        venta.TotalArticulos,
-                        venta.MontoTotal
-                    );
+                        venta.Fecha.ToString("dd-MM-yyyy"),
+                        detalles,
+                        detalles.Count,
+                        venta.Total
+                            );
 
                     // Inserta el diseño dentro de la ventana y lo muestra como un diálogo modal
                     ventanaContenedor.Controls.Add(ucFactura);
@@ -247,30 +248,9 @@ namespace IlkaPoint
         {
             // Logo redondo siempre al frente y visible
             if (avatarLogo != null) avatarLogo.BringToFront();
-
             ActualizarMenuActivo(btnVentas);
-
             if (btnNuevaVenta != null)
-            {
                 btnNuevaVenta.BackColor = AzulClaroTarjetas;
-            }
-
-            // Al inciar el programa, La pantalla principal de ventas esta vacia. Con este se agrega una tarjeta por default.
-            if (BaseDatosVentas.Count == 0)
-            {
-                var ventaDemo = new RegistroVenta()
-                {
-                    IdVenta = "0001",
-                    MetodoPago = "Efectivo", 
-                    Fecha = "27-05-2026",  
-                    TotalArticulos = 4,
-                    MontoTotal = 5.05m
-                };
-                ventaDemo.Productos.Add(new ItemVendido { Nombre = "Coca Cola 2 ltrs", Cantidad = 1, Precio = 2.10m });
-                ventaDemo.Productos.Add(new ItemVendido { Nombre = "Jabon Corporal Palmolive", Cantidad = 3, Precio = 1.00m });
-
-                BaseDatosVentas.Add(ventaDemo);
-            }
 
             CargarHistorialVentas();
         }
@@ -293,11 +273,37 @@ namespace IlkaPoint
         private void btnInicio_Click(object sender, EventArgs e)
         {
             ActualizarMenuActivo(btnInicio);
+
+            //Ir a inicio
+            FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
+            if (!Application.OpenForms.OfType<FrmDashboardPrincipal>().Any())
+            {
+                dashboard = new FrmDashboardPrincipal();
+            }
+            else
+            {
+                dashboard = Application.OpenForms.OfType<FrmDashboardPrincipal>().FirstOrDefault();
+            }
+            this.Hide();
+            dashboard.Show();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
             ActualizarMenuActivo(btnInventario);
+
+            //Ir a Inventario
+            FrmInventario2 frmInventario;
+            if (!Application.OpenForms.OfType<FrmInventario2>().Any())
+            {
+                frmInventario = new FrmInventario2();
+            }
+            else
+            {
+                frmInventario = Application.OpenForms.OfType<FrmInventario2>().FirstOrDefault();
+            }
+            this.Hide();
+            frmInventario.Show();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
@@ -345,6 +351,11 @@ namespace IlkaPoint
 
             // Refresca el historial para mostrar la nueva venta
             CargarHistorialVentas();
+        }
+
+        private void btnCerrarsesion_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using IlkaPoint.Clases;
 using IlkaPoint.Data.Modelos;
+using IlkaPoint.Forms_Oficiales;
 using IlkaPoint.Servicios;
 using System;
 using System.Collections.Generic;
@@ -494,6 +495,26 @@ namespace IlkaPoint
         private void lblNumArtAgotados_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+            Form1v2 frmVentas;
+            if (!Application.OpenForms.OfType<Form1v2>().Any())
+            {
+                frmVentas = new Form1v2();
+            }
+            else
+            {
+                frmVentas = Application.OpenForms.OfType<Form1v2>().FirstOrDefault();
+            }
+            this.Hide();
+            frmVentas.Show();
+        }
+
+        private void btnCerrarsesion_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

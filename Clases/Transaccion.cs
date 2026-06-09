@@ -75,7 +75,10 @@ namespace IlkaPoint.Clases
 
 
         public List<DetallesTransaccion> Detalles {  get; set; }
-
+        public Transaccion()
+        {
+            Detalles = new List<DetallesTransaccion>();
+        }
 
 
         //Constructor
