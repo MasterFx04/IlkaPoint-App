@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using IlkaPoint.Clases;
+using IlkaPoint.Data.Modelos;
 using IlkaPoint.Forms_Oficiales;
 using IlkaPoint.Servicios;
 using System;
@@ -356,6 +357,80 @@ namespace IlkaPoint
         private void btnCerrarsesion_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        public void ExportarVentasAExcel()
+        {
+            TransaccionService service = new TransaccionService();
+            List<Transaccion> transacciones = service.ObtenerTodasLasTransacciones();
+
+            var workbook = new ClosedXML.Excel.XLWorkbook();
+            var hoja = workbook.Worksheets.Add("Historial de Ventas");
+
+            // Encabezados
+            hoja.Cell(1, 1).Value = "ID Transacción";
+            hoja.Cell(1, 2).Value = "Nombre Producto";
+            hoja.Cell(1, 3).Value = "Fecha";
+            hoja.Cell(1, 4).Value = "Categoría";
+            hoja.Cell(1, 5).Value = "Total";
+
+            // Estilo de encabezados
+            var encabezados = hoja.Range("A1:E1");
+            encabezados.Style.Font.Bold = true;
+            encabezados.Style.Fill.BackgroundColor = ClosedXML.Excel.XLColor.FromHtml("#1A3560");
+            encabezados.Style.Font.FontColor = ClosedXML.Excel.XLColor.White;
+            encabezados.Style.Alignment.Horizontal = ClosedXML.Excel.XLAlignmentHorizontalValues.Center;
+
+            int fila = 2;
+            foreach (Transaccion transaccion in transacciones)
+            {
+                if (transaccion.Detalles == null) continue;
+
+                foreach (DetallesTransaccion detalle in transaccion.Detalles)
+                {
+                    ServicioInventario servicio = new ServicioInventario();
+                    Producto producto = servicio.BuscarProductoPorId(detalle.ProductoId);
+
+                    hoja.Cell(fila, 1).Value = "T" + transaccion.idTransaccion.ToString("D4");
+                    hoja.Cell(fila, 2).Value = detalle.ProductoNombre;
+                    hoja.Cell(fila, 3).Value = transaccion.Fecha.ToString("dd/MM/yyyy HH:mm");
+                    hoja.Cell(fila, 4).Value = producto?.categoria ?? "Sin categoría";
+                    hoja.Cell(fila, 5).Value = transaccion.Total;
+                    hoja.Cell(fila, 5).Style.NumberFormat.Format = "$#,##0.00";
+
+                    // Color alterno por fila
+                    if (fila % 2 == 0)
+                        hoja.Row(fila).Style.Fill.BackgroundColor = ClosedXML.Excel.XLColor.FromHtml("#EBF0FA");
+
+                    fila++;
+                }
+            }
+
+            // Ajusta el ancho de las columnas automáticamente
+            hoja.Columns().AdjustToContents();
+
+            // Borde a toda la tabla
+            var tabla = hoja.Range(1, 1, fila - 1, 5);
+            tabla.Style.Border.OutsideBorder = ClosedXML.Excel.XLBorderStyleValues.Thin;
+            tabla.Style.Border.InsideBorder = ClosedXML.Excel.XLBorderStyleValues.Thin;
+
+            // Guardar con dialogo para que el usuario elija dónde
+            SaveFileDialog dialogo = new SaveFileDialog();
+            dialogo.Filter = "Excel|*.xlsx";
+            dialogo.FileName = "Ventas_IlkaPoint_" + DateTime.Now.ToString("yyyyMMdd");
+
+            if (dialogo.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(dialogo.FileName);
+                System.Windows.Forms.MessageBox.Show("Archivo exportado correctamente.", "IlkaPoint",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnexcel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se exportaran todas sus ventas a un archivo .xlsx");
+            ExportarVentasAExcel();
         }
     }
 }
