@@ -378,7 +378,18 @@ namespace IlkaPoint
         // Eventos de los botones del menú
         private void btnInicio_Click(object sender, EventArgs e)
         {
-
+            //Ir a inicio
+            FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
+            if (!Application.OpenForms.OfType<FrmDashboardPrincipal>().Any())
+            {
+                dashboard = new FrmDashboardPrincipal();
+            }
+            else
+            {
+                dashboard = Application.OpenForms.OfType<FrmDashboardPrincipal>().FirstOrDefault();
+            }
+            this.Hide();
+            dashboard.Show();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
