@@ -59,7 +59,7 @@
             this.panelFondoUC.Location = new System.Drawing.Point(0, 0);
             this.panelFondoUC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFondoUC.Name = "panelFondoUC";
-            this.panelFondoUC.Size = new System.Drawing.Size(427, 819);
+            this.panelFondoUC.Size = new System.Drawing.Size(427, 676);
             this.panelFondoUC.TabIndex = 0;
             this.panelFondoUC.Text = "panel1";
             // 
@@ -82,7 +82,7 @@
             this.panelContenidoUC.Location = new System.Drawing.Point(0, 0);
             this.panelContenidoUC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenidoUC.Name = "panelContenidoUC";
-            this.panelContenidoUC.Size = new System.Drawing.Size(427, 819);
+            this.panelContenidoUC.Size = new System.Drawing.Size(427, 676);
             this.panelContenidoUC.TabIndex = 0;
             this.panelContenidoUC.Text = "panel1";
             this.panelContenidoUC.Click += new System.EventHandler(this.panelContenidoUC_Click);
@@ -138,6 +138,7 @@
             this.input1.SuffixSvg = "";
             this.input1.SuffixWidth = 0;
             this.input1.TabIndex = 10;
+            this.input1.TextChanged += new System.EventHandler(this.input1_TextChanged);
             // 
             // label2
             // 
@@ -165,6 +166,7 @@
             this.inputNumberCantProducto.Size = new System.Drawing.Size(373, 66);
             this.inputNumberCantProducto.TabIndex = 8;
             this.inputNumberCantProducto.Text = "0";
+            this.inputNumberCantProducto.ValueChanged += new AntdUI.DecimalEventHandler(this.inputNumberCantProducto_ValueChanged);
             // 
             // label1
             // 
@@ -228,9 +230,10 @@
             this.cmbCategorías.Location = new System.Drawing.Point(28, 205);
             this.cmbCategorías.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategorías.Name = "cmbCategorías";
-            this.cmbCategorías.Size = new System.Drawing.Size(368, 35);
+            this.cmbCategorías.Size = new System.Drawing.Size(368, 31);
             this.cmbCategorías.TabIndex = 4;
             this.cmbCategorías.Text = "Seleccione la categoría";
+            this.cmbCategorías.SelectedIndexChanged += new System.EventHandler(this.cmbCategorías_SelectedIndexChanged);
             // 
             // lblCategoríaDeProducto
             // 
@@ -273,7 +276,7 @@
             this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenido.Location = new System.Drawing.Point(0, 0);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(427, 819);
+            this.panelContenido.Size = new System.Drawing.Size(427, 676);
             this.panelContenido.TabIndex = 16;
             this.panelContenido.Text = "panel1";
             // 
@@ -297,7 +300,7 @@
             this.btnAgregarProducto.Text = "Añadir Producto";
             this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarProducto.UseVisualStyleBackColor = false;
-            this.btnAgregarProducto.Click += new System.EventHandler(this.btnNuevaVenta_Click);
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // pbProducto
             // 
@@ -320,7 +323,7 @@
             this.Controls.Add(this.panelFondoUC);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucAgregarProducto";
-            this.Size = new System.Drawing.Size(427, 819);
+            this.Size = new System.Drawing.Size(427, 676);
             this.panelFondoUC.ResumeLayout(false);
             this.panelContenidoUC.ResumeLayout(false);
             this.panelContenido.ResumeLayout(false);

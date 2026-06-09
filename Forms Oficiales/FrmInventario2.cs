@@ -304,6 +304,7 @@ namespace IlkaPoint
 
             // Puedes agregar un método para refrescar tu Grid o lista de inventario si lo necesitas:
             CargarDatos();
+
         }
 
 

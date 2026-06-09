@@ -105,6 +105,94 @@ namespace IlkaPoint
 
         private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void cmbCategorías_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            // Expresiones regulares para el análisis defensivo
+            //Va a detectar si el texto tiene AL MENOS una letra (para evitar puros números o puros símbolos)
+            var tieneLetras = new System.Text.RegularExpressions.Regex(@"[a-zA-ZáéíóúÁÉÍÓÚñÑ]");
+
+            // Detecta si hay caracteres especiales prohibidos en nombres 
+            var tieneSimbolosProhibidos = new System.Text.RegularExpressions.Regex(@"[<>{}*\[\]\\\/^~_]");
+
+            // Validación para categoría de producto
+            string categoriaText = cmbCategorías.Text.Trim();
+
+            if (cmbCategorías.SelectedIndex == -1 && string.IsNullOrEmpty(categoriaText))
+            {
+                MessageBox.Show("Por favor, seleccione o ingrese una categoría válida.", "Categoría Vacía", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbCategorías.Focus();
+                return;
+            }
+
+            // Si escriben algo, obligamos a que no sean puros números o puros símbolos
+            if (!tieneLetras.IsMatch(categoriaText) || tieneSimbolosProhibidos.IsMatch(categoriaText))
+            {
+                MessageBox.Show("La categoría debe contener palabras. No se permiten solo números ni símbolos extraños.", "Categoría Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbCategorías.Focus();
+                return;
+            }
+
+            // validación para el nombre del producto. no puede estar vacio, no puede ser solamente númeroa o caracteres especiales 
+            string nombreProd = txtNombreProducto.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombreProd))
+            {
+                MessageBox.Show("El nombre del producto no puede estar vacío.", "Nombre Vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreProducto.Focus();
+                return;
+            }
+
+            // regla: se va a permitir que el nombre tenga númeors como: "Naranjas 8000", pero bloquea si son puros números o puros caracteres especiales
+            if (!tieneLetras.IsMatch(nombreProd) || tieneSimbolosProhibidos.IsMatch(nombreProd))
+            {
+                MessageBox.Show("El nombre del producto debe incluir letras (Ej. 'Naranjas 8000'). No puede ser puramente numérico ni contener símbolos raros como *, /, ^, etc.", "Nombre Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreProducto.Focus();
+                return;
+            }
+
+
+            //blindamos directamente desde el código para que no acepte negativo para el precio por unidad 
+            inputNumberCantProducto.Minimum = 0;
+
+            int cantidad1 = (int)inputNumberCantProducto.Value;
+            if (cantidad1 <= 0)
+            {
+                MessageBox.Show("La cantidad por unidad debe ser un número entero mayor a 0.", "Cantidad Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                inputNumberCantProducto.Focus();
+                return;
+            }
+
+            //validación para el precio unitario y evitamos que el programa se cierre forzozamente por haber introducido un numero raor 
+            decimal precioUnitario = 0;
+
+            // Con TryParse filtramos de un solo golpe letras infiltradas y símbolos raros
+            if (string.IsNullOrEmpty(input1.Text) || !decimal.TryParse(input1.Text, out precioUnitario))
+            {
+                MessageBox.Show("Por favor, introduzca un precio unitario aceptable (Ejemplo: 1.75). No coloque símbolos de moneda ni letras.", "Precio Inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                input1.Focus();
+                return;
+            }
+
+            // Evitamos precios de cero o negativos
+            if (precioUnitario <= 0)
+            {
+                MessageBox.Show("El precio unitario no puede ser cero ni un número negativo. El negocio tiene que ganar.", "Precio Fuera de Rango", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                input1.Focus();
+                return;
+            }
+
+            //si logro pasar todos los filtros se guarde de forma segura 
+            // Aquí pones tu código para guardar en la Base de Datos con Entity Framework...
+            MessageBox.Show("¡Producto verificado y agregado con éxito al inventario!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             ServicioInventario servicio = new ServicioInventario();
 
             string categoria = cmbCategorías.Text;
@@ -113,7 +201,7 @@ namespace IlkaPoint
             decimal precio = decimal.Parse(input1.Text, System.Globalization.CultureInfo.InvariantCulture);
             //Image imagen = pbProducto.Image; TRANSFORMAMOS LA IMAGEN A BYTES PARA QUE EL EF PUEDA LEERLO :D
             byte[] imagen = null;
-            if(pbProducto.Image != null)
+            if (pbProducto.Image != null)
             {
                 using (MemoryStream ms = new MemoryStream())
                 {
@@ -127,7 +215,18 @@ namespace IlkaPoint
             servicio.AgregarCantidadStock(producto.id, cantidad);
             MessageBox.Show("Producto guardado con ID: P" + producto.id.ToString("D4"));
             this.FindForm()?.Close();
+        }
+
+        private void input1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputNumberCantProducto_ValueChanged(object sender, AntdUI.DecimalEventArgs e)
+        {
 
         }
     }
 }
+
+
