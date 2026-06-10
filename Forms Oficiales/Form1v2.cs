@@ -318,7 +318,7 @@ namespace IlkaPoint
             ActualizarMenuActivo(btnAyuda);
             // Construimos la ruta dinámica uniendo la ubicación del .exe con la carpeta del PDF
             // Usamos Application.StartupPath para que funcione en cualquier computadora donde se instale
-            string rutaLocalPdf = System.IO.Path.Combine(Application.StartupPath, "Resources", "Guia_de_Usuario_IlcaPoint.pdf");
+            string rutaLocalPdf = System.IO.Path.Combine(Application.StartupPath, "Resources", "Guia_de_Usuario_IlcaPoint_con_capturas.pdf");
 
             // Validamos si el archivo realmente existe físicamente en esa ruta
             if (System.IO.File.Exists(rutaLocalPdf))

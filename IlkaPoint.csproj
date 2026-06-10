@@ -410,6 +410,9 @@
     <None Include="Resources\Guia_de_Usuario_IlcaPoint.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Resources\Guia_de_Usuario_IlcaPoint_con_capturas.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\image-Photoroom %2810%29.png" />
     <None Include="Resources\image %281%29.png" />
     <None Include="Resources\image-Photoroom %2817%29.png" />
