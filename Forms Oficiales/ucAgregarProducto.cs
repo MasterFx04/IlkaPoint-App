@@ -17,6 +17,8 @@ namespace IlkaPoint
     public partial class ucAgregarProducto : UserControl
     {
         private string rutaImagen = "";
+        public static readonly Color AzulFondo = ColorTranslator.FromHtml("#1A3560");         // Fondo de la pantalla principal
+        public static readonly Color AzulClaroTarjetas = ColorTranslator.FromHtml("#3059B6");
         public ucAgregarProducto()
         {
             InitializeComponent();
@@ -32,6 +34,10 @@ namespace IlkaPoint
 
             // 3. Forzar que el botón Añadir mantenga su posición abajo
             btnAgregarProducto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnAgregarProducto.BackColor = AzulClaroTarjetas;
+            btnAgregarProducto.FlatAppearance.BorderSize = 0;
+
+
         }
      
 

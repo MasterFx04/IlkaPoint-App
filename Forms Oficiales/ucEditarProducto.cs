@@ -20,10 +20,13 @@ namespace IlkaPoint
         private string rutaImagen = "";
         private Stock stockSeleccionado;
         private Producto _producoSeleccionado;
+        public static readonly Color AzulClaroTarjetas = ColorTranslator.FromHtml("#3059B6");
         public ucEditarProducto(Stock stock)
         {
             InitializeComponent();
             stockSeleccionado = stock;
+            btnGuardarCambios.BackColor = AzulClaroTarjetas;
+            btnGuardarCambios.FlatAppearance.BorderSize = 0;
 
             CargarDatosProducto();
             cmbCategorías.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);

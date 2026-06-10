@@ -56,7 +56,7 @@
             this.btnCerrarPanel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCerrarPanel.IconColor = System.Drawing.Color.Black;
             this.btnCerrarPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarPanel.Location = new System.Drawing.Point(411, 20);
+            this.btnCerrarPanel.Location = new System.Drawing.Point(380, 20);
             this.btnCerrarPanel.Name = "btnCerrarPanel";
             this.btnCerrarPanel.Size = new System.Drawing.Size(52, 52);
             this.btnCerrarPanel.TabIndex = 16;
@@ -78,7 +78,7 @@
             this.btnGuardarCambios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardarCambios.Location = new System.Drawing.Point(35, 927);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
-            this.btnGuardarCambios.Size = new System.Drawing.Size(425, 55);
+            this.btnGuardarCambios.Size = new System.Drawing.Size(416, 67);
             this.btnGuardarCambios.TabIndex = 14;
             this.btnGuardarCambios.Text = "Guardar Cambios";
             this.btnGuardarCambios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -108,7 +108,7 @@
             this.label3.Location = new System.Drawing.Point(34, 736);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(441, 37);
+            this.label3.Size = new System.Drawing.Size(426, 43);
             this.label3.TabIndex = 11;
             this.label3.Text = "5. Agregar Imagen";
             // 
@@ -125,7 +125,7 @@
             this.input1.PrefixFormat = AntdUI.FormatFlags.Left;
             this.input1.PrefixSvg = "";
             this.input1.Radius = 0;
-            this.input1.Size = new System.Drawing.Size(433, 50);
+            this.input1.Size = new System.Drawing.Size(416, 67);
             this.input1.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
             this.input1.SuffixFormat = AntdUI.FormatFlags.Left;
             this.input1.SuffixSvg = "";
@@ -141,7 +141,7 @@
             this.label2.Location = new System.Drawing.Point(34, 609);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(441, 37);
+            this.label2.Size = new System.Drawing.Size(426, 43);
             this.label2.TabIndex = 9;
             this.label2.Text = "4. Precio unitario ($)";
             // 
@@ -154,7 +154,7 @@
             this.inputNumberCantProducto.Location = new System.Drawing.Point(34, 525);
             this.inputNumberCantProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputNumberCantProducto.Name = "inputNumberCantProducto";
-            this.inputNumberCantProducto.Size = new System.Drawing.Size(426, 66);
+            this.inputNumberCantProducto.Size = new System.Drawing.Size(416, 67);
             this.inputNumberCantProducto.TabIndex = 8;
             this.inputNumberCantProducto.Text = "0";
             // 
@@ -164,10 +164,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(34, 455);
+            this.label1.Location = new System.Drawing.Point(34, 478);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(441, 53);
+            this.label1.Size = new System.Drawing.Size(426, 43);
             this.label1.TabIndex = 7;
             this.label1.Text = "3. Cantidad por unidad";
             // 
@@ -176,7 +176,7 @@
             this.txtNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(34, 391);
+            this.txtNombreProducto.Location = new System.Drawing.Point(30, 391);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.PlaceholderText = "Ejemplo: Queso Amarillo Kraft";
@@ -184,7 +184,7 @@
             this.txtNombreProducto.PrefixFormat = AntdUI.FormatFlags.Left;
             this.txtNombreProducto.PrefixSvg = "";
             this.txtNombreProducto.Radius = 0;
-            this.txtNombreProducto.Size = new System.Drawing.Size(426, 67);
+            this.txtNombreProducto.Size = new System.Drawing.Size(416, 67);
             this.txtNombreProducto.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
             this.txtNombreProducto.SuffixFormat = AntdUI.FormatFlags.Left;
             this.txtNombreProducto.SuffixSvg = "";
@@ -253,7 +253,7 @@
             // 
             this.lblAgregarProducto.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblAgregarProducto.Location = new System.Drawing.Point(30, 20);
+            this.lblAgregarProducto.Location = new System.Drawing.Point(35, 20);
             this.lblAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblAgregarProducto.Name = "lblAgregarProducto";
             this.lblAgregarProducto.Size = new System.Drawing.Size(339, 58);

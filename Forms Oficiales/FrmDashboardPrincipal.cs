@@ -32,6 +32,7 @@ namespace IlkaPoint
         {
             // Llamamos al método para aplicar los íconos a los botones de este formulario
             InicializarIconosMenu();
+            ActualizarMenuActivo(btnInicio);
 
             try
             {
@@ -199,6 +200,8 @@ namespace IlkaPoint
             this.Hide();
             FrmInventario2 inventario = new FrmInventario2();
             inventario.Show();
+
+
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
@@ -229,6 +232,7 @@ namespace IlkaPoint
             if (this.Visible)
             {
                 RefrescarDashBoard();
+                ActualizarMenuActivo(btnInicio);
             }
         }
         /*
@@ -447,6 +451,7 @@ namespace IlkaPoint
             {
                 frmVentas = Application.OpenForms.OfType<Form1v2>().FirstOrDefault();
             }
+           
             this.Hide();
             frmVentas.Show();
         }

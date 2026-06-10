@@ -42,10 +42,11 @@ namespace IlkaPoint
             public int TotalArticulos { get; set; }
             public decimal MontoTotal { get; set; }
         }
-        */
+       */
 
         // Base de datos Simulada
         //public static List<RegistroVenta> BaseDatosVentas = new List<RegistroVenta>();
+
         // Base de Datos REAL
         public static List<TransaccionService> BaseDatosVentas = new List<TransaccionService>();
         

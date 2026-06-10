@@ -26,6 +26,7 @@ namespace IlkaPoint
         public static readonly System.Drawing.Color AzulFondo = System.Drawing.ColorTranslator.FromHtml("#1A3560");
         public static readonly Color BlancoTexto = ColorTranslator.FromHtml("#FFFFFF"); // Texto
         public static readonly Color AzulMenu = ColorTranslator.FromHtml("#08243B");   // Color del menú izquierdo
+        public static readonly Color AzulClaroTarjetas = ColorTranslator.FromHtml("#3059B6");
         public FrmInventario2()
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace IlkaPoint
             CargarDatos();
             // Llamamos al método para aplicar los íconos a los botones de esta pantalla
             InicializarIconosMenu();
+            ActualizarMenuActivo(btnInventario);
         }
 
         //DATOS DE PRUEBA
@@ -274,6 +276,7 @@ namespace IlkaPoint
         //con el User Control de agregar producto.
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
+            btnAgregarProducto.BackColor = AzulClaroTarjetas;
             // 1. Creamos y mostramos el fondo oscuro estirado sobre todo el FrmInventario2
             Form_FondoOscuro fondo = new Form_FondoOscuro();
             fondo.StartPosition = FormStartPosition.Manual;
@@ -378,6 +381,7 @@ namespace IlkaPoint
         // Eventos de los botones del menú
         private void btnInicio_Click(object sender, EventArgs e)
         {
+
             //Ir a inicio
             FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
             if (!Application.OpenForms.OfType<FrmDashboardPrincipal>().Any())
@@ -388,18 +392,21 @@ namespace IlkaPoint
             {
                 dashboard = Application.OpenForms.OfType<FrmDashboardPrincipal>().FirstOrDefault();
             }
+            
             this.Hide();
             dashboard.Show();
+
+
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
 
         }
-
+        
         private void btnVentas_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
@@ -439,7 +446,7 @@ namespace IlkaPoint
             }
 
         }
-
+        
 
         //Este evento se abrió por error mientras diseñaba el formulario, pueden borrarlo
         //porque no se utiliza.
@@ -494,16 +501,19 @@ namespace IlkaPoint
 
         private void btnInicio_Click_1(object sender, EventArgs e)
         {
+            ActualizarMenuActivo(btnInicio);
             FrmDashboardPrincipal dashboard = Application.OpenForms.OfType<FrmDashboardPrincipal>().FirstOrDefault();
-           // FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
+            // FrmDashboardPrincipal dashboard = new FrmDashboardPrincipal();
             this.Hide();
             dashboard?.RefrescarDashBoard();
             dashboard?.Show();
-            
+
+
         }
 
         private void btnVentas_Click_1(object sender, EventArgs e)
         {
+            ActualizarMenuActivo(btnVentas);
             Form1v2 frmVentas;
             if (!Application.OpenForms.OfType<Form1v2>().Any())
             {

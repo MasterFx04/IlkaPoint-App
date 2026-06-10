@@ -29,20 +29,6 @@
         private void InitializeComponent()
         {
             this.panelFondo = new AntdUI.Panel();
-            this.tlpContenidos = new System.Windows.Forms.TableLayoutPanel();
-            this.panelEncabezado = new AntdUI.Panel();
-            this.btnBuscar = new AntdUI.Button();
-            this.txtBuscarProducto = new AntdUI.Input();
-            this.lblTitulo = new AntdUI.Label();
-            this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
-            this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colEditar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelTablaInventario = new AntdUI.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.avatarLogo = new AntdUI.Avatar();
             this.btnCerrarsesion = new FontAwesome.Sharp.IconButton();
@@ -51,12 +37,26 @@
             this.btnInventario = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.lblNombreApp = new AntdUI.Label();
+            this.tlpContenidos = new System.Windows.Forms.TableLayoutPanel();
+            this.panelEncabezado = new AntdUI.Panel();
+            this.btnBuscar = new AntdUI.Button();
+            this.txtBuscarProducto = new AntdUI.Input();
+            this.lblTitulo = new AntdUI.Label();
+            this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
+            this.panelTablaInventario = new AntdUI.Panel();
+            this.dgvInventario = new System.Windows.Forms.DataGridView();
+            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEditar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelFondo.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.tlpContenidos.SuspendLayout();
             this.panelEncabezado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.panelTablaInventario.SuspendLayout();
-            this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFondo
@@ -73,197 +73,11 @@
             this.panelFondo.TabIndex = 0;
             this.panelFondo.Text = "panel1";
             // 
-            // tlpContenidos
-            // 
-            this.tlpContenidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpContenidos.ColumnCount = 1;
-            this.tlpContenidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpContenidos.Controls.Add(this.panelEncabezado, 0, 0);
-            this.tlpContenidos.Controls.Add(this.panelTablaInventario, 0, 1);
-            this.tlpContenidos.Location = new System.Drawing.Point(439, 0);
-            this.tlpContenidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tlpContenidos.Name = "tlpContenidos";
-            this.tlpContenidos.RowCount = 3;
-            this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 224F));
-            this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tlpContenidos.Size = new System.Drawing.Size(979, 943);
-            this.tlpContenidos.TabIndex = 2;
-            // 
-            // panelEncabezado
-            // 
-            this.panelEncabezado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelEncabezado.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
-            this.panelEncabezado.Controls.Add(this.btnBuscar);
-            this.panelEncabezado.Controls.Add(this.txtBuscarProducto);
-            this.panelEncabezado.Controls.Add(this.lblTitulo);
-            this.panelEncabezado.Controls.Add(this.btnAgregarProducto);
-            this.panelEncabezado.Location = new System.Drawing.Point(3, 2);
-            this.panelEncabezado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelEncabezado.Name = "panelEncabezado";
-            this.panelEncabezado.Size = new System.Drawing.Size(973, 219);
-            this.panelEncabezado.TabIndex = 0;
-            this.panelEncabezado.Text = "panel1";
-            this.panelEncabezado.Click += new System.EventHandler(this.panelEncabezado_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.IconSvg = "SearchOutlined";
-            this.btnBuscar.Location = new System.Drawing.Point(891, 100);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Radius = 0;
-            this.btnBuscar.Size = new System.Drawing.Size(71, 71);
-            this.btnBuscar.TabIndex = 6;
-            this.btnBuscar.Type = AntdUI.TTypeMini.Primary;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtBuscarProducto
-            // 
-            this.txtBuscarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarProducto.Location = new System.Drawing.Point(490, 101);
-            this.txtBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscarProducto.Name = "txtBuscarProducto";
-            this.txtBuscarProducto.PlaceholderText = "Buscar producto...";
-            this.txtBuscarProducto.PrefixFore = System.Drawing.Color.Black;
-            this.txtBuscarProducto.PrefixFormat = AntdUI.FormatFlags.Left;
-            this.txtBuscarProducto.PrefixSvg = "";
-            this.txtBuscarProducto.Radius = 0;
-            this.txtBuscarProducto.Size = new System.Drawing.Size(394, 70);
-            this.txtBuscarProducto.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.txtBuscarProducto.SuffixFormat = AntdUI.FormatFlags.Left;
-            this.txtBuscarProducto.SuffixSvg = "";
-            this.txtBuscarProducto.SuffixWidth = 0;
-            this.txtBuscarProducto.TabIndex = 5;
-            this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
-            this.txtBuscarProducto.Click += new System.EventHandler(this.txtBuscarProducto_TextChanged);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSizeMode = AntdUI.TAutoSize.Auto;
-            this.lblTitulo.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblTitulo.Location = new System.Drawing.Point(42, 92);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(406, 56);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Inventario y Stock";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAgregarProducto
-            // 
-            this.btnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarProducto.AutoSize = true;
-            this.btnAgregarProducto.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarProducto.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnAgregarProducto.IconColor = System.Drawing.Color.White;
-            this.btnAgregarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregarProducto.IconSize = 45;
-            this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(597, 22);
-            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(351, 56);
-            this.btnAgregarProducto.TabIndex = 4;
-            this.btnAgregarProducto.Text = "Añadir Producto";
-            this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarProducto.UseVisualStyleBackColor = false;
-            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
-            // 
-            // dgvInventario
-            // 
-            this.dgvInventario.AllowUserToAddRows = false;
-            this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Categoría,
-            this.Producto,
-            this.Stock,
-            this.Estado,
-            this.colEditar,
-            this.colEliminar});
-            this.dgvInventario.Location = new System.Drawing.Point(18, 0);
-            this.dgvInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvInventario.Name = "dgvInventario";
-            this.dgvInventario.RowHeadersVisible = false;
-            this.dgvInventario.RowHeadersWidth = 62;
-            this.dgvInventario.RowTemplate.Height = 28;
-            this.dgvInventario.Size = new System.Drawing.Size(961, 708);
-            this.dgvInventario.TabIndex = 1;
-            this.dgvInventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellContentClick);
-            this.dgvInventario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInventario_CellFormatting);
-            // 
-            // colEliminar
-            // 
-            this.colEliminar.HeaderText = "Eliminar";
-            this.colEliminar.MinimumWidth = 8;
-            this.colEliminar.Name = "colEliminar";
-            this.colEliminar.Text = "🗑️";
-            this.colEliminar.UseColumnTextForButtonValue = true;
-            this.colEliminar.Width = 150;
-            // 
-            // colEditar
-            // 
-            this.colEditar.HeaderText = "Editar";
-            this.colEditar.MinimumWidth = 8;
-            this.colEditar.Name = "colEditar";
-            this.colEditar.Text = "✏️";
-            this.colEditar.UseColumnTextForButtonValue = true;
-            this.colEditar.Width = 150;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 8;
-            this.Estado.Name = "Estado";
-            this.Estado.Width = 150;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 8;
-            this.Stock.Name = "Stock";
-            this.Stock.Width = 150;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.MinimumWidth = 8;
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 150;
-            // 
-            // Categoría
-            // 
-            this.Categoría.HeaderText = "Categoría";
-            this.Categoría.MinimumWidth = 8;
-            this.Categoría.Name = "Categoría";
-            this.Categoría.Width = 150;
-            // 
-            // panelTablaInventario
-            // 
-            this.panelTablaInventario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTablaInventario.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
-            this.panelTablaInventario.Controls.Add(this.dgvInventario);
-            this.panelTablaInventario.Location = new System.Drawing.Point(3, 226);
-            this.panelTablaInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTablaInventario.Name = "panelTablaInventario";
-            this.panelTablaInventario.Padding = new System.Windows.Forms.Padding(18, 0, 18, 16);
-            this.panelTablaInventario.Size = new System.Drawing.Size(973, 699);
-            this.panelTablaInventario.TabIndex = 1;
-            this.panelTablaInventario.Text = "panel1";
-            // 
             // panelMenu
             // 
             this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(59)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panelMenu.Controls.Add(this.avatarLogo);
             this.panelMenu.Controls.Add(this.btnCerrarsesion);
             this.panelMenu.Controls.Add(this.btnAyuda);
@@ -423,6 +237,192 @@
             this.lblNombreApp.Text = "Ilca Point";
             this.lblNombreApp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tlpContenidos
+            // 
+            this.tlpContenidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpContenidos.ColumnCount = 1;
+            this.tlpContenidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpContenidos.Controls.Add(this.panelEncabezado, 0, 0);
+            this.tlpContenidos.Controls.Add(this.panelTablaInventario, 0, 1);
+            this.tlpContenidos.Location = new System.Drawing.Point(439, 0);
+            this.tlpContenidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tlpContenidos.Name = "tlpContenidos";
+            this.tlpContenidos.RowCount = 3;
+            this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 224F));
+            this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpContenidos.Size = new System.Drawing.Size(979, 943);
+            this.tlpContenidos.TabIndex = 2;
+            // 
+            // panelEncabezado
+            // 
+            this.panelEncabezado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelEncabezado.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
+            this.panelEncabezado.Controls.Add(this.btnBuscar);
+            this.panelEncabezado.Controls.Add(this.txtBuscarProducto);
+            this.panelEncabezado.Controls.Add(this.lblTitulo);
+            this.panelEncabezado.Controls.Add(this.btnAgregarProducto);
+            this.panelEncabezado.Location = new System.Drawing.Point(3, 2);
+            this.panelEncabezado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelEncabezado.Name = "panelEncabezado";
+            this.panelEncabezado.Size = new System.Drawing.Size(973, 219);
+            this.panelEncabezado.TabIndex = 0;
+            this.panelEncabezado.Text = "panel1";
+            this.panelEncabezado.Click += new System.EventHandler(this.panelEncabezado_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.IconSvg = "SearchOutlined";
+            this.btnBuscar.Location = new System.Drawing.Point(891, 100);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Radius = 0;
+            this.btnBuscar.Size = new System.Drawing.Size(71, 71);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Type = AntdUI.TTypeMini.Primary;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscarProducto
+            // 
+            this.txtBuscarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarProducto.Location = new System.Drawing.Point(490, 101);
+            this.txtBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarProducto.Name = "txtBuscarProducto";
+            this.txtBuscarProducto.PlaceholderText = "Buscar producto...";
+            this.txtBuscarProducto.PrefixFore = System.Drawing.Color.Black;
+            this.txtBuscarProducto.PrefixFormat = AntdUI.FormatFlags.Left;
+            this.txtBuscarProducto.PrefixSvg = "";
+            this.txtBuscarProducto.Radius = 0;
+            this.txtBuscarProducto.Size = new System.Drawing.Size(394, 70);
+            this.txtBuscarProducto.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.txtBuscarProducto.SuffixFormat = AntdUI.FormatFlags.Left;
+            this.txtBuscarProducto.SuffixSvg = "";
+            this.txtBuscarProducto.SuffixWidth = 0;
+            this.txtBuscarProducto.TabIndex = 5;
+            this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
+            this.txtBuscarProducto.Click += new System.EventHandler(this.txtBuscarProducto_TextChanged);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSizeMode = AntdUI.TAutoSize.Auto;
+            this.lblTitulo.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblTitulo.Location = new System.Drawing.Point(42, 92);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(406, 56);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Inventario y Stock";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnAgregarProducto
+            // 
+            this.btnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarProducto.AutoSize = true;
+            this.btnAgregarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarProducto.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAgregarProducto.IconColor = System.Drawing.Color.White;
+            this.btnAgregarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarProducto.IconSize = 45;
+            this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarProducto.Location = new System.Drawing.Point(573, 22);
+            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(375, 56);
+            this.btnAgregarProducto.TabIndex = 4;
+            this.btnAgregarProducto.Text = "Agregar Producto";
+            this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarProducto.UseVisualStyleBackColor = false;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
+            // 
+            // panelTablaInventario
+            // 
+            this.panelTablaInventario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTablaInventario.Back = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
+            this.panelTablaInventario.Controls.Add(this.dgvInventario);
+            this.panelTablaInventario.Location = new System.Drawing.Point(3, 226);
+            this.panelTablaInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTablaInventario.Name = "panelTablaInventario";
+            this.panelTablaInventario.Padding = new System.Windows.Forms.Padding(18, 0, 18, 16);
+            this.panelTablaInventario.Size = new System.Drawing.Size(973, 699);
+            this.panelTablaInventario.TabIndex = 1;
+            this.panelTablaInventario.Text = "panel1";
+            // 
+            // dgvInventario
+            // 
+            this.dgvInventario.AllowUserToAddRows = false;
+            this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Categoría,
+            this.Producto,
+            this.Stock,
+            this.Estado,
+            this.colEditar,
+            this.colEliminar});
+            this.dgvInventario.Location = new System.Drawing.Point(18, 0);
+            this.dgvInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvInventario.Name = "dgvInventario";
+            this.dgvInventario.RowHeadersVisible = false;
+            this.dgvInventario.RowHeadersWidth = 62;
+            this.dgvInventario.RowTemplate.Height = 28;
+            this.dgvInventario.Size = new System.Drawing.Size(961, 708);
+            this.dgvInventario.TabIndex = 1;
+            this.dgvInventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellContentClick);
+            this.dgvInventario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInventario_CellFormatting);
+            // 
+            // Categoría
+            // 
+            this.Categoría.HeaderText = "Categoría";
+            this.Categoría.MinimumWidth = 8;
+            this.Categoría.Name = "Categoría";
+            this.Categoría.Width = 150;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.MinimumWidth = 8;
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 150;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 8;
+            this.Stock.Name = "Stock";
+            this.Stock.Width = 150;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 8;
+            this.Estado.Name = "Estado";
+            this.Estado.Width = 150;
+            // 
+            // colEditar
+            // 
+            this.colEditar.HeaderText = "Editar";
+            this.colEditar.MinimumWidth = 8;
+            this.colEditar.Name = "colEditar";
+            this.colEditar.Text = "✏️";
+            this.colEditar.UseColumnTextForButtonValue = true;
+            this.colEditar.Width = 150;
+            // 
+            // colEliminar
+            // 
+            this.colEliminar.HeaderText = "Eliminar";
+            this.colEliminar.MinimumWidth = 8;
+            this.colEliminar.Name = "colEliminar";
+            this.colEliminar.Text = "🗑️";
+            this.colEliminar.UseColumnTextForButtonValue = true;
+            this.colEliminar.Width = 150;
+            // 
             // FrmInventario2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -433,12 +433,12 @@
             this.Name = "FrmInventario2";
             this.Text = "FrmInventario2";
             this.panelFondo.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
             this.tlpContenidos.ResumeLayout(false);
             this.panelEncabezado.ResumeLayout(false);
             this.panelEncabezado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.panelTablaInventario.ResumeLayout(false);
-            this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.ResumeLayout(false);
 
         }
