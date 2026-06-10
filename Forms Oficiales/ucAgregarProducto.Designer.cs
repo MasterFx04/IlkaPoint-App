@@ -282,9 +282,9 @@ namespace IlkaPoint
             this.Controls.Add(this.lblIndicaciones);
             this.Controls.Add(this.btnCerrarPanel);
             this.Controls.Add(this.lblAgregarProducto);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ucAgregarProducto";
-            this.Size = new System.Drawing.Size(480, 1024);
+            this.Size = new System.Drawing.Size(480, 1025);
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.ResumeLayout(false);
 
