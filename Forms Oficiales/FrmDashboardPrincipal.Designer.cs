@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelFondoDP = new AntdUI.Panel();
             this.panelMenuDP = new AntdUI.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -115,7 +115,6 @@
             this.panelMenu.Controls.Add(this.btnInventario);
             this.panelMenu.Controls.Add(this.btnInicio);
             this.panelMenu.Controls.Add(this.lblNombreApp);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
@@ -343,34 +342,34 @@
             // 
             // chartCategorias
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartCategorias.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartCategorias.Legends.Add(legend1);
+            chartArea9.Name = "ChartArea1";
+            this.chartCategorias.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chartCategorias.Legends.Add(legend9);
             this.chartCategorias.Location = new System.Drawing.Point(501, 17);
             this.chartCategorias.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
             this.chartCategorias.Name = "chartCategorias";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartCategorias.Series.Add(series1);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chartCategorias.Series.Add(series9);
             this.chartCategorias.Size = new System.Drawing.Size(453, 300);
             this.chartCategorias.TabIndex = 1;
             this.chartCategorias.Text = "chart2";
             // 
             // chartTendencia
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartTendencia.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartTendencia.Legends.Add(legend2);
+            chartArea10.Name = "ChartArea1";
+            this.chartTendencia.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chartTendencia.Legends.Add(legend10);
             this.chartTendencia.Location = new System.Drawing.Point(10, 17);
             this.chartTendencia.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
             this.chartTendencia.Name = "chartTendencia";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartTendencia.Series.Add(series2);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chartTendencia.Series.Add(series10);
             this.chartTendencia.Size = new System.Drawing.Size(453, 300);
             this.chartTendencia.TabIndex = 0;
             this.chartTendencia.Text = "chart1";

@@ -28,64 +28,33 @@ namespace IlkaPoint
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelFondoUC = new AntdUI.In.Panel();
-            this.panelContenidoUC = new AntdUI.In.Panel();
-            this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
-            this.label3 = new AntdUI.Label();
-            this.input1 = new AntdUI.Input();
-            this.label2 = new AntdUI.Label();
-            this.inputNumberCantProducto = new AntdUI.InputNumber();
-            this.label1 = new AntdUI.Label();
-            this.txtNombreProducto = new AntdUI.Input();
-            this.lblNombreProducto = new AntdUI.Label();
-            this.cmbCategorías = new System.Windows.Forms.ComboBox();
-            this.lblCategoríaDeProducto = new AntdUI.Label();
-            this.lblIndicaciones = new AntdUI.Label();
             this.lblAgregarProducto = new AntdUI.Label();
-            this.panelContenido = new AntdUI.In.Panel();
-            this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarPanel = new FontAwesome.Sharp.IconButton();
+            this.lblIndicaciones = new AntdUI.Label();
+            this.lblCategoríaDeProducto = new AntdUI.Label();
+            this.cmbCategorías = new System.Windows.Forms.ComboBox();
+            this.lblNombreProducto = new AntdUI.Label();
+            this.txtNombreProducto = new AntdUI.Input();
+            this.label1 = new AntdUI.Label();
+            this.inputNumberCantProducto = new AntdUI.InputNumber();
+            this.label2 = new AntdUI.Label();
+            this.input1 = new AntdUI.Input();
+            this.label3 = new AntdUI.Label();
             this.pbProducto = new System.Windows.Forms.PictureBox();
-            this.panelFondoUC.SuspendLayout();
-            this.panelContenidoUC.SuspendLayout();
-            this.panelContenido.SuspendLayout();
+            this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelFondoUC
+            // lblAgregarProducto
             // 
-            this.panelFondoUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
-            this.panelFondoUC.Controls.Add(this.panelContenidoUC);
-            this.panelFondoUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFondoUC.Location = new System.Drawing.Point(0, 0);
-            this.panelFondoUC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelFondoUC.Name = "panelFondoUC";
-            this.panelFondoUC.Size = new System.Drawing.Size(427, 676);
-            this.panelFondoUC.TabIndex = 0;
-            this.panelFondoUC.Text = "panel1";
-            // 
-            // panelContenidoUC
-            // 
-            this.panelContenidoUC.Controls.Add(this.btnCerrarPanel);
-            this.panelContenidoUC.Controls.Add(this.label3);
-            this.panelContenidoUC.Controls.Add(this.input1);
-            this.panelContenidoUC.Controls.Add(this.label2);
-            this.panelContenidoUC.Controls.Add(this.inputNumberCantProducto);
-            this.panelContenidoUC.Controls.Add(this.label1);
-            this.panelContenidoUC.Controls.Add(this.txtNombreProducto);
-            this.panelContenidoUC.Controls.Add(this.lblNombreProducto);
-            this.panelContenidoUC.Controls.Add(this.cmbCategorías);
-            this.panelContenidoUC.Controls.Add(this.lblCategoríaDeProducto);
-            this.panelContenidoUC.Controls.Add(this.lblIndicaciones);
-            this.panelContenidoUC.Controls.Add(this.lblAgregarProducto);
-            this.panelContenidoUC.Controls.Add(this.panelContenido);
-            this.panelContenidoUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenidoUC.Location = new System.Drawing.Point(0, 0);
-            this.panelContenidoUC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelContenidoUC.Name = "panelContenidoUC";
-            this.panelContenidoUC.Size = new System.Drawing.Size(427, 676);
-            this.panelContenidoUC.TabIndex = 0;
-            this.panelContenidoUC.Text = "panel1";
-            this.panelContenidoUC.Click += new System.EventHandler(this.panelContenidoUC_Click);
+            this.lblAgregarProducto.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblAgregarProducto.Location = new System.Drawing.Point(35, 20);
+            this.lblAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblAgregarProducto.Name = "lblAgregarProducto";
+            this.lblAgregarProducto.Size = new System.Drawing.Size(339, 58);
+            this.lblAgregarProducto.TabIndex = 1;
+            this.lblAgregarProducto.Text = "Agregar Producto";
             // 
             // btnCerrarPanel
             // 
@@ -98,142 +67,23 @@ namespace IlkaPoint
             this.btnCerrarPanel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCerrarPanel.IconColor = System.Drawing.Color.Black;
             this.btnCerrarPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarPanel.Location = new System.Drawing.Point(408, 16);
-            this.btnCerrarPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrarPanel.Location = new System.Drawing.Point(394, 26);
             this.btnCerrarPanel.Name = "btnCerrarPanel";
             this.btnCerrarPanel.Size = new System.Drawing.Size(52, 52);
-            this.btnCerrarPanel.TabIndex = 15;
+            this.btnCerrarPanel.TabIndex = 17;
             this.btnCerrarPanel.UseVisualStyleBackColor = false;
             this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
             // 
-            // label3
+            // lblIndicaciones
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(28, 579);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(388, 37);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "5. Agregar Imagen";
-            // 
-            // input1
-            // 
-            this.input1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.input1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input1.Location = new System.Drawing.Point(24, 513);
-            this.input1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.input1.Name = "input1";
-            this.input1.PlaceholderText = "Ejemplo: 1.75";
-            this.input1.PrefixFore = System.Drawing.Color.Black;
-            this.input1.PrefixFormat = AntdUI.FormatFlags.Left;
-            this.input1.PrefixSvg = "";
-            this.input1.Radius = 0;
-            this.input1.Size = new System.Drawing.Size(380, 50);
-            this.input1.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.input1.SuffixFormat = AntdUI.FormatFlags.Left;
-            this.input1.SuffixSvg = "";
-            this.input1.SuffixWidth = 0;
-            this.input1.TabIndex = 10;
-            this.input1.TextChanged += new System.EventHandler(this.input1_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(26, 470);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(388, 37);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "4. Precio unitario ($)";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // inputNumberCantProducto
-            // 
-            this.inputNumberCantProducto.AlwaysShowControl = true;
-            this.inputNumberCantProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNumberCantProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputNumberCantProducto.Location = new System.Drawing.Point(31, 399);
-            this.inputNumberCantProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.inputNumberCantProducto.Name = "inputNumberCantProducto";
-            this.inputNumberCantProducto.Size = new System.Drawing.Size(373, 66);
-            this.inputNumberCantProducto.TabIndex = 8;
-            this.inputNumberCantProducto.Text = "0";
-            this.inputNumberCantProducto.ValueChanged += new AntdUI.DecimalEventHandler(this.inputNumberCantProducto_ValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(26, 349);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(388, 53);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "3. Cantidad por unidad";
-            // 
-            // txtNombreProducto
-            // 
-            this.txtNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(26, 295);
-            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.PlaceholderText = "Ejemplo: Queso Amarillo Kraft";
-            this.txtNombreProducto.PrefixFore = System.Drawing.Color.Black;
-            this.txtNombreProducto.PrefixFormat = AntdUI.FormatFlags.Left;
-            this.txtNombreProducto.PrefixSvg = "";
-            this.txtNombreProducto.Radius = 0;
-            this.txtNombreProducto.Size = new System.Drawing.Size(373, 48);
-            this.txtNombreProducto.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.txtNombreProducto.SuffixFormat = AntdUI.FormatFlags.Left;
-            this.txtNombreProducto.SuffixSvg = "";
-            this.txtNombreProducto.SuffixWidth = 0;
-            this.txtNombreProducto.TabIndex = 6;
-            // 
-            // lblNombreProducto
-            // 
-            this.lblNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombreProducto.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblNombreProducto.Location = new System.Drawing.Point(28, 254);
-            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(373, 43);
-            this.lblNombreProducto.TabIndex = 5;
-            this.lblNombreProducto.Text = "2. Nombre del Producto";
-            // 
-            // cmbCategorías
-            // 
-            this.cmbCategorías.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 12.5F);
-            this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.cmbCategorías.FormattingEnabled = true;
-            this.cmbCategorías.Items.AddRange(new object[] {
-            "Abarrotes",
-            "Lácteos",
-            "Bebidas",
-            "Limpieza",
-            "Papelería"});
-            this.cmbCategorías.Location = new System.Drawing.Point(28, 205);
-            this.cmbCategorías.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbCategorías.Name = "cmbCategorías";
-            this.cmbCategorías.Size = new System.Drawing.Size(368, 31);
-            this.cmbCategorías.TabIndex = 4;
-            this.cmbCategorías.Text = "Seleccione la categoría";
-            this.cmbCategorías.SelectedIndexChanged += new System.EventHandler(this.cmbCategorías_SelectedIndexChanged);
+            this.lblIndicaciones.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIndicaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.lblIndicaciones.Location = new System.Drawing.Point(30, 110);
+            this.lblIndicaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblIndicaciones.Name = "lblIndicaciones";
+            this.lblIndicaciones.Size = new System.Drawing.Size(402, 62);
+            this.lblIndicaciones.TabIndex = 18;
+            this.lblIndicaciones.Text = "Para editar un producto complete los siguientes campos:";
             // 
             // lblCategoríaDeProducto
             // 
@@ -241,44 +91,155 @@ namespace IlkaPoint
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCategoríaDeProducto.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoríaDeProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblCategoríaDeProducto.Location = new System.Drawing.Point(28, 157);
+            this.lblCategoríaDeProducto.Location = new System.Drawing.Point(34, 201);
             this.lblCategoríaDeProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblCategoríaDeProducto.Name = "lblCategoríaDeProducto";
-            this.lblCategoríaDeProducto.Size = new System.Drawing.Size(373, 43);
-            this.lblCategoríaDeProducto.TabIndex = 3;
+            this.lblCategoríaDeProducto.Size = new System.Drawing.Size(426, 43);
+            this.lblCategoríaDeProducto.TabIndex = 19;
             this.lblCategoríaDeProducto.Text = "1. Categoría de Producto";
             // 
-            // lblIndicaciones
+            // cmbCategorías
             // 
-            this.lblIndicaciones.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIndicaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.lblIndicaciones.Location = new System.Drawing.Point(31, 98);
-            this.lblIndicaciones.Name = "lblIndicaciones";
-            this.lblIndicaciones.Size = new System.Drawing.Size(402, 62);
-            this.lblIndicaciones.TabIndex = 1;
-            this.lblIndicaciones.Text = "Para agregar un producto complete los siguientes campos:";
+            this.cmbCategorías.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.cmbCategorías.FormattingEnabled = true;
+            this.cmbCategorías.ItemHeight = 36;
+            this.cmbCategorías.Items.AddRange(new object[] {
+            "Abarrotes",
+            "Lácteos",
+            "Bebidas",
+            "Limpieza",
+            "Papelería"});
+            this.cmbCategorías.Location = new System.Drawing.Point(30, 266);
+            this.cmbCategorías.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCategorías.Name = "cmbCategorías";
+            this.cmbCategorías.Size = new System.Drawing.Size(416, 44);
+            this.cmbCategorías.TabIndex = 20;
+            this.cmbCategorías.Text = "Seleccione la categoría";
+            this.cmbCategorías.Click += new System.EventHandler(this.cmbCategorías_SelectedIndexChanged);
             // 
-            // lblAgregarProducto
+            // lblNombreProducto
             // 
-            this.lblAgregarProducto.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblAgregarProducto.Location = new System.Drawing.Point(3, 0);
-            this.lblAgregarProducto.Name = "lblAgregarProducto";
-            this.lblAgregarProducto.Size = new System.Drawing.Size(410, 92);
-            this.lblAgregarProducto.TabIndex = 0;
-            this.lblAgregarProducto.Text = "Agregar Producto";
-            this.lblAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombreProducto.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.lblNombreProducto.Location = new System.Drawing.Point(30, 325);
+            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblNombreProducto.Name = "lblNombreProducto";
+            this.lblNombreProducto.Size = new System.Drawing.Size(426, 43);
+            this.lblNombreProducto.TabIndex = 21;
+            this.lblNombreProducto.Text = "2. Nombre del Producto";
             // 
-            // panelContenido
+            // txtNombreProducto
             // 
-            this.panelContenido.Controls.Add(this.btnAgregarProducto);
-            this.panelContenido.Controls.Add(this.pbProducto);
-            this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenido.Location = new System.Drawing.Point(0, 0);
-            this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(427, 676);
-            this.panelContenido.TabIndex = 16;
-            this.panelContenido.Text = "panel1";
+            this.txtNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProducto.Location = new System.Drawing.Point(30, 383);
+            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.PlaceholderText = "Ejemplo: Queso Amarillo Kraft";
+            this.txtNombreProducto.PrefixFore = System.Drawing.Color.Black;
+            this.txtNombreProducto.PrefixFormat = AntdUI.FormatFlags.Left;
+            this.txtNombreProducto.PrefixSvg = "";
+            this.txtNombreProducto.Radius = 0;
+            this.txtNombreProducto.Size = new System.Drawing.Size(416, 67);
+            this.txtNombreProducto.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.txtNombreProducto.SuffixFormat = AntdUI.FormatFlags.Left;
+            this.txtNombreProducto.SuffixSvg = "";
+            this.txtNombreProducto.SuffixWidth = 0;
+            this.txtNombreProducto.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(34, 466);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(426, 43);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "3. Cantidad por unidad";
+            // 
+            // inputNumberCantProducto
+            // 
+            this.inputNumberCantProducto.AlwaysShowControl = true;
+            this.inputNumberCantProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputNumberCantProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNumberCantProducto.Location = new System.Drawing.Point(30, 525);
+            this.inputNumberCantProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.inputNumberCantProducto.Name = "inputNumberCantProducto";
+            this.inputNumberCantProducto.Size = new System.Drawing.Size(416, 67);
+            this.inputNumberCantProducto.TabIndex = 24;
+            this.inputNumberCantProducto.Text = "0";
+            this.inputNumberCantProducto.Click += new System.EventHandler(this.input1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(34, 609);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(426, 43);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "4. Precio unitario ($)";
+            // 
+            // input1
+            // 
+            this.input1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.input1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input1.Location = new System.Drawing.Point(30, 664);
+            this.input1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.input1.Name = "input1";
+            this.input1.PlaceholderText = "Ejemplo: 1.75";
+            this.input1.PrefixFore = System.Drawing.Color.Black;
+            this.input1.PrefixFormat = AntdUI.FormatFlags.Left;
+            this.input1.PrefixSvg = "";
+            this.input1.Radius = 0;
+            this.input1.Size = new System.Drawing.Size(416, 67);
+            this.input1.SuffixFore = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.input1.SuffixFormat = AntdUI.FormatFlags.Left;
+            this.input1.SuffixSvg = "";
+            this.input1.SuffixWidth = 0;
+            this.input1.TabIndex = 26;
+            this.input1.Click += new System.EventHandler(this.input1_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.label3.Location = new System.Drawing.Point(34, 736);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(426, 43);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "5. Agregar Imagen";
+            // 
+            // pbProducto
+            // 
+            this.pbProducto.BackColor = System.Drawing.Color.Gainsboro;
+            this.pbProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbProducto.Image = global::IlkaPoint.Properties.Resources.subir_imagen;
+            this.pbProducto.Location = new System.Drawing.Point(131, 800);
+            this.pbProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbProducto.Name = "pbProducto";
+            this.pbProducto.Size = new System.Drawing.Size(208, 100);
+            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProducto.TabIndex = 28;
+            this.pbProducto.TabStop = false;
+            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
             // 
             // btnAgregarProducto
             // 
@@ -293,40 +254,37 @@ namespace IlkaPoint
             this.btnAgregarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarProducto.IconSize = 45;
             this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(35, 928);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(35, 927);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(312, 55);
-            this.btnAgregarProducto.TabIndex = 14;
-            this.btnAgregarProducto.Text = "Añadir Producto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(416, 67);
+            this.btnAgregarProducto.TabIndex = 29;
+            this.btnAgregarProducto.Text = "Agregar Producto";
+            this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarProducto.UseVisualStyleBackColor = false;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
-            // pbProducto
-            // 
-            this.pbProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbProducto.BackColor = System.Drawing.Color.Gainsboro;
-            this.pbProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbProducto.Image = global::IlkaPoint.Properties.Resources.subir_imagen;
-            this.pbProducto.Location = new System.Drawing.Point(107, 776);
-            this.pbProducto.Name = "pbProducto";
-            this.pbProducto.Size = new System.Drawing.Size(146, 100);
-            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProducto.TabIndex = 12;
-            this.pbProducto.TabStop = false;
-            this.pbProducto.Click += new System.EventHandler(this.pbProducto_Click);
-            // 
             // ucAgregarProducto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.panelFondoUC);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(96)))));
+            this.Controls.Add(this.btnAgregarProducto);
+            this.Controls.Add(this.pbProducto);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.input1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.inputNumberCantProducto);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNombreProducto);
+            this.Controls.Add(this.lblNombreProducto);
+            this.Controls.Add(this.cmbCategorías);
+            this.Controls.Add(this.lblCategoríaDeProducto);
+            this.Controls.Add(this.lblIndicaciones);
+            this.Controls.Add(this.btnCerrarPanel);
+            this.Controls.Add(this.lblAgregarProducto);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucAgregarProducto";
-            this.Size = new System.Drawing.Size(427, 676);
-            this.panelFondoUC.ResumeLayout(false);
-            this.panelContenidoUC.ResumeLayout(false);
-            this.panelContenido.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(480, 1024);
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.ResumeLayout(false);
 
@@ -334,22 +292,19 @@ namespace IlkaPoint
 
         #endregion
 
-        private AntdUI.In.Panel panelFondoUC;
-        private AntdUI.In.Panel panelContenidoUC;
         private AntdUI.Label lblAgregarProducto;
+        private FontAwesome.Sharp.IconButton btnCerrarPanel;
         private AntdUI.Label lblIndicaciones;
         private AntdUI.Label lblCategoríaDeProducto;
         private System.Windows.Forms.ComboBox cmbCategorías;
         private AntdUI.Label lblNombreProducto;
         private AntdUI.Input txtNombreProducto;
-        private AntdUI.Label label2;
-        private AntdUI.InputNumber inputNumberCantProducto;
         private AntdUI.Label label1;
-        private AntdUI.Label label3;
+        private AntdUI.InputNumber inputNumberCantProducto;
+        private AntdUI.Label label2;
         private AntdUI.Input input1;
+        private AntdUI.Label label3;
         private System.Windows.Forms.PictureBox pbProducto;
         private FontAwesome.Sharp.IconButton btnAgregarProducto;
-        private FontAwesome.Sharp.IconButton btnCerrarPanel;
-        private AntdUI.In.Panel panelContenido;
     }
 }
