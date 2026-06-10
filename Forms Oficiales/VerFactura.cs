@@ -104,12 +104,20 @@ namespace IlkaPoint.Forms_Oficiales
                 lblNumVenta.Left = centroPanel - (lblNumVenta.Width / 2);
             }
 
-            if (lblFecha != null) lblFecha.Left = 18;
+            // --- ALINEACIÓN FLUIDA DE FECHAS A LOS EXTREMOS ---
+            if (lblFecha != null)
+            {
+                lblFecha.AutoSize = true;
+                // Dejamos un margen estético de 35 píxeles desde el borde izquierdo del panel
+                lblFecha.Left = 12;
+            }
 
             if (lblFechaFactura != null)
             {
                 lblFechaFactura.AutoSize = true;
-                lblFechaFactura.Left = panelArriba.Width - lblFechaFactura.Width - 20;
+                // Calculamos dinámicamente el ancho del panel superior, restamos el tamaño real 
+                // del texto de la fecha actual y dejamos el mismo margen de 35 píxeles al borde derecho
+                lblFechaFactura.Left = panelArriba.Width - lblFechaFactura.Width - 12;
             }
 
             // Estiramiento de tarjetas

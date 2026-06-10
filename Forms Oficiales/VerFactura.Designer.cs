@@ -98,10 +98,10 @@
             // 
             // lblFechaFactura
             // 
-            this.lblFechaFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFechaFactura.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFactura.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFechaFactura.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaFactura.ForeColor = System.Drawing.Color.White;
-            this.lblFechaFactura.Location = new System.Drawing.Point(103, 206);
+            this.lblFechaFactura.Location = new System.Drawing.Point(122, 206);
             this.lblFechaFactura.Name = "lblFechaFactura";
             this.lblFechaFactura.Size = new System.Drawing.Size(288, 30);
             this.lblFechaFactura.TabIndex = 15;
@@ -110,12 +110,14 @@
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(14, 206);
+            this.lblFecha.Location = new System.Drawing.Point(-5, 206);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(79, 30);
+            this.lblFecha.Size = new System.Drawing.Size(72, 27);
             this.lblFecha.TabIndex = 14;
             this.lblFecha.Text = "Fecha:";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,8 +244,7 @@
             // 
             // VerFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.lblFormPago);
             this.Controls.Add(this.lblTotalProductos);
             this.Controls.Add(this.lblTotalPrecio);

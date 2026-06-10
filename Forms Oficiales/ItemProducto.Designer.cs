@@ -68,9 +68,9 @@
             this.lblSubtotal.AutoEllipsis = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtotal.ForeColor = System.Drawing.Color.White;
-            this.lblSubtotal.Location = new System.Drawing.Point(301, 7);
+            this.lblSubtotal.Location = new System.Drawing.Point(261, 7);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(90, 23);
+            this.lblSubtotal.Size = new System.Drawing.Size(130, 23);
             this.lblSubtotal.TabIndex = 2;
             this.lblSubtotal.Text = "0.00";
             this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panelFondo = new AntdUI.In.Panel();
             this.panelLogin = new AntdUI.Panel();
+            this.pcpassw = new System.Windows.Forms.PictureBox();
+            this.pcuser = new System.Windows.Forms.PictureBox();
             this.avatarCandado = new AntdUI.Avatar();
             this.btnEntar = new AntdUI.Button();
             this.txtContraseña = new AntdUI.Input();
             this.lblContraseña = new AntdUI.Label();
             this.lblIniciarSesión = new AntdUI.Label();
             this.panelCentro = new AntdUI.In.Panel();
-            this.avatarLogo = new AntdUI.Avatar();
             this.lblmessag = new System.Windows.Forms.Label();
+            this.avatarLogo = new AntdUI.Avatar();
             this.lblBienvenido = new AntdUI.Label();
-            this.pcpassw = new System.Windows.Forms.PictureBox();
-            this.pcuser = new System.Windows.Forms.PictureBox();
             this.avatar1 = new AntdUI.Avatar();
             this.panelFondo.SuspendLayout();
             this.panelLogin.SuspendLayout();
-            this.panelCentro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcpassw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcuser)).BeginInit();
+            this.panelCentro.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelFondo
@@ -84,6 +84,29 @@
             this.panelLogin.Size = new System.Drawing.Size(556, 1024);
             this.panelLogin.TabIndex = 11;
             this.panelLogin.Text = "panelLogin";
+            // 
+            // pcpassw
+            // 
+            this.pcpassw.BackgroundImage = global::IlkaPoint.Properties.Resources.password_148;
+            this.pcpassw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcpassw.Location = new System.Drawing.Point(115, 441);
+            this.pcpassw.Name = "pcpassw";
+            this.pcpassw.Size = new System.Drawing.Size(37, 37);
+            this.pcpassw.TabIndex = 5;
+            this.pcpassw.TabStop = false;
+            // 
+            // pcuser
+            // 
+            this.pcuser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcuser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcuser.Image = ((System.Drawing.Image)(resources.GetObject("pcuser.Image")));
+            this.pcuser.Location = new System.Drawing.Point(201, 100);
+            this.pcuser.Name = "pcuser";
+            this.pcuser.Size = new System.Drawing.Size(170, 170);
+            this.pcuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcuser.TabIndex = 4;
+            this.pcuser.TabStop = false;
             // 
             // avatarCandado
             // 
@@ -163,14 +186,6 @@
             this.panelCentro.TabIndex = 3;
             this.panelCentro.Text = "panel1";
             // 
-            // avatarLogo
-            // 
-            this.avatarLogo.Location = new System.Drawing.Point(0, 0);
-            this.avatarLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.avatarLogo.Name = "avatarLogo";
-            this.avatarLogo.Size = new System.Drawing.Size(0, 0);
-            this.avatarLogo.TabIndex = 3;
-            // 
             // lblmessag
             // 
             this.lblmessag.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -183,6 +198,14 @@
             this.lblmessag.Size = new System.Drawing.Size(408, 39);
             this.lblmessag.TabIndex = 17;
             this.lblmessag.Text = "Inicia sesión para continuar";
+            // 
+            // avatarLogo
+            // 
+            this.avatarLogo.Location = new System.Drawing.Point(0, 0);
+            this.avatarLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.avatarLogo.Name = "avatarLogo";
+            this.avatarLogo.Size = new System.Drawing.Size(0, 0);
+            this.avatarLogo.TabIndex = 3;
             // 
             // lblBienvenido
             // 
@@ -197,29 +220,6 @@
             this.lblBienvenido.TabIndex = 15;
             this.lblBienvenido.Text = "¡Bienvenido!";
             this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pcpassw
-            // 
-            this.pcpassw.BackgroundImage = global::IlkaPoint.Properties.Resources.password_148;
-            this.pcpassw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcpassw.Location = new System.Drawing.Point(115, 441);
-            this.pcpassw.Name = "pcpassw";
-            this.pcpassw.Size = new System.Drawing.Size(37, 37);
-            this.pcpassw.TabIndex = 5;
-            this.pcpassw.TabStop = false;
-            // 
-            // pcuser
-            // 
-            this.pcuser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pcuser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcuser.Image = ((System.Drawing.Image)(resources.GetObject("pcuser.Image")));
-            this.pcuser.Location = new System.Drawing.Point(201, 100);
-            this.pcuser.Name = "pcuser";
-            this.pcuser.Size = new System.Drawing.Size(170, 170);
-            this.pcuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcuser.TabIndex = 4;
-            this.pcuser.TabStop = false;
             // 
             // avatar1
             // 
@@ -242,16 +242,17 @@
             this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.panelFondo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panelFondo.ResumeLayout(false);
             this.panelLogin.ResumeLayout(false);
-            this.panelCentro.ResumeLayout(false);
-            this.panelCentro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcpassw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcuser)).EndInit();
+            this.panelCentro.ResumeLayout(false);
+            this.panelCentro.PerformLayout();
             this.ResumeLayout(false);
 
         }
