@@ -404,6 +404,39 @@ namespace IlkaPoint
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
+            ActualizarMenuActivo(btnAyuda);
+
+            // Construimos la ruta dinámica uniendo la ubicación del .exe con la carpeta del PDF
+            // Usamos Application.StartupPath para que funcione en cualquier computadora donde se instale
+            string rutaLocalPdf = System.IO.Path.Combine(Application.StartupPath, "Resources", "Guia_de_Usuario_IlcaPoint.pdf");
+
+            // Validamos si el archivo realmente existe físicamente en esa ruta
+            if (System.IO.File.Exists(rutaLocalPdf))
+            {
+                try
+                {
+                    //le decimos a sistemaoperativo del usuario que use su visor predeterminado para ver el archivo 
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = rutaLocalPdf,
+                        UseShellExecute = true // para asocial los archivos predeterminada (Edge, Chrome, Adobe, lalalala)
+                    });
+                }
+                catch (Exception ex)
+                {
+                    // Filtro de error si el sistema operativo no tiene ningún lector de PDF asignado
+                    MessageBox.Show("Ocurrió un problema al intentar abrir el visor de PDF de su sistema.",
+                                    "Error de Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                // Alerta controlada si por alguna razón el archivo fue borrado de la carpeta
+                MessageBox.Show("El archivo de la guía de usuario no se encuentra en la carpeta de la aplicación.",
+                                "Archivo No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                
+            }
 
         }
 

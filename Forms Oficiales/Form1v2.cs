@@ -310,6 +310,7 @@ namespace IlkaPoint
         private void btnVentas_Click(object sender, EventArgs e)
         {
             ActualizarMenuActivo(btnVentas);
+
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
@@ -317,7 +318,7 @@ namespace IlkaPoint
             ActualizarMenuActivo(btnAyuda);
             // Construimos la ruta dinámica uniendo la ubicación del .exe con la carpeta del PDF
             // Usamos Application.StartupPath para que funcione en cualquier computadora donde se instale
-            string rutaLocalPdf = System.IO.Path.Combine(Application.StartupPath, "Resources", "Guía_de_Usuario_IlcaPoint.pdf");
+            string rutaLocalPdf = System.IO.Path.Combine(Application.StartupPath, "Resources", "Guia_de_Usuario_IlcaPoint.pdf");
 
             // Validamos si el archivo realmente existe físicamente en esa ruta
             if (System.IO.File.Exists(rutaLocalPdf))
@@ -342,9 +343,7 @@ namespace IlkaPoint
             {
                 // Alerta controlada si por alguna razón el archivo fue borrado de la carpeta
                 MessageBox.Show("El archivo de la guía de usuario no se encuentra en la carpeta de la aplicación.",
-                                "Archivo No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);// 1. Construimos la ruta dinámica uniendo la ubicación del .exe con la carpeta del PDF
-                                                                                                       // Usamos Application.StartupPath para que funcione en cualquier computadora donde se instale
-                
+                                "Archivo No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
