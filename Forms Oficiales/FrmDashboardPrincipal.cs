@@ -6,12 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using System.IO;
 
 namespace IlkaPoint
 {
@@ -520,6 +522,24 @@ namespace IlkaPoint
         private void btnCerrarsesion_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void btnAyuda_Click_1(object sender, EventArgs e)
+        {
+            string nombreArchivo = "Guia_de_Usuario_IlcaPoint.pdf";
+
+            // 2. Combinamos la ruta de ejecución con el nombre del archivo
+            // AppDomain.CurrentDomain.BaseDirectory apunta a la carpeta /bin/Debug o /bin/Release
+            string rutaPdf = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, nombreArchivo);
+
+            if (File.Exists(rutaPdf))
+            {
+                Process.Start(rutaPdf);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró el archivo en: " + rutaPdf);
+            }
         }
     }
 }

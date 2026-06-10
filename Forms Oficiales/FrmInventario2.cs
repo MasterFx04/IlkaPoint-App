@@ -8,7 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -30,6 +32,7 @@ namespace IlkaPoint
         public FrmInventario2()
         {
             InitializeComponent();
+            this.ClientSize = new System.Drawing.Size(1440, 1024);
 
             // === CONGELAR EL TAMAÑO ESTÁNDAR ===
             this.Size = new Size(1440, 1024); // Pon aquí los pixeles exactos de tu Figma
@@ -411,7 +414,20 @@ namespace IlkaPoint
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
+            string nombreArchivo = "Guia_de_Usuario_IlcaPoint.pdf";
 
+            // 2. Combinamos la ruta de ejecución con el nombre del archivo
+            // AppDomain.CurrentDomain.BaseDirectory apunta a la carpeta /bin/Debug o /bin/Release
+            string rutaPdf = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, nombreArchivo);
+
+            if (File.Exists(rutaPdf))
+            {
+                Process.Start(rutaPdf);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró el archivo en: " + rutaPdf);
+            }
         }
         
 

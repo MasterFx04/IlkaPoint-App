@@ -105,7 +105,7 @@ namespace IlkaPoint
             this.cmbCategorías.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategorías.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.cmbCategorías.FormattingEnabled = true;
-            this.cmbCategorías.ItemHeight = 36;
+            this.cmbCategorías.ItemHeight = 28;
             this.cmbCategorías.Items.AddRange(new object[] {
             "Abarrotes",
             "Lácteos",
@@ -115,7 +115,7 @@ namespace IlkaPoint
             this.cmbCategorías.Location = new System.Drawing.Point(30, 266);
             this.cmbCategorías.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategorías.Name = "cmbCategorías";
-            this.cmbCategorías.Size = new System.Drawing.Size(416, 44);
+            this.cmbCategorías.Size = new System.Drawing.Size(416, 36);
             this.cmbCategorías.TabIndex = 20;
             this.cmbCategorías.Text = "Seleccione la categoría";
             this.cmbCategorías.Click += new System.EventHandler(this.cmbCategorías_SelectedIndexChanged);
@@ -284,7 +284,7 @@ namespace IlkaPoint
             this.Controls.Add(this.lblAgregarProducto);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ucAgregarProducto";
-            this.Size = new System.Drawing.Size(480, 1025);
+            this.Size = new System.Drawing.Size(480, 1024);
             ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.ResumeLayout(false);
 

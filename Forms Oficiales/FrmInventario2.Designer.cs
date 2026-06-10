@@ -69,7 +69,7 @@
             this.panelFondo.Location = new System.Drawing.Point(0, 0);
             this.panelFondo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFondo.Name = "panelFondo";
-            this.panelFondo.Size = new System.Drawing.Size(1418, 968);
+            this.panelFondo.Size = new System.Drawing.Size(1422, 977);
             this.panelFondo.TabIndex = 0;
             this.panelFondo.Text = "panel1";
             // 
@@ -88,7 +88,7 @@
             this.panelMenu.Location = new System.Drawing.Point(45, 24);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(376, 892);
+            this.panelMenu.Size = new System.Drawing.Size(376, 901);
             this.panelMenu.TabIndex = 3;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint_1);
             // 
@@ -118,7 +118,7 @@
             this.btnCerrarsesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarsesion.IconSize = 40;
             this.btnCerrarsesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarsesion.Location = new System.Drawing.Point(32, 794);
+            this.btnCerrarsesion.Location = new System.Drawing.Point(32, 803);
             this.btnCerrarsesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarsesion.Name = "btnCerrarsesion";
             this.btnCerrarsesion.Size = new System.Drawing.Size(344, 66);
@@ -142,7 +142,7 @@
             this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAyuda.IconSize = 40;
             this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.Location = new System.Drawing.Point(32, 720);
+            this.btnAyuda.Location = new System.Drawing.Point(32, 729);
             this.btnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(344, 66);
@@ -252,7 +252,7 @@
             this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpContenidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tlpContenidos.Size = new System.Drawing.Size(979, 943);
+            this.tlpContenidos.Size = new System.Drawing.Size(983, 943);
             this.tlpContenidos.TabIndex = 2;
             // 
             // panelEncabezado
@@ -267,7 +267,7 @@
             this.panelEncabezado.Location = new System.Drawing.Point(3, 2);
             this.panelEncabezado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelEncabezado.Name = "panelEncabezado";
-            this.panelEncabezado.Size = new System.Drawing.Size(973, 219);
+            this.panelEncabezado.Size = new System.Drawing.Size(977, 219);
             this.panelEncabezado.TabIndex = 0;
             this.panelEncabezado.Text = "panel1";
             this.panelEncabezado.Click += new System.EventHandler(this.panelEncabezado_Click);
@@ -277,7 +277,7 @@
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.IconSvg = "SearchOutlined";
-            this.btnBuscar.Location = new System.Drawing.Point(891, 100);
+            this.btnBuscar.Location = new System.Drawing.Point(895, 100);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Radius = 0;
             this.btnBuscar.Size = new System.Drawing.Size(71, 71);
@@ -288,7 +288,7 @@
             // txtBuscarProducto
             // 
             this.txtBuscarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarProducto.Location = new System.Drawing.Point(490, 101);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(494, 101);
             this.txtBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.PlaceholderText = "Buscar producto...";
@@ -313,7 +313,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(42, 92);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(406, 56);
+            this.lblTitulo.Size = new System.Drawing.Size(339, 47);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Inventario y Stock";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,7 +331,7 @@
             this.btnAgregarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarProducto.IconSize = 45;
             this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(573, 22);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(577, 22);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(375, 56);
@@ -351,7 +351,7 @@
             this.panelTablaInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTablaInventario.Name = "panelTablaInventario";
             this.panelTablaInventario.Padding = new System.Windows.Forms.Padding(18, 0, 18, 16);
-            this.panelTablaInventario.Size = new System.Drawing.Size(973, 699);
+            this.panelTablaInventario.Size = new System.Drawing.Size(977, 699);
             this.panelTablaInventario.TabIndex = 1;
             this.panelTablaInventario.Text = "panel1";
             // 
@@ -426,7 +426,7 @@
             // FrmInventario2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1418, 968);
+            this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.panelFondo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1246, 649);
