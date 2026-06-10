@@ -183,6 +183,7 @@
             this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAyuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnVentas
             // 

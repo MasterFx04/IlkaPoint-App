@@ -96,65 +96,7 @@ namespace IlkaPoint
                 chartCategorias.BorderSkin.PageColor = System.Drawing.Color.Transparent;
                 chartCategorias.BorderSkin.BackColor = System.Drawing.ColorTranslator.FromHtml("#1A3560");
 
-                /*
-                chartCategorias.Titles.Add("Distribución por Categorías");
-
-                var serieDona = chartCategorias.Series.Add("Categorias");
-                serieDona.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-
-
-                //CÓDIGO DATO DE PRUEBA, EN TU CASO AQUÍ DEBERÍAS CONECTAR A TU BASE DE DATOS
-                //Y OBTENER LOS VALORES REALES PARA CADA CATEGORÍA
-                //(LÍNEA 67 A 70)
-                serieDona.Points.AddXY("Abarrotería (34%)", 34);
-                serieDona.Points.AddXY("Lácteos (10%)", 10);
-                serieDona.Points.AddXY("Bebidas (36%)", 36);
-                serieDona.Points.AddXY("Limpieza (20%)", 20);
-
-
-                //DISEÑO CÓDIGO (LÍNEA 74 A 77)
-
-                // === EL TRUCO MAGISTRAL ===
-                // Esto obliga a Windows Forms a redibujar los controles con los nuevos datos en
-                // el segundo uno. Sin esto, a veces no se actualizan correctamente al cargar el
-                // formulario.
-                //Igual pueden ver si necesitan modificarlo pero si funciona bien, es mejor
-                //dejarlo así para evitar problemas de actualización visual.
-                chartTendencia.DataBind();
-                chartCategorias.DataBind();
-
-                // === 3. TABLA DE INVENTARIO RÁPIDO (Datos de Prueba) ===
-                // Creamos la estructura de la tabla con las columnas de tu Figma
-                DataTable dt = new DataTable();
-                dt.Columns.Add("Código", typeof(string));
-                dt.Columns.Add("Producto", typeof(string));
-                dt.Columns.Add("Categoría", typeof(string));
-                dt.Columns.Add("Precio Venta", typeof(string));
-                dt.Columns.Add("Existencia", typeof(int));
-                dt.Columns.Add("Estado", typeof(string));
-
-
-                //DATO DE PRUEBA, EN TU CASO AQUÍ DEBERÍAS CONECTAR A TU BASE DE DATOS
-                // Y OBTENER LOS VALORES REALES PARA CADA PRODUCTO CON STOCK BAJO O CRÍTICO
-                // (LÍNEA 94 A 99)
-
-                // Agregamos filas de simulación con stock bajo o crítico
-                dt.Rows.Add("P001", "Jabón Palmolive", "Limpieza", "$1.25", 5, "Crítico");
-                dt.Rows.Add("P002", "Agua Cristal 1.5L", "Bebidas", "$0.80", 12, "Bajo Stock");
-                dt.Rows.Add("P003", "Coca-Cola 2L", "Bebidas", "$2.10", 3, "Crítico");
-                dt.Rows.Add("P004", "Leche Estrella 1L", "Lácteos", "$1.50", 8, "Bajo Stock");
-                dt.Rows.Add("P005", "Arroz Gold 5lb", "Abarrotería", "$4.25", 15, "Bajo Stock");
-
-
-                //DISEÑO CÓDIGO (LÍNEA 109 A 115)
-                //Este conecta los datos a tu DataGridView, y automáticamente se encarga
-                //de mostrar las filas con su formato correspondiente.
-                //Ustedes solo necesitan asegurarse de que el DataGridView tenga las columnas configuradas
-                //con los mismos nombres que las del DataTable para que se muestren correctamente.
-
-                // Conectamos los datos al control visual
-                dgvInventarioRapido.DataSource = dt;
-                */
+                
 
                 //CONECTANDO A LA BASE DE DATOS:
                 RefrescarDashBoard(); //Refrescamos la info nueva :D
@@ -264,10 +206,7 @@ namespace IlkaPoint
             ActualizarMenuActivo(btnVentas);
         }
 
-        private void btnAyuda_Click(object sender, EventArgs e)
-        {
-            ActualizarMenuActivo(btnAyuda);
-        }
+   
 
         //Estos eventos se abrieron por erro mientras diseñaba el formulario
         //pueden borrarolo porque no se utilizan.
@@ -515,6 +454,46 @@ namespace IlkaPoint
         private void btnCerrarsesion_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+
+            ActualizarMenuActivo(btnAyuda);
+
+            // Construimos la ruta dinámica uniendo la ubicación del .exe con la carpeta del PDF
+            // Usamos Application.StartupPath para que funcione en cualquier computadora donde se instale
+            string rutaLocalPdf = System.IO.Path.Combine(Application.StartupPath, "Resources", "Guia_de_Usuario_IlcaPoint.pdf");
+
+            // Validamos si el archivo realmente existe físicamente en esa ruta
+            if (System.IO.File.Exists(rutaLocalPdf))
+            {
+                try
+                {
+                    //le decimos a sistemaoperativo del usuario que use su visor predeterminado para ver el archivo 
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = rutaLocalPdf,
+                        UseShellExecute = true // para asocial los archivos predeterminada (Edge, Chrome, Adobe, lalalala)
+                    });
+                }
+                catch (Exception ex)
+                {
+                    // Filtro de error si el sistema operativo no tiene ningún lector de PDF asignado
+                    MessageBox.Show("Ocurrió un problema al intentar abrir el visor de PDF de su sistema.",
+                                    "Error de Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                // Alerta controlada si por alguna razón el archivo fue borrado de la carpeta
+                MessageBox.Show("El archivo de la guía de usuario no se encuentra en la carpeta de la aplicación.",
+                                "Archivo No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                //Se construye la ruta uniendo la ubicación del .exe con la carpeta del PDF
+                // Usamos Application.StartupPath para que funcione en cualquier computadora donde se instale
+            }
+
         }
     }
 }
