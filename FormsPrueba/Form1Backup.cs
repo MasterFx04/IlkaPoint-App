@@ -30,7 +30,7 @@ namespace IlkaPoint.FormsPrueba
             string proovedor = textBox3.Text;
             decimal precio = decimal.Parse(textBox4.Text);
 
-            Producto productoPrueba = new ProductoPorUnidad(nombre, categoria, proovedor, precio, null); //LA IMAGEN NO ME FUNCIONA PERO IGUAL EL FORMS NO SIRVE, ES DE EJEMPLO
+            Producto productoPrueba = new Producto(nombre, categoria, proovedor, precio, null); //LA IMAGEN NO ME FUNCIONA PERO IGUAL EL FORMS NO SIRVE, ES DE EJEMPLO
 
             /*
             if (comboBox1.SelectedItem.ToString() == "Unitario")
@@ -96,11 +96,6 @@ namespace IlkaPoint.FormsPrueba
             Producto producto = (Producto)dataGridView1.Rows[e.RowIndex].DataBoundItem;
             //MessageBox.Show(producto.nombre); si funciona
 
-            if (producto is ProductoPorPeso)
-            {
-                MessageBox.Show("No se ingresan cantidades de este producto ya que es un producto por peso");
-                return;
-            }
 
             FormAgregarStock formStock = new FormAgregarStock(producto);
             formStock.Show();
